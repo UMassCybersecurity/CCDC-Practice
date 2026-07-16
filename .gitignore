@@ -10,6 +10,7 @@ packer/output/
 *.vmdk
 *.vdi
 *.vbox
+*.log
 
 # Vagrant box files (huge, don't commit)
 *.box
