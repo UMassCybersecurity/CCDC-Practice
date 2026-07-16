@@ -1,0 +1,33 @@
+# Vagrant
+.vagrant/
+
+# Packer output
+packer/output/
+
+# VirtualBox
+*.ova
+*.ovf
+*.vmdk
+*.vdi
+*.vbox
+
+# Vagrant box files (huge, don't commit)
+*.box
+
+# Windows junk
+Thumbs.db
+desktop.ini
+
+# macOS junk
+.DS_Store
+
+# Logs
+*.log
+crash.log
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
