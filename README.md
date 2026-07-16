@@ -5,6 +5,7 @@
 | Requirement | Details |
 |---|---|
 | VirtualBox | https://www.virtualbox.org/wiki/Downloads |
+| VmWare Fusion (for Apple Silicon only) | https://knowledge.broadcom.com/external/article/315638/download-and-install-vmware-fusion.html |
 | Vagrant | https://www.vagrantup.com/downloads |
 | Packer | https://www.packer.io/downloads |
 | RAM | At least 16GB recommended |
@@ -16,9 +17,10 @@
 
 1. Clone this repo
 2. `cd` into any challenge directory
-3. Run: `vagrant up`
-4. First run will auto-build the base box with Packer *(~20–30 min)*
-5. Subsequent runs boot in *~2–3 minutes*
+3. Read the README.md for setup and challenge goals. 
+4. Run: `vagrant up`
+5. First run will auto-build the base box with Packer *(~20–30 min)*
+6. Subsequent runs boot in *~2–3 minutes*
 
 ---
 
