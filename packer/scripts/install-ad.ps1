@@ -3,7 +3,17 @@
 
 Write-Host "=== Installing AD Domain Services ==="
 
+# Fix: suppress progress bar that breaks in SSH sessions
+$ProgressPreference = 'SilentlyContinue'
+
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
+
+# Verify it actually installed
+if (-not (Get-WindowsFeature AD-Domain-Services).Installed) {
+    Write-Host "Feature install via cmdlet failed. Trying DISM..."
+    dism /online /enable-feature /featurename:ActiveDirectory-DomainServices /all /norestart
+    dism /online /enable-feature /featurename:DirectoryServices-DomainController /all /norestart
+}
 
 Write-Host "=== Promoting to Domain Controller ==="
 

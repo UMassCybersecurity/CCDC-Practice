@@ -1,16 +1,19 @@
 # create-users.ps1
 # Populates the domain with realistic users, groups, and OUs
-
 Write-Host "=== Populating Active Directory ==="
+
+$ProgressPreference = 'SilentlyContinue'
 
 Import-Module ActiveDirectory
 
 # Wait for AD to be fully ready after reboot
-$maxRetries = 30
+Write-Host "Waiting for AD to be ready (this may take a while)"
+$maxRetries = 60
 $retry = 0
 while ($retry -lt $maxRetries) {
     try {
         Get-ADDomain -ErrorAction Stop
+        Write-Host "AD is ready"
         break
     } catch {
         $retry++

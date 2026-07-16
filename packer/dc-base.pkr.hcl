@@ -11,6 +11,7 @@ source "vagrant" "windows-dc" {
   source_path  = "gusztavvargadr/windows-server-2022-standard"
   provider     = "virtualbox"
   add_force    = true
+  output_dir   = "output"
 
   ssh_username = "vagrant"
   ssh_password = "vagrant"
