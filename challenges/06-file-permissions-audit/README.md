@@ -8,11 +8,15 @@
 ## Scenario
 WidgetCorp's file-drop server hosts a shared directory for internal documents, fronted by an Apache default page for a status check. An audit turned up sloppy permissions across the box — a world-writable share, a low-privileged account with unrestricted sudo, and something that looks like a privilege-escalation backdoor hiding in `/usr/local/bin`.
 
-## Learning Objectives
+<details>
+<summary><strong>Learning Objectives</strong> (spoiler — click to reveal)</summary>
+
 - Audit and correct world-writable directories and files
 - Find and remove SUID-root privilege-escalation backdoors
 - Identify and revoke unwarranted passwordless sudo grants
 - Fix a misconfigured system without taking down a running service
+
+</details>
 
 ## Objectives
 - Lock down `/srv/fileshare` so it's no longer world-writable
@@ -31,14 +35,21 @@ WidgetCorp's file-drop server hosts a shared directory for internal documents, f
 - Do not stop the Apache web service — it must stay reachable on port 80.
 - Don't delete the legitimate files in `/srv/fileshare`, just fix their permissions.
 
-## Hints *(try without these first)*
+<details>
+<summary><strong>Hints</strong> (try without these first — click to reveal)</summary>
+
 - `find / -perm -4000 -type f 2>/dev/null` finds every SUID binary on the box — most of them are legitimate.
 - Check `/etc/sudoers.d/` for anything granting `NOPASSWD:ALL` to an account that shouldn't have it.
 - `chmod` the share to something that isn't world-writable — owner/group access is enough for a legitimate file-drop.
 - `ls -la /usr/local/bin` — nothing legitimate normally lives there with a leading dot.
 
+</details>
+
 ## Scoring
 Run `sudo /vagrant/scripts/score_me.sh` inside the VM.
+
+<details>
+<summary>Scoring criteria (spoiler — click to reveal)</summary>
 
 | Points | Criteria |
 |---|---|
@@ -48,3 +59,5 @@ Run `sudo /vagrant/scripts/score_me.sh` inside the VM.
 | +1 | Apache still online |
 
 > **Expected finding count: 3** *(fileshare permissions, SUID backdoor, sudoers grant)*
+
+</details>

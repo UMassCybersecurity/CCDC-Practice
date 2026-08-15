@@ -8,11 +8,15 @@
 ## Scenario
 WidgetCorp's edge nginx was stood up in a hurry to front the internal "backend" service. Someone dropped a self-signed certificate in place for "later" and never finished the job — the site is still plain HTTP, and there's no redirect to force clients onto an encrypted connection. Security wants this fixed before the next audit.
 
-## Learning Objectives
+<details>
+<summary><strong>Learning Objectives</strong> (spoiler — click to reveal)</summary>
+
 - Configure nginx to terminate TLS using an existing certificate/key pair
 - Enforce an HTTP → HTTPS redirect
 - Restrict `ssl_protocols` to modern, non-deprecated TLS versions
 - Edit a live nginx config and reload without downtime
+
+</details>
 
 ## Objectives
 - Serve the backend over HTTPS on port 443 using the provided certificate
@@ -32,15 +36,22 @@ WidgetCorp's edge nginx was stood up in a hurry to front the internal "backend" 
 ## Rules of Engagement
 - Don't take the backend offline — it must keep responding through both the fix and afterward.
 
-## Hints *(try without these first)*
+<details>
+<summary><strong>Hints</strong> (try without these first — click to reveal)</summary>
+
 - The certificate and key are already on disk — you just need to point nginx at them.
 - `listen 443 ssl;` plus `ssl_certificate` / `ssl_certificate_key` directives are all a minimal TLS server block needs.
 - A `return 301 https://...` block on the port-80 server is the simplest redirect.
 - `ssl_protocols TLSv1.2 TLSv1.3;` disables the deprecated versions.
 - After editing `edge/default.conf`, run `docker compose exec edge nginx -s reload` to apply it without restarting the container.
 
+</details>
+
 ## Scoring
 Run `./scripts/score_me.sh` from this directory on the host.
+
+<details>
+<summary>Scoring criteria (spoiler — click to reveal)</summary>
 
 | Points | Criteria |
 |---|---|
@@ -49,3 +60,5 @@ Run `./scripts/score_me.sh` from this directory on the host.
 | +1 | `ssl_protocols` restricted to TLSv1.2 and TLSv1.3 |
 
 > **Expected finding count: 3**
+
+</details>

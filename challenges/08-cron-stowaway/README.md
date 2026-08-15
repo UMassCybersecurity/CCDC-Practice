@@ -8,11 +8,15 @@
 ## Scenario
 WidgetCorp's nightly backup box has been running unattended for months. A junior admin noticed the box "feels busier than it should be" and asked you to take a look before this week's audit. Nothing is on fire — but something doesn't belong.
 
-## Learning Objectives
+<details>
+<summary><strong>Learning Objectives</strong> (spoiler — click to reveal)</summary>
+
 - Enumerate cron-based persistence for a specific user (`crontab -l`, `/etc/cron.d`, `/var/spool/cron`)
 - Recognize disguised or suspicious cron entries vs. legitimate scheduled jobs
 - Spot a shell-function backdoor hiding in a system-wide rc file
 - Practice surgical remediation that leaves legitimate automation intact
+
+</details>
 
 ## Objectives
 - Find and remove the unauthorized cron job
@@ -29,13 +33,20 @@ WidgetCorp's nightly backup box has been running unattended for months. A junior
 ## Rules of Engagement
 - The nightly backup cron entry (`/usr/bin/date >> /var/log/backup.log` at 02:00) is a legitimate business job. Removing it costs points.
 
-## Hints *(try without these first)*
+<details>
+<summary><strong>Hints</strong> (try without these first — click to reveal)</summary>
+
 - `crontab -l` as root shows every cron entry for that user — legitimate and not.
 - A job that fires every single minute is worth a second look.
 - System-wide shell startup files (`/etc/bash.bashrc`, `/etc/profile.d/*`) are a common place to hide a function that shadows a real command.
 
+</details>
+
 ## Scoring
 Run `docker compose exec app score_me.sh` from the challenge directory on the host.
+
+<details>
+<summary>Scoring criteria (spoiler — click to reveal)</summary>
 
 | Points | Criteria |
 |---|---|
@@ -44,3 +55,5 @@ Run `docker compose exec app score_me.sh` from the challenge directory on the ho
 | +1 | `sudo`-wrapping backdoor removed from `/etc/bash.bashrc` |
 
 > **Expected finding count: 2**
+
+</details>

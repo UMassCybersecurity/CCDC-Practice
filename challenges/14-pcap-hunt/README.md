@@ -10,10 +10,14 @@ A network tap upstream of `intranet.corp` caught a short window of traffic
 before someone noticed something odd. Security handed you `capture.pcap` and
 nothing else. Find out what leaked, and what's calling home.
 
-## Learning Objectives
+<details>
+<summary><strong>Learning Objectives</strong> (spoiler — click to reveal)</summary>
+
 - Navigate a pcap with `tshark` (protocol/IO filters, following streams, reading raw payloads)
 - Recognize plaintext credential leakage in HTTP traffic
 - Recognize periodic beacon/C2 traffic by destination and interval
+
+</details>
 
 ## Objectives
 - Recover the plaintext username and password submitted over HTTP
@@ -39,13 +43,20 @@ PASS: <leaked password>
 BEACON: <destination IP>:<destination port>
 ```
 
-## Hints *(try without these first)*
+<details>
+<summary><strong>Hints</strong> (try without these first — click to reveal)</summary>
+
 - `tshark -r /root/capture.pcap -Y http` isolates the login request.
 - `tshark -r /root/capture.pcap -Y udp` isolates the non-HTTP traffic — look at destination and interval.
 - `tshark -r /root/capture.pcap -x` dumps raw bytes if you'd rather read payloads directly.
 
+</details>
+
 ## Scoring
 From the challenge directory on the host: `docker compose exec app /scripts/score_me.sh`
+
+<details>
+<summary>Scoring criteria (spoiler — click to reveal)</summary>
 
 | Points | Criteria |
 |---|---|
@@ -54,3 +65,5 @@ From the challenge directory on the host: `docker compose exec app /scripts/scor
 | +1 | Correct beacon destination IP:port |
 
 > **Expected finding count: 3**
+
+</details>

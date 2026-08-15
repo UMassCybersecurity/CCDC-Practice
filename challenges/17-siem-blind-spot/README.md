@@ -11,10 +11,14 @@ the logging pipeline before you got here, and whatever they were hiding is
 still running. You need to restore visibility first, then use it to find
 what's actually going on.
 
-## Learning Objectives
+<details>
+<summary><strong>Learning Objectives</strong> (spoiler — click to reveal)</summary>
+
 - Recognize a logging pipeline that's been tampered with to create a blind spot
 - Understand how rsyslog filtering/discard rules can selectively hide activity
 - Use restored visibility (and direct system inspection) to find a hidden persistence mechanism
+
+</details>
 
 ## Objectives
 - Find and remove whatever is suppressing log visibility, and get logging working normally again
@@ -32,13 +36,20 @@ what's actually going on.
 - **DO NOT** stop the Apache2 web service. It must remain online.
 - **DO NOT** just disable rsyslog entirely to "fix" the blind spot — that trades one blind spot for a bigger one. Fix the actual filter.
 
-## Hints *(try without these first)*
+<details>
+<summary><strong>Hints</strong> (try without these first — click to reveal)</summary>
+
 - rsyslog reads config from `/etc/rsyslog.conf` and everything under `/etc/rsyslog.d/`.
 - A `stop` in an rsyslog filter action drops the message entirely — it never reaches the log files.
 - Once you know what's being hidden, `crontab -l -u <user>` for suspicious local accounts is a fast next step.
 
+</details>
+
 ## Scoring
 Inside the VM: `sudo /vagrant/scripts/score_me.sh`
+
+<details>
+<summary>Scoring criteria (spoiler — click to reveal)</summary>
 
 | Points | Criteria |
 |---|---|
@@ -48,3 +59,5 @@ Inside the VM: `sudo /vagrant/scripts/score_me.sh`
 | +1 | Apache web server still online |
 
 > **Expected finding count: 1 logging blind spot + 1 hidden persistence mechanism**
+
+</details>

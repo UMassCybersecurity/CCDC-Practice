@@ -8,11 +8,15 @@
 ## Scenario
 WidgetCorp's "inventory-app" stores its counters in Redis. Whoever wired this up published Redis straight to the host with no password, so anyone who can reach port 8101 has full read/write access to the datastore behind your application.
 
-## Learning Objectives
+<details>
+<summary><strong>Learning Objectives</strong> (spoiler — click to reveal)</summary>
+
 - Add authentication to a datastore that ships with none by default
 - Stop publishing an internal service to the host network
 - Wire a new credential through to a dependent application via environment variables
 - Verify a fix doesn't break the service that depends on it
+
+</details>
 
 ## Objectives
 - Require authentication on Redis
@@ -30,14 +34,21 @@ WidgetCorp's "inventory-app" stores its counters in Redis. Whoever wired this up
 ## Rules of Engagement
 - The `inventory-app`'s `/health` endpoint must keep returning 200 with a working Redis connection.
 
-## Hints *(try without these first)*
+<details>
+<summary><strong>Hints</strong> (try without these first — click to reveal)</summary>
+
 - `redis-server --requirepass <password>` is the quickest way to add auth to the `redis` service's `command:`.
 - The app needs that same password passed in via an environment variable so it can still connect.
 - Dropping the `ports:` mapping on the `redis` service removes host access entirely — containers on the same compose network can still reach it by service name.
 - `docker compose up -d` picks up compose file changes without a rebuild.
 
+</details>
+
 ## Scoring
 Run `./scripts/score_me.sh` from this directory on the host.
+
+<details>
+<summary>Scoring criteria (spoiler — click to reveal)</summary>
 
 | Points | Criteria |
 |---|---|
@@ -46,3 +57,5 @@ Run `./scripts/score_me.sh` from this directory on the host.
 | +1 | `inventory-app` `/health` still reports a working Redis connection |
 
 > **Expected finding count: 3**
+
+</details>

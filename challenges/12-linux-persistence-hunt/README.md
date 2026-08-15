@@ -8,7 +8,9 @@
 ## Scenario
 WidgetCorp's ops box runs a legitimate Apache site and not much else — or so the previous admin thought. An audit is coming up and you've been asked to sweep the box for anything that shouldn't be there before it happens.
 
-## Learning Objectives
+<details>
+<summary><strong>Learning Objectives</strong> (spoiler — click to reveal)</summary>
+
 - Enumerate cron-based persistence for every user, not just the current one
 - Identify a disguised systemd service by what it runs, not its unit name
 - Audit `~/.ssh/authorized_keys` for unauthorized keys
@@ -16,6 +18,8 @@ WidgetCorp's ops box runs a legitimate Apache site and not much else — or so t
 - Find SUID-root binaries planted outside their expected locations
 - Audit `/etc/sudoers.d/` for unauthorized privilege grants
 - Remediate without breaking a running business service
+
+</details>
 
 ## Objectives
 - Find and remove all 6 persistence mechanisms
@@ -33,7 +37,9 @@ WidgetCorp's ops box runs a legitimate Apache site and not much else — or so t
 - Do not stop the Apache web service — it must remain online.
 - Do not remove the legitimate `vagrant` account.
 
-## Hints *(try without these first)*
+<details>
+<summary><strong>Hints</strong> (try without these first — click to reveal)</summary>
+
 - `crontab -l` (as root, via `sudo crontab -l`) — a job firing every minute is worth a second look.
 - `systemctl list-unit-files --state=enabled` — check what actually runs, not just what the name implies.
 - `cat ~/.ssh/authorized_keys` — is every key one you recognize?
@@ -41,8 +47,13 @@ WidgetCorp's ops box runs a legitimate Apache site and not much else — or so t
 - `find / -perm -4000 -type f 2>/dev/null` finds every SUID binary on the box; most of what you'll see is normal, one isn't.
 - `ls /etc/sudoers.d/` and check each file's contents.
 
+</details>
+
 ## Scoring
 Run `sudo /vagrant/scripts/score_me.sh` inside the VM.
+
+<details>
+<summary>Scoring criteria (spoiler — click to reveal)</summary>
 
 | Points | Criteria |
 |---|---|
@@ -55,3 +66,5 @@ Run `sudo /vagrant/scripts/score_me.sh` inside the VM.
 | +1 | Apache web server still online |
 
 > **Expected persistence count: 6**
+
+</details>
