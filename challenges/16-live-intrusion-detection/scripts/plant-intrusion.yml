@@ -1,0 +1,53 @@
+---
+- name: Plant a live, disguised intrusion for CCDC practice
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Apache (legit business service) and netcat
+      apt:
+        name:
+          - apache2
+          - netcat-openbsd
+        state: present
+
+    - name: Drop the disguised beacon script
+      copy:
+        src: udevd-helper.sh
+        dest: /usr/lib/systemd/systemd-udevd-helper
+        mode: '0755'
+        owner: root
+        group: root
+
+    - name: Install the rogue systemd unit
+      copy:
+        dest: /etc/systemd/system/systemd-udevd-helper.service
+        content: |
+          [Unit]
+          Description=udev device event helper
+          After=network.target
+
+          [Service]
+          ExecStart=/usr/lib/systemd/systemd-udevd-helper
+          Restart=always
+
+          [Install]
+          WantedBy=multi-user.target
+
+    - name: Enable and start the rogue service
+      systemd:
+        name: systemd-udevd-helper
+        enabled: yes
+        state: started
+        daemon_reload: yes
+
+    - name: Drop fabricated IOC evidence (decoy — not the real answer)
+      copy:
+        dest: /tmp/.compromise_evidence
+        content: |
+          suspicious_ip=45.33.12.200
+          suspicious_domain=totally-legit-updates.net
+          note=partial IR notes from an earlier (unrelated) incident, left behind by mistake

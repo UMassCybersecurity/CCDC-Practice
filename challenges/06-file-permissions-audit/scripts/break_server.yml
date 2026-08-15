@@ -1,0 +1,58 @@
+---
+- name: Intentionally misconfigure permissions on the Ubuntu server for CCDC practice
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Apache web server
+      apt:
+        name: apache2
+        state: present
+
+    - name: Create the fileshare group
+      group:
+        name: fileshare
+        state: present
+
+    - name: Create the shared file-drop directory
+      file:
+        path: /srv/fileshare
+        state: directory
+        owner: root
+        group: root
+        mode: '0777'
+
+    - name: Drop a couple of "sensitive" files into the share
+      copy:
+        dest: "/srv/fileshare/{{ item }}"
+        content: "WidgetCorp internal document — {{ item }}\n"
+        mode: '0666'
+      loop:
+        - q3-payroll.txt
+        - vendor-contracts.txt
+
+    - name: Create a low-privileged intern account
+      user:
+        name: intern
+        shell: /bin/bash
+        state: present
+
+    - name: Set a password for intern (widget123)
+      shell: echo "intern:widget123" | chpasswd
+
+    - name: Grant intern unrestricted passwordless sudo (the backdoor)
+      copy:
+        dest: /etc/sudoers.d/90-intern
+        content: "intern ALL=(ALL) NOPASSWD:ALL\n"
+        mode: '0440'
+        validate: 'visudo -cf %s'
+
+    - name: Plant a SUID-root shell backdoor
+      shell: |
+        cp /bin/bash /usr/local/bin/.syshelper
+        chmod 4755 /usr/local/bin/.syshelper
+      args:
+        creates: /usr/local/bin/.syshelper

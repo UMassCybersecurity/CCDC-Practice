@@ -1,0 +1,11 @@
+[Unit]
+Description=WidgetCorp App
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/widgetapp/app.py
+User=root
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

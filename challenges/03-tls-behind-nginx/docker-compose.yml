@@ -1,0 +1,16 @@
+services:
+  backend:
+    image: nginx:alpine
+    volumes:
+      - ./backend:/usr/share/nginx/html:ro
+
+  edge:
+    image: nginx:alpine
+    depends_on:
+      - backend
+    volumes:
+      - ./edge:/etc/nginx/conf.d
+      - ./certs:/etc/nginx/certs:ro
+    ports:
+      - "8100:80"
+      - "8143:443"

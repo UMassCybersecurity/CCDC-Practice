@@ -1,0 +1,5 @@
+services:
+  app:
+    build: ./app
+    ports:
+      - "8103:5000"

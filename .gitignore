@@ -26,6 +26,10 @@ desktop.ini
 *.log
 crash.log
 
+# ...except seeded log fixtures that are challenge content, not build output
+!challenges/13-log-triage/auth.log
+!challenges/15-brute-force-detector/auth.log
+
 # Editor files
 *.swp
 *.swo

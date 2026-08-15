@@ -1,0 +1,6 @@
+services:
+  web:
+    build: .
+    container_name: ccdc-09-webshell-hunt
+    ports:
+      - "8201:80"

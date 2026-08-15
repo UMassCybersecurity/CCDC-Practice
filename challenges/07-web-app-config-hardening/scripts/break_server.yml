@@ -1,0 +1,74 @@
+---
+- name: Intentionally misconfigure the WidgetCorp app server for CCDC practice
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install nginx, python3, and Flask
+      apt:
+        name:
+          - nginx
+          - python3
+          - python3-flask
+        state: present
+
+    - name: Create the app directory
+      file:
+        path: /opt/widgetapp
+        state: directory
+        mode: '0755'
+
+    - name: Deploy the app (with a hardcoded default admin credential)
+      copy:
+        src: app.py
+        dest: /opt/widgetapp/app.py
+        mode: '0644'
+
+    - name: Install the systemd unit (running as root — the vulnerability)
+      copy:
+        src: widgetapp.service
+        dest: /etc/systemd/system/widgetapp.service
+        mode: '0644'
+      notify: Reload and restart widgetapp
+
+    - name: Remove the default nginx site
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+      notify: Restart nginx
+
+    - name: Install the nginx site (with directory listing enabled — the vulnerability)
+      copy:
+        src: widgetapp-nginx.conf
+        dest: /etc/nginx/sites-available/widgetapp
+        mode: '0644'
+      notify: Restart nginx
+
+    - name: Enable the nginx site
+      file:
+        src: /etc/nginx/sites-available/widgetapp
+        dest: /etc/nginx/sites-enabled/widgetapp
+        state: link
+      notify: Restart nginx
+
+    - name: Enable and start widgetapp
+      systemd:
+        name: widgetapp
+        enabled: yes
+        state: started
+        daemon_reload: yes
+
+  handlers:
+    - name: Reload and restart widgetapp
+      systemd:
+        name: widgetapp
+        state: restarted
+        daemon_reload: yes
+
+    - name: Restart nginx
+      service:
+        name: nginx
+        state: restarted

