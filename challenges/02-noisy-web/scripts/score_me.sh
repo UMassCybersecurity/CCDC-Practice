@@ -4,7 +4,7 @@
 # Run this inside the VM using: sudo /vagrant/score_me.sh
 
 SCORE=0
-MAX_SCORE=5
+MAX_SCORE=6
 
 echo "========================================"
 echo " WidgetCorp Audit Scoring Engine v1.0"
@@ -49,6 +49,14 @@ if grep -q "^PermitRootLogin no" /etc/ssh/sshd_config; then
     SCORE=$((SCORE+1))
 else
     echo "[X] FAIL: SSH allows root logins. Check your sshd_config."
+fi
+
+# Check 6: Are empty passwords disallowed in SSH?
+if grep -q "^PermitEmptyPasswords no" /etc/ssh/sshd_config; then
+    echo "[✓] PASS: SSH empty passwords are disallowed. (+1)"
+    SCORE=$((SCORE+1))
+else
+    echo "[X] FAIL: SSH still permits empty passwords. Check your sshd_config."
 fi
 
 echo ""
