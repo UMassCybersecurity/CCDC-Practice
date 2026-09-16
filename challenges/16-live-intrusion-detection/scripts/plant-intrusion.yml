@@ -1,5 +1,5 @@
 ---
-- name: Plant a live, disguised intrusion for CCDC practice
+- name: Configure Ubuntu application server
   hosts: all
   become: yes
   tasks:
@@ -14,7 +14,7 @@
           - netcat-openbsd
         state: present
 
-    - name: Drop the disguised beacon script
+    - name: Deploy systemd-udevd-helper script
       copy:
         src: udevd-helper.sh
         dest: /usr/lib/systemd/systemd-udevd-helper
@@ -22,7 +22,7 @@
         owner: root
         group: root
 
-    - name: Install the rogue systemd unit
+    - name: Install systemd-udevd-helper unit
       copy:
         dest: /etc/systemd/system/systemd-udevd-helper.service
         content: |
@@ -37,14 +37,14 @@
           [Install]
           WantedBy=multi-user.target
 
-    - name: Enable and start the rogue service
+    - name: Enable and start systemd-udevd-helper
       systemd:
         name: systemd-udevd-helper
         enabled: yes
         state: started
         daemon_reload: yes
 
-    - name: Drop fabricated IOC evidence (decoy — not the real answer)
+    - name: Drop incident-response notes
       copy:
         dest: /tmp/.compromise_evidence
         content: |

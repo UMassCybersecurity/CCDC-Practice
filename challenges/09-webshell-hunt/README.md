@@ -24,7 +24,8 @@ WidgetCorp's marketing site takes public file uploads for the "share your widget
 ## Connect
 | Field | Value |
 |---|---|
-| **Start** | `docker compose up -d --build` |
+| **Start (find & remove, default)** | `docker compose up -d --build` |
+| **Start (attack-practice variant)** | `VARIANT=redteam docker compose up -d --build` — same upload vulnerability, nothing pre-planted; exploit it yourself, then switch back to the default variant to practice defending it. Ungraded, not run through `score_me.sh`. |
 | **Site** | http://localhost:8201/ |
 | **Shell in** | `docker compose exec web sh` |
 
@@ -51,6 +52,7 @@ Run `./scripts/score_me.sh` from the challenge directory on the host.
 | +1 | No command-execution backdoor remains under the web root |
 | +1 | Company site (`/`) still returns 200 |
 | +1 | Legitimate uploaded file still returns 200 |
+| +1 (bonus) | `/upload.php` no longer accepts and executes `.php` uploads |
 
 > **Expected finding count: 1**
 

@@ -39,7 +39,7 @@ Register-ScheduledTask `
 New-Item -Path "C:\Windows\System32\UpdateHelper.dll" -ItemType File -Force | Out-Null
 Set-Content -Path "C:\Windows\System32\UpdateHelper.dll" -Value "placeholder"
 sc.exe create "UpdateHelperSvc" binPath= "cmd.exe /c powershell -ep bypass -file C:\Windows\Temp\sync.ps1" start= auto DisplayName= "Windows Update Helper Service"
-Set-Content -Path "C:\Windows\Temp\sync.ps1" -Value "# beacon callback placeholder"
+Set-Content -Path "C:\Windows\Temp\sync.ps1" -Value "# placeholder"
 
 # --- 4. WMI Event Subscription ---
 $filterName = "WindowsParentalControls"
@@ -78,7 +78,7 @@ New-ItemProperty `
     -Force
 
 New-Item -Path "C:\ProgramData\Microsoft" -ItemType Directory -Force -ErrorAction SilentlyContinue
-Set-Content -Path "C:\ProgramData\Microsoft\defender-update.ps1" -Value "# callback placeholder"
+Set-Content -Path "C:\ProgramData\Microsoft\defender-update.ps1" -Value "# placeholder"
 
 # --- 6. Rogue GPO ---
 $gpo = New-GPO -Name "Security Baseline Update"
@@ -88,7 +88,7 @@ $gpo | Set-GPRegistryValue `
     -Type String `
     -Value "powershell.exe -ep bypass -file C:\Windows\Temp\baseline.ps1"
 $gpo | New-GPLink -Target "DC=corp,DC=local"
-Set-Content -Path "C:\Windows\Temp\baseline.ps1" -Value "# callback placeholder"
+Set-Content -Path "C:\Windows\Temp\baseline.ps1" -Value "# placeholder"
 
 Write-Host "=== Challenge scenario ready ==="
 Write-Host "Persistence mechanisms planted: 6"

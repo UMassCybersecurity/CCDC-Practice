@@ -13,8 +13,8 @@ It also appends a shell function to `/etc/bash.bashrc` that shadows `sudo`, logg
 1. `docker compose exec app bash`
 2. `crontab -l` — confirm both the legit backup line and the per-minute `whoami` line are present.
 3. `crontab -l | grep -v whoami | crontab -` — removes only the unauthorized line, leaves the backup job.
-4. `grep -n 'training artifact' /etc/bash.bashrc` — locate the backdoor block.
-5. `sed -i '/training artifact: logs sudo invocations/,/^}/d' /etc/bash.bashrc` — removes the whole planted block (comment through closing brace).
+4. `grep -n 'sudo()' /etc/bash.bashrc` — locate the shadowed-`sudo` function.
+5. `sed -i '/^sudo() {/,/^}/d' /etc/bash.bashrc` — removes the whole planted block.
 6. `exit` back to the host, then `docker compose exec app score_me.sh` to confirm a perfect score.
 
 ## Validation

@@ -1,5 +1,5 @@
 ---
-- name: Intentionally misconfigure the WidgetCorp app server for CCDC practice
+- name: Configure the WidgetCorp app server
   hosts: all
   become: yes
   tasks:
@@ -21,13 +21,13 @@
         state: directory
         mode: '0755'
 
-    - name: Deploy the app (with a hardcoded default admin credential)
+    - name: Deploy the app
       copy:
         src: app.py
         dest: /opt/widgetapp/app.py
         mode: '0644'
 
-    - name: Install the systemd unit (running as root — the vulnerability)
+    - name: Install the systemd unit
       copy:
         src: widgetapp.service
         dest: /etc/systemd/system/widgetapp.service
@@ -40,7 +40,7 @@
         state: absent
       notify: Restart nginx
 
-    - name: Install the nginx site (with directory listing enabled — the vulnerability)
+    - name: Install the nginx site
       copy:
         src: widgetapp-nginx.conf
         dest: /etc/nginx/sites-available/widgetapp

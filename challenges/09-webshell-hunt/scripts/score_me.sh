@@ -38,6 +38,21 @@ else
     echo "[X] FAIL: Legitimate uploaded file is missing (got $CODE)."
 fi
 
+# Bonus check: upload endpoint no longer accepts executable file types
+PROBE=$(mktemp)
+echo '<?php echo "SCORER_PROBE_EXECUTED"; ?>' > "$PROBE"
+curl -s -F "photo=@${PROBE};filename=score_probe.php" http://localhost:8201/upload.php -o /dev/null
+RESPONSE=$(curl -s --max-time 5 http://localhost:8201/uploads/score_probe.php)
+rm -f "$PROBE"
+docker compose exec -T web rm -f /var/www/html/uploads/score_probe.php 2>/dev/null
+if [ "$RESPONSE" != "SCORER_PROBE_EXECUTED" ]; then
+    echo "[✓] BONUS: Upload endpoint no longer accepts and executes .php uploads. (+1)"
+    SCORE=$((SCORE+1))
+    MAX_SCORE=$((MAX_SCORE+1))
+else
+    echo "[ ] BONUS (not required): /upload.php still accepts and executes .php uploads — the same hole the original backdoor came through."
+fi
+
 echo ""
 echo "========================================"
 echo " FINAL SCORE: $SCORE / $MAX_SCORE"
