@@ -4,6 +4,7 @@
 **Difficulty:** Medium
 **Time estimate:** 30-60 minutes
 **Format:** Vagrant (Windows/AD)
+**Track:** AD/Windows
 
 ## Scenario
 Your organization's domain controller was compromised last weekend. The incident response team removed the initial malware, but they suspect the attacker left multiple persistence mechanisms behind. Your job: find and remove **ALL** of them.

@@ -4,6 +4,7 @@
 **Difficulty:** Hard
 **Time estimate:** 40-60 minutes
 **Format:** Vagrant (Windows/AD)
+**Track:** AD/Windows
 
 ## Scenario
 corp.local's domain controller was compromised again — a different attacker than the one from Challenge 01, using a different playbook. This one favored quieter, more privileged techniques than last time. Find all five and remove them without breaking the domain.

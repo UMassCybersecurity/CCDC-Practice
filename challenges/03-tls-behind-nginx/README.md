@@ -4,6 +4,7 @@
 **Difficulty:** Easy
 **Time estimate:** 20-30 minutes
 **Format:** Docker
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 WidgetCorp's edge nginx was stood up in a hurry to front the internal "backend" service. Someone dropped a self-signed certificate in place for "later" and never finished the job — the site is still plain HTTP, and there's no redirect to force clients onto an encrypted connection. Security wants this fixed before the next audit.

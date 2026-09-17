@@ -4,6 +4,7 @@
 **Difficulty:** Medium
 **Time estimate:** 40-60 minutes
 **Format:** Vagrant (Linux)
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 WidgetCorp's internal app went from "works on my machine" to production without a second look: it runs as root under systemd, the default admin credential from the demo build is still live, and nginx is happily listing the app's source directory to anyone who asks.

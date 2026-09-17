@@ -4,6 +4,7 @@
 **Difficulty:** Easy
 **Time estimate:** 20-30 minutes
 **Format:** Docker
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 WidgetCorp's "inventory-app" stores its counters in Redis. Whoever wired this up published Redis straight to the host with no password, so anyone who can reach port 8101 has full read/write access to the datastore behind your application.

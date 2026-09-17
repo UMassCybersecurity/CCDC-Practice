@@ -1,0 +1,4 @@
+services:
+  app:
+    build: .
+    container_name: ccdc-26-siem-detection-rule

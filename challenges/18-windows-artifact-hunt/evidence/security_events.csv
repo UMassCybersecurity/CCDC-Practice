@@ -1,0 +1,16 @@
+TimeCreated,Id,ProviderName,Message
+2026-09-12 07:58:01,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 2
+2026-09-12 07:58:02,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: jsmith
+2026-09-12 08:10:15,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 3
+2026-09-12 08:22:47,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: jsmith
+2026-09-12 08:40:03,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 2
+2026-09-12 08:40:04,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: administrator
+2026-09-12 08:55:19,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: administrator
+2026-09-12 09:02:11,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-monitor Logon Type: 5
+2026-09-12 09:12:40,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\RtkAudUService64.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 09:15:02,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 2
+2026-09-12 09:31:07,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: jsmith
+2026-09-12 09:41:52,4624,Microsoft-Windows-Security-Auditing,An RDP logon attempt reached the Winlogon secure desktop. Account: -
+2026-09-12 09:41:58,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\cmd.exe Creator Process Name: C:\Windows\System32\sethc.exe Creator Process ID: 0x8ac
+2026-09-12 09:42:31,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\ProgramData\Microsoft\svchost.exe Creator Process Name: C:\Windows\System32\cmd.exe
+2026-09-12 09:55:00,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 3

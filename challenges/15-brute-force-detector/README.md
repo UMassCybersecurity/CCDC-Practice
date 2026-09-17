@@ -4,6 +4,7 @@
 **Difficulty:** Medium
 **Time estimate:** 30-40 minutes
 **Format:** Docker
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 `prod-app03` has a day's worth of SSH auth logs, and somewhere in the noise

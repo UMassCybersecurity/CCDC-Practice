@@ -4,6 +4,7 @@
 **Difficulty:** Easy
 **Time estimate:** 20-30 minutes
 **Format:** Docker
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 A dev spun up WidgetCorp's public API container and never took the training wheels off: debug mode is still on, an API key is hardcoded and echoed back on a status page, and the static file route will happily serve any file in its directory — including the `.env` sitting right next to the legit assets.

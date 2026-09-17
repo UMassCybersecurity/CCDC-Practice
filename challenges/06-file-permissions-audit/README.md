@@ -4,6 +4,7 @@
 **Difficulty:** Medium
 **Time estimate:** 40-60 minutes
 **Format:** Vagrant (Linux)
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 WidgetCorp's file-drop server hosts a shared directory for internal documents, fronted by an Apache default page for a status check. An audit turned up sloppy permissions across the box — a world-writable share, a low-privileged account with unrestricted sudo, and something that looks like a privilege-escalation backdoor hiding in `/usr/local/bin`.

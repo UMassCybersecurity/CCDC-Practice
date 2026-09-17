@@ -4,6 +4,7 @@
 **Difficulty:** Easy
 **Time estimate:** 20-30 minutes
 **Format:** Docker
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 WidgetCorp's monitoring box runs one job: a lightweight agent that writes a heartbeat every few seconds. Someone noticed the box's process list looks a little busier than a single heartbeat script should account for.

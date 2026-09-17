@@ -4,6 +4,7 @@
 **Difficulty:** Easy
 **Time estimate:** 20-30 minutes
 **Format:** Docker
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 A network tap upstream of `intranet.corp` caught a short window of traffic

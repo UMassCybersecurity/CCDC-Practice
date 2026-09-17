@@ -4,6 +4,7 @@
 **Difficulty:** Hard
 **Time estimate:** 40-60 minutes
 **Format:** Vagrant (Linux)
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 WidgetCorp's ops box runs a legitimate Apache site and not much else — or so the previous admin thought. An audit is coming up and you've been asked to sweep the box for anything that shouldn't be there before it happens.

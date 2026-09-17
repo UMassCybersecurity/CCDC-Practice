@@ -4,6 +4,7 @@
 **Difficulty:** Medium
 **Time estimate:** 40-60 minutes
 **Format:** Vagrant (Linux)
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 `prod-app03` is live and serving traffic right now — and so, apparently, is

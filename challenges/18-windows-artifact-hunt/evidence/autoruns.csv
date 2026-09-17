@@ -1,0 +1,12 @@
+Entry Location,Entry,Enabled,Category,Profile,Description,Publisher,Image Path,Timestamp
+HKLM\...\Run,OneDrive,Enabled,Logon,System,Microsoft OneDrive,(Verified) Microsoft Corporation,C:\Program Files\Microsoft OneDrive\OneDrive.exe,2026-08-01 09:14:02
+HKLM\...\Run,SecurityHealth,Enabled,Logon,System,Windows Security notification icon,(Verified) Microsoft Windows,C:\Windows\System32\SecurityHealthSystray.exe,2026-08-01 09:14:02
+HKLM\...\Run,NvBackend,Enabled,Logon,System,NVIDIA GeForce Experience,(Verified) NVIDIA Corporation,C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe,2026-08-01 09:14:05
+Scheduled Tasks,GoogleUpdateTaskMachineCore,Enabled,Task Scheduler,System,Keeps Google software up to date,(Verified) Google LLC,C:\Program Files (x86)\Google\Update\GoogleUpdate.exe,2026-08-01 09:15:11
+Scheduled Tasks,OneDrive Standalone Update Task,Enabled,Task Scheduler,System,Updates OneDrive,(Verified) Microsoft Corporation,C:\Program Files\Microsoft OneDrive\OneDriveStandaloneUpdater.exe,2026-08-01 09:15:12
+Services,RealtekAudioService,Enabled,Boot Execute,System,Realtek Audio Universal Service,(Verified) Realtek Semiconductor,C:\Windows\System32\RtkAudUService64.exe,2026-08-01 09:14:22
+Services,WdNisSvc,Enabled,Boot Execute,System,Windows Defender Antivirus Network Inspection Service,(Verified) Microsoft Windows,C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24070.5\NisSrv.exe,2026-08-01 09:14:23
+HKLM\...\Winlogon\Notify,GPClient,Enabled,Boot Execute,System,Group Policy Client-Side Extension,(Verified) Microsoft Corporation,C:\Windows\System32\gpclient.dll,2026-08-01 09:14:01
+Codecs,MSVideo,Enabled,Codec,System,Microsoft Video Codec,(Verified) Microsoft Corporation,C:\Windows\System32\msyuv.dll,2026-08-01 09:14:01
+HKLM\...\Run,WinUpdateHelper,Enabled,Logon,System,Windows Update Helper,(Not verified) Unknown,C:\ProgramData\Microsoft\svchost.exe,2026-09-12 03:41:57
+HKLM\...\Run,Dropbox,Enabled,Logon,System,Dropbox desktop sync client,(Verified) Dropbox Inc,C:\Program Files (x86)\Dropbox\Client\Dropbox.exe,2026-08-03 14:02:40

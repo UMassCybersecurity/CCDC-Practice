@@ -1,6 +1,9 @@
 # Vagrant
 .vagrant/
 
+# Packaged challenge bundles (scripts/package-challenge.sh output)
+dist/
+
 # Packer output
 packer/output/
 

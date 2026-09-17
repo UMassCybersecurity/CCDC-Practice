@@ -54,6 +54,21 @@ Pick the lightest family that fits the scenario: reach for Docker first, fall ba
 
 **Adding a new challenge**: create `challenges/<NN-name>/README.md` and `ANSWER.md` plus whichever of the above families fits — `Vagrantfile` + `scripts/` for a VM-based challenge (`require_relative "../../shared/base"` and call `apply_base_config(config)` if it's Windows/AD), or `docker-compose.yml` (+ supporting config) for a lightweight one. Validate the answer file end-to-end against a fresh build before considering the challenge done.
 
+**Tracks**: every challenge's README header carries a `**Track:**` line (right after `**Format:**`) of either `AD/Windows` or `Linux/Docker/SIEM` — the two screening tracks. This is independent of family/format (e.g. `18-windows-artifact-hunt` is Docker-format but AD/Windows-track, since its content tests AD/Windows knowledge). When adding a challenge, set `Track:` to whichever track its *subject matter* belongs to, not its underlying family.
+
+## Packaging
+
+`scripts/package-challenge.sh <challenge-dir> [--bundle candidate|instructor|both] [--offline] [--build-box]` zips a challenge up for distribution (e.g. handing it to screening candidates via Google Drive). Output lands in `dist/` at the repo root (gitignored). Run it with no args for full usage.
+
+It always produces two different things, because the provisioning script for a Vagrant-based challenge (`plant-backdoors.ps1`, `break_server.yml`) **is the answer key** per the "Challenge scripts are the challenge" rule above:
+
+- **Instructor bundle** (`<name>-instructor.zip`): the whole directory, answer key and all.
+- **Candidate bundle** (`<name>-candidate.zip`): `ANSWER.md` and `scripts/score_me.*` stripped. For Docker challenges that's sufficient — the compromised/vulnerable *content* the candidate needs to find (e.g. a planted webshell file) ships fine, since finding it is the point; only the grading script and the write-up are withheld. For **Windows/AD and Linux-VM (Vagrant) challenges**, stripping isn't enough, because the provisioning script itself runs at `vagrant up` and would still leak the answer — so those candidate bundles instead ship a pre-provisioned `.box` (built once via `--build-box`, which runs `vagrant up` + `vagrant package` + `vagrant destroy`) plus a minimal, provisioning-free Vagrantfile. The `.box` file is separate from the zip (multi-GB, not worth re-compressing) and needs to be uploaded/shared alongside it.
+
+`--offline` (Docker challenges only) additionally `docker save`s the built image(s) into the candidate bundle and rewrites `docker-compose.yml` to reference `image:` instead of `build:`, so the candidate doesn't need registry access — useful for the screening subset where you don't want a slow/flaky first build blocking a timed session.
+
+The shared `ccdc/dc-base` box (see Architecture above) is a one-time dependency for every Windows/AD challenge, distinct from any single challenge's packaged candidate box — build and share it once (`cd packer && packer build .`, then `gzip`/upload the `.box`), not per-challenge.
+
 ## Credentials & network (Vagrant challenges)
 
 | Role | Username | Password |

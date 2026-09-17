@@ -4,6 +4,7 @@
 **Difficulty:** Easy
 **Time estimate:** 30 minutes
 **Format:** Vagrant (Linux)
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 Welcome to WidgetCorp. You are the new IT Administrator. The previous admin left abruptly and set up a new Ubuntu web server, but we suspect they left it highly insecure. We have an audit in 30 minutes.

@@ -4,6 +4,7 @@
 **Difficulty:** Medium
 **Time estimate:** 40-60 minutes
 **Format:** Vagrant (Linux)
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 `prod-app04`'s logs look clean — suspiciously clean. Someone tampered with

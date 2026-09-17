@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+; Exported from HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options
+; via: reg export "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options" ifeo_export.reg
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\AcroRd32.exe]
+"CompatibilityFlags"=dword:00000100
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\vpnclient_x64.exe]
+"MitigationOptions"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\OldSetup.exe]
+"CompatibilityFlags"=dword:00000200
+"LayerName"="WIN7RTM"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\sethc.exe]
+"Debugger"="C:\\Windows\\System32\\cmd.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\reportingsvc.exe]
+"MitigationOptions"=hex:00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00

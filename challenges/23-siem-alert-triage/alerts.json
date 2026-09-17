@@ -1,0 +1,40 @@
+[
+  {"id": 1005, "timestamp": "2026-02-10T02:14:11Z", "rule_name": "Multiple Failed Logins", "severity": "low", "source_ip": "203.0.113.9", "dest_ip": "10.0.2.15", "description": "Repeated failed SSH logins against web01 from a known internet-wide scanner range; no successful login followed."},
+  {"id": 1006, "timestamp": "2026-02-10T02:16:40Z", "rule_name": "Multiple Failed Logins", "severity": "low", "source_ip": "203.0.113.9", "dest_ip": "10.0.2.15", "description": "Continued scanner brute-force noise, same source as prior alert, no escalation."},
+  {"id": 1011, "timestamp": "2026-02-10T04:02:55Z", "rule_name": "Antivirus Signature Update", "severity": "info", "source_ip": "10.0.2.15", "dest_ip": "10.0.0.5", "description": "Endpoint AV definitions updated successfully on web01."},
+  {"id": 1013, "timestamp": "2026-02-10T05:47:20Z", "rule_name": "Outbound Connection to New Domain", "severity": "low", "source_ip": "10.0.4.22", "dest_ip": "52.20.14.87", "description": "First-seen outbound connection to a SaaS analytics domain from finance workstation; matches newly-approved vendor."},
+  {"id": 1017, "timestamp": "2026-02-10T06:30:02Z", "rule_name": "New Process Created", "severity": "info", "source_ip": "10.0.2.15", "dest_ip": "10.0.2.15", "description": "Scheduled backup process (backup-agent.exe) started under its normal service account, matches daily 06:30 baseline."},
+  {"id": 1019, "timestamp": "2026-02-10T07:05:44Z", "rule_name": "Multiple Failed Logins", "severity": "low", "source_ip": "198.51.100.201", "dest_ip": "10.0.2.15", "description": "Handful of failed logins from an unrelated scanning host, tapers off with no success."},
+  {"id": 1022, "timestamp": "2026-02-10T07:58:13Z", "rule_name": "New Process Created", "severity": "info", "source_ip": "10.0.4.9", "dest_ip": "10.0.4.9", "description": "Nightly antivirus scan process started on HR workstation, matches baseline."},
+  {"id": 1026, "timestamp": "2026-02-10T08:12:39Z", "rule_name": "VPN Login Success", "severity": "info", "source_ip": "10.0.6.14", "dest_ip": "10.0.0.2", "description": "Employee VPN login from registered device, normal start-of-day pattern."},
+  {"id": 1031, "timestamp": "2026-02-10T08:44:02Z", "rule_name": "Outbound Connection to New Domain", "severity": "low", "source_ip": "10.0.4.31", "dest_ip": "104.18.32.7", "description": "Marketing workstation reaches a new CDN-hosted domain; matches a newly published vendor asset."},
+  {"id": 1037, "timestamp": "2026-02-10T09:01:55Z", "rule_name": "Multiple Failed Logins", "severity": "low", "source_ip": "203.0.113.9", "dest_ip": "10.0.2.18", "description": "Same scanner range hitting a second host, still no successful authentication."},
+
+  {"id": 1042, "timestamp": "2026-02-10T09:14:02Z", "rule_name": "Web Recon Scan Detected", "severity": "medium", "source_ip": "198.51.100.44", "dest_ip": "10.0.2.15", "description": "Automated path and parameter scanning detected against /app endpoints on web01 from an external host."},
+  {"id": 1043, "timestamp": "2026-02-10T09:16:47Z", "rule_name": "New Process Created", "severity": "info", "source_ip": "10.0.4.9", "dest_ip": "10.0.4.9", "description": "Print spooler restarted by helpdesk technician, matches open change ticket."},
+  {"id": 1045, "timestamp": "2026-02-10T09:22:10Z", "rule_name": "Multiple Failed Logins", "severity": "low", "source_ip": "198.51.100.201", "dest_ip": "10.0.2.18", "description": "Unrelated scanner noise against a different host, no correlation to web01 activity."},
+  {"id": 1046, "timestamp": "2026-02-10T09:28:33Z", "rule_name": "Antivirus Signature Update", "severity": "info", "source_ip": "10.0.4.31", "dest_ip": "10.0.0.5", "description": "Routine AV definition update on marketing workstation."},
+
+  {"id": 1047, "timestamp": "2026-02-10T09:31:18Z", "rule_name": "SQL Injection Attempt Blocked", "severity": "medium", "source_ip": "198.51.100.44", "dest_ip": "10.0.2.15", "description": "Malformed SQL syntax observed in the login form 'username' parameter on web01; WAF rule matched but the request reached the application layer before the block was enforced."},
+
+  {"id": 1048, "timestamp": "2026-02-10T09:33:02Z", "rule_name": "Outbound Connection to New Domain", "severity": "low", "source_ip": "10.0.4.22", "dest_ip": "13.107.6.156", "description": "Finance workstation reaches a Microsoft 365 endpoint, matches baseline."},
+  {"id": 1050, "timestamp": "2026-02-10T09:36:40Z", "rule_name": "New Process Created", "severity": "info", "source_ip": "10.0.6.14", "dest_ip": "10.0.6.14", "description": "Browser update process launched on employee laptop, matches baseline."},
+
+  {"id": 1051, "timestamp": "2026-02-10T09:38:55Z", "rule_name": "Anomalous Outbound Shell", "severity": "high", "source_ip": "10.0.2.15", "dest_ip": "198.51.100.44", "description": "web01 initiated an outbound TCP connection to an external host on port 4444, inconsistent with baseline outbound traffic for this asset."},
+
+  {"id": 1052, "timestamp": "2026-02-10T09:39:47Z", "rule_name": "Multiple Failed Logins", "severity": "low", "source_ip": "203.0.113.9", "dest_ip": "10.0.2.18", "description": "Continued unrelated scanner noise, no escalation."},
+
+  {"id": 1053, "timestamp": "2026-02-10T09:41:07Z", "rule_name": "New Local Admin Account Created", "severity": "high", "source_ip": "10.0.2.15", "dest_ip": "10.0.2.15", "description": "Local account 'svc_update' was added to the Administrators group on web01 outside any approved change window."},
+
+  {"id": 1054, "timestamp": "2026-02-10T09:45:20Z", "rule_name": "VPN Login Success", "severity": "info", "source_ip": "10.0.6.22", "dest_ip": "10.0.0.2", "description": "Employee VPN login from a registered device, normal pattern."},
+  {"id": 1056, "timestamp": "2026-02-10T09:49:03Z", "rule_name": "Outbound Connection to New Domain", "severity": "low", "source_ip": "10.0.4.9", "dest_ip": "151.101.1.69", "description": "HR workstation reaches a newly-onboarded benefits-provider domain, matches change ticket."},
+
+  {"id": 1058, "timestamp": "2026-02-10T09:52:30Z", "rule_name": "Scheduled Task Created by Non-Admin Context", "severity": "high", "source_ip": "10.0.2.15", "dest_ip": "10.0.2.15", "description": "Scheduled task 'SysHealthCheck' was created under SYSTEM context by a non-interactive process shortly after the local admin account was created on web01."},
+
+  {"id": 1061, "timestamp": "2026-02-10T11:05:14Z", "rule_name": "Multiple Failed Logins", "severity": "low", "source_ip": "203.0.113.9", "dest_ip": "10.0.2.15", "description": "Scanner range continues probing web01, unrelated to the earlier successful compromise."},
+  {"id": 1064, "timestamp": "2026-02-10T13:22:48Z", "rule_name": "New Process Created", "severity": "info", "source_ip": "10.0.4.31", "dest_ip": "10.0.4.31", "description": "Design software auto-updater ran on marketing workstation, matches baseline."},
+  {"id": 1070, "timestamp": "2026-02-10T15:40:19Z", "rule_name": "Antivirus Signature Update", "severity": "info", "source_ip": "10.0.2.18", "dest_ip": "10.0.0.5", "description": "Routine AV definition update on secondary web host."},
+  {"id": 1076, "timestamp": "2026-02-10T18:02:57Z", "rule_name": "Outbound Connection to New Domain", "severity": "low", "source_ip": "10.0.6.14", "dest_ip": "142.250.72.14", "description": "Employee laptop reaches a common consumer domain during lunch hours, matches historical pattern."},
+  {"id": 1083, "timestamp": "2026-02-10T20:11:33Z", "rule_name": "Multiple Failed Logins", "severity": "low", "source_ip": "198.51.100.201", "dest_ip": "10.0.2.18", "description": "Late-day unrelated scanner noise, no successful authentication."},
+  {"id": 1090, "timestamp": "2026-02-10T22:48:05Z", "rule_name": "VPN Login Success", "severity": "info", "source_ip": "10.0.6.9", "dest_ip": "10.0.0.2", "description": "On-call engineer VPN login from a registered device, matches on-call schedule."}
+]

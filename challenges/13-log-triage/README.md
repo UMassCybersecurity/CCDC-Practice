@@ -4,6 +4,7 @@
 **Difficulty:** Easy
 **Time estimate:** 20 minutes
 **Format:** Docker
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 Overnight monitoring flagged unusual SSH activity on `prod-web01`. Nobody has

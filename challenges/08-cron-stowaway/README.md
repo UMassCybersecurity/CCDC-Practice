@@ -4,6 +4,7 @@
 **Difficulty:** Easy
 **Time estimate:** 20-30 minutes
 **Format:** Docker
+**Track:** Linux/Docker/SIEM
 
 ## Scenario
 WidgetCorp's nightly backup box has been running unattended for months. A junior admin noticed the box "feels busier than it should be" and asked you to take a look before this week's audit. Nothing is on fire — but something doesn't belong.

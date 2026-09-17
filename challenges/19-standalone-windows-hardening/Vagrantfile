@@ -1,0 +1,8 @@
+# Challenge 19: Standalone Windows Hardening
+# Difficulty: Easy-Medium
+# Time estimate: 25-35 minutes
+require_relative "../../shared/base"
+Vagrant.configure("2") do |config|
+ apply_base_config(config)
+ config.vm.provision "shell", path: "scripts/plant-backdoors.ps1"
+end
