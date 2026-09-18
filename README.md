@@ -84,3 +84,21 @@ packer init .
 packer build .
 vagrant box add ccdc/dc-base output/package.box --force
 ```
+
+---
+
+## Packaging Challenges for Distribution
+
+To zip up a challenge for handing out (e.g. to screening candidates via Google Drive):
+
+```bash
+scripts/package-challenge.sh <challenge-dir-name> [--bundle candidate|instructor|both] [--offline] [--build-box]
+```
+
+| Flag | Purpose |
+|---|---|
+| `--bundle candidate\|instructor\|both` | Which bundle(s) to produce (default: `both`) |
+| `--offline` | Docker challenges only: bakes the built image(s) into the candidate bundle via `docker save`, so candidates don't need registry access |
+| `--build-box` | Windows/AD and Linux-VM (Vagrant) challenges only: runs `vagrant up` + `vagrant package` to produce a pre-provisioned `.box` for the candidate bundle, since the provisioning script itself is the answer key. Slow — run once per challenge before its candidate bundle can be built |
+
+Output lands in `dist/` at the repo root (gitignored). Run with no args for full usage.
