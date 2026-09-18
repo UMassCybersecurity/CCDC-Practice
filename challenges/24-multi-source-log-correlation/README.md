@@ -13,15 +13,6 @@ came out of last week's IR data pull — `nginx_access.log`, the app's own
 The attack only becomes obvious once you line the three up by timestamp and
 IP and read them together.
 
-<details>
-<summary><strong>Learning Objectives</strong> (spoiler — click to reveal)</summary>
-
-- Correlate web server, application, and authentication logs into a single timeline
-- Recognize that an attacker's source IP can change mid-chain once they pivot through a compromised service
-- Distinguish an application-layer vulnerability indicator (in `app.log`) from the request that triggered it (in `nginx_access.log`)
-
-</details>
-
 ## Objectives
 - Identify the attacker's source IP
 - Identify the vulnerable endpoint that was exploited
@@ -48,15 +39,6 @@ ENDPOINT: <the exploited path>
 PERSISTENCE: <short description of the persistence mechanism>
 TIME: <nginx-format timestamp of the initial exploit request>
 ```
-
-<details>
-<summary><strong>Hints</strong> (try without these first — click to reveal)</summary>
-
-- Start with `nginx_access.log` and look for a single IP doing recon (404s on `/admin`, `/phpmyadmin`, etc.) immediately before a successful `POST`.
-- `app.log` explains *why* that request mattered — grep it for `WARN`/`ERROR`.
-- The persistence event in `auth.log` won't come from the attacker's IP — the attacker is pivoting through the web app by then, not SSHing in directly. Look at what's happening a few minutes *after* the exploit, from `localhost`/the web server's own user context.
-
-</details>
 
 ## Scoring
 From the challenge directory on the host: `docker compose exec app /scripts/score_me.sh`

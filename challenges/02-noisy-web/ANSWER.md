@@ -2,6 +2,29 @@
 
 **DO NOT READ BEFORE ATTEMPTING THE CHALLENGE**
 
+## Learning Objectives
+- Enable and configure a host firewall (UFW) without locking yourself out
+- Identify and disable an unnecessary/vulnerable network service
+- Find and remove or lock an unauthorized local account
+- Harden `sshd_config` against root login and empty-password authentication
+- Fix a misconfigured system without taking down the service it's meant to protect
+
+## Hints
+- `ufw status` / `ufw enable` — a default-deny inbound policy plus explicit allows for the ports you actually need is the simplest fix.
+- `systemctl status vsftpd` — is an FTP server actually part of this box's job?
+- `cat /etc/passwd` and `getent group sudo` — check for accounts that don't belong, especially ones with sudo rights.
+- `/etc/ssh/sshd_config` — both root login and empty-password authentication should be explicitly disabled.
+
+## Scoring breakdown
+| Points | Criteria |
+|---|---|
+| +1 | UFW firewall is active |
+| +1 | Vulnerable FTP service (`vsftpd`) is stopped |
+| +1 | Apache web server is still online |
+| +1 | Backdoor account (`backupadmin`) removed |
+| +1 | SSH root login disabled |
+| +1 | SSH empty-password authentication disabled |
+
 ## What's broken / planted
 `scripts/break_server.yml` plants: UFW disabled; `vsftpd` (FTP) installed and running, unrelated to this box's actual job; a backdoor account `backupadmin` (password `password123`) in the `sudo` group; and two SSH weaknesses in `/etc/ssh/sshd_config` — `PermitRootLogin yes` and `PermitEmptyPasswords yes`.
 

@@ -12,15 +12,6 @@ investigated yet — the on-call engineer just dumped `/var/log/auth.log` and
 went back to bed. Before anyone touches the box, you need to work out exactly
 what happened from the log alone: who got in, from where, and when.
 
-<details>
-<summary><strong>Learning Objectives</strong> (spoiler — click to reveal)</summary>
-
-- Read and interpret raw `sshd`/`auth.log` entries
-- Distinguish a genuine brute-force/compromise from background noise
-- Correlate failed-login, successful-login, and post-login log lines into a timeline
-
-</details>
-
 ## Objectives
 - Identify the source IP that successfully compromised an account
 - Identify the compromised username
@@ -45,15 +36,6 @@ IP: <attacker source IP>
 USER: <compromised username>
 TIME: <syslog timestamp of the first successful login, e.g. "Mar 14 02:11:03">
 ```
-
-<details>
-<summary><strong>Hints</strong> (try without these first — click to reveal)</summary>
-
-- Not every IP with failed logins in this log is the attacker — some of it is background scanning noise.
-- `grep "Failed password"` and `grep "Accepted"` are your starting points.
-- Look at what the attacker did in the minutes *after* the first successful login.
-
-</details>
 
 ## Scoring
 From the challenge directory on the host: `docker compose exec app /scripts/score_me.sh`

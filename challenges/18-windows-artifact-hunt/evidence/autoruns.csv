@@ -1,12 +1,82 @@
 Entry Location,Entry,Enabled,Category,Profile,Description,Publisher,Image Path,Timestamp
-HKLM\...\Run,OneDrive,Enabled,Logon,System,Microsoft OneDrive,(Verified) Microsoft Corporation,C:\Program Files\Microsoft OneDrive\OneDrive.exe,2026-08-01 09:14:02
-HKLM\...\Run,SecurityHealth,Enabled,Logon,System,Windows Security notification icon,(Verified) Microsoft Windows,C:\Windows\System32\SecurityHealthSystray.exe,2026-08-01 09:14:02
-HKLM\...\Run,NvBackend,Enabled,Logon,System,NVIDIA GeForce Experience,(Verified) NVIDIA Corporation,C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe,2026-08-01 09:14:05
-Scheduled Tasks,GoogleUpdateTaskMachineCore,Enabled,Task Scheduler,System,Keeps Google software up to date,(Verified) Google LLC,C:\Program Files (x86)\Google\Update\GoogleUpdate.exe,2026-08-01 09:15:11
-Scheduled Tasks,OneDrive Standalone Update Task,Enabled,Task Scheduler,System,Updates OneDrive,(Verified) Microsoft Corporation,C:\Program Files\Microsoft OneDrive\OneDriveStandaloneUpdater.exe,2026-08-01 09:15:12
-Services,RealtekAudioService,Enabled,Boot Execute,System,Realtek Audio Universal Service,(Verified) Realtek Semiconductor,C:\Windows\System32\RtkAudUService64.exe,2026-08-01 09:14:22
-Services,WdNisSvc,Enabled,Boot Execute,System,Windows Defender Antivirus Network Inspection Service,(Verified) Microsoft Windows,C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24070.5\NisSrv.exe,2026-08-01 09:14:23
-HKLM\...\Winlogon\Notify,GPClient,Enabled,Boot Execute,System,Group Policy Client-Side Extension,(Verified) Microsoft Corporation,C:\Windows\System32\gpclient.dll,2026-08-01 09:14:01
-Codecs,MSVideo,Enabled,Codec,System,Microsoft Video Codec,(Verified) Microsoft Corporation,C:\Windows\System32\msyuv.dll,2026-08-01 09:14:01
+HKLM\...\Run,OneDrive,Enabled,Logon,System,Microsoft OneDrive,(Verified) Microsoft Corporation,C:\Program Files\Microsoft OneDrive\OneDrive.exe,2026-08-03 14:05:45
+HKCU\...\Run,OneDrive,Enabled,Logon,jsmith,Microsoft OneDrive,(Verified) Microsoft Corporation,C:\Program Files\Microsoft OneDrive\OneDrive.exe,2026-08-03 14:02:42
+HKCU\...\Run,OneDrive,Enabled,Logon,mgarcia,Microsoft OneDrive,(Verified) Microsoft Corporation,C:\Program Files\Microsoft OneDrive\OneDrive.exe,2026-08-03 14:02:42
+HKCU\...\Run,OneDrive,Enabled,Logon,twong,Microsoft OneDrive,(Verified) Microsoft Corporation,C:\Program Files\Microsoft OneDrive\OneDrive.exe,2026-08-01 09:14:05
+HKLM\...\Run,SecurityHealth,Enabled,Logon,System,Windows Security notification icon,(Verified) Microsoft Windows,C:\Windows\System32\SecurityHealthSystray.exe,2026-08-02 10:04:14
+HKCU\...\Run,SecurityHealth,Enabled,Logon,jsmith,Windows Security notification icon,(Verified) Microsoft Windows,C:\Windows\System32\SecurityHealthSystray.exe,2026-08-03 14:06:46
+HKCU\...\Run,SecurityHealth,Enabled,Logon,mgarcia,Windows Security notification icon,(Verified) Microsoft Windows,C:\Windows\System32\SecurityHealthSystray.exe,2026-08-01 09:14:06
+HKCU\...\Run,SecurityHealth,Enabled,Logon,twong,Windows Security notification icon,(Verified) Microsoft Windows,C:\Windows\System32\SecurityHealthSystray.exe,2026-08-01 09:14:06
+HKLM\...\Run,NvBackend,Enabled,Logon,System,NVIDIA GeForce Experience,(Verified) NVIDIA Corporation,C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe,2026-08-05 11:11:21
+HKCU\...\Run,NvBackend,Enabled,Logon,jsmith,NVIDIA GeForce Experience,(Verified) NVIDIA Corporation,C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe,2026-08-05 11:15:25
+HKCU\...\Run,NvBackend,Enabled,Logon,mgarcia,NVIDIA GeForce Experience,(Verified) NVIDIA Corporation,C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe,2026-08-03 14:05:45
+HKCU\...\Run,NvBackend,Enabled,Logon,twong,NVIDIA GeForce Experience,(Verified) NVIDIA Corporation,C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe,2026-08-01 09:14:03
+HKLM\...\Run,Dropbox,Enabled,Logon,System,Dropbox desktop sync client,(Verified) Dropbox Inc,C:\Program Files (x86)\Dropbox\Client\Dropbox.exe,2026-08-05 11:13:23
+HKCU\...\Run,Dropbox,Enabled,Logon,jsmith,Dropbox desktop sync client,(Verified) Dropbox Inc,C:\Program Files (x86)\Dropbox\Client\Dropbox.exe,2026-08-03 14:07:47
+HKCU\...\Run,Dropbox,Enabled,Logon,mgarcia,Dropbox desktop sync client,(Verified) Dropbox Inc,C:\Program Files (x86)\Dropbox\Client\Dropbox.exe,2026-08-03 14:04:44
+HKCU\...\Run,Dropbox,Enabled,Logon,twong,Dropbox desktop sync client,(Verified) Dropbox Inc,C:\Program Files (x86)\Dropbox\Client\Dropbox.exe,2026-08-02 10:02:12
+HKLM\...\Run,com.squirrel.Teams.Teams,Enabled,Logon,System,Microsoft Teams,(Verified) Microsoft Corporation,C:\Users\jsmith\AppData\Local\Microsoft\Teams\current\Teams.exe,2026-08-01 09:14:05
+HKCU\...\Run,com.squirrel.Teams.Teams,Enabled,Logon,jsmith,Microsoft Teams,(Verified) Microsoft Corporation,C:\Users\jsmith\AppData\Local\Microsoft\Teams\current\Teams.exe,2026-08-05 11:13:23
+HKCU\...\Run,com.squirrel.Teams.Teams,Enabled,Logon,mgarcia,Microsoft Teams,(Verified) Microsoft Corporation,C:\Users\mgarcia\AppData\Local\Microsoft\Teams\current\Teams.exe,2026-08-03 14:06:46
+HKCU\...\Run,com.squirrel.Teams.Teams,Enabled,Logon,twong,Microsoft Teams,(Verified) Microsoft Corporation,C:\Users\twong\AppData\Local\Microsoft\Teams\current\Teams.exe,2026-08-03 14:03:43
+HKLM\...\Run,SlackAutoLaunch,Enabled,Logon,System,Slack desktop client,(Verified) Slack Technologies, Inc.,C:\Users\jsmith\AppData\Local\slack\slack.exe,2026-08-03 14:03:43
+HKCU\...\Run,SlackAutoLaunch,Enabled,Logon,jsmith,Slack desktop client,(Verified) Slack Technologies, Inc.,C:\Users\jsmith\AppData\Local\slack\slack.exe,2026-08-03 14:01:41
+HKCU\...\Run,SlackAutoLaunch,Enabled,Logon,mgarcia,Slack desktop client,(Verified) Slack Technologies, Inc.,C:\Users\mgarcia\AppData\Local\slack\slack.exe,2026-08-02 10:05:15
+HKCU\...\Run,SlackAutoLaunch,Enabled,Logon,twong,Slack desktop client,(Verified) Slack Technologies, Inc.,C:\Users\twong\AppData\Local\slack\slack.exe,2026-08-02 10:03:13
+HKLM\...\Run,ZoomUMX,Enabled,Logon,System,Zoom Meetings,(Verified) Zoom Video Communications, Inc.,C:\Users\jsmith\AppData\Roaming\Zoom\bin\Zoom.exe,2026-08-05 11:12:22
+HKCU\...\Run,ZoomUMX,Enabled,Logon,jsmith,Zoom Meetings,(Verified) Zoom Video Communications, Inc.,C:\Users\jsmith\AppData\Roaming\Zoom\bin\Zoom.exe,2026-08-03 14:05:45
+HKCU\...\Run,ZoomUMX,Enabled,Logon,mgarcia,Zoom Meetings,(Verified) Zoom Video Communications, Inc.,C:\Users\mgarcia\AppData\Roaming\Zoom\bin\Zoom.exe,2026-08-05 11:14:24
+HKCU\...\Run,ZoomUMX,Enabled,Logon,twong,Zoom Meetings,(Verified) Zoom Video Communications, Inc.,C:\Users\twong\AppData\Roaming\Zoom\bin\Zoom.exe,2026-08-02 10:07:17
+HKLM\...\Run,jusched,Enabled,Logon,System,Java Update Scheduler,(Verified) Oracle Corporation,C:\Program Files (x86)\Common Files\Java\Java Update\jusched.exe,2026-08-02 10:04:14
+HKCU\...\Run,jusched,Enabled,Logon,jsmith,Java Update Scheduler,(Verified) Oracle Corporation,C:\Program Files (x86)\Common Files\Java\Java Update\jusched.exe,2026-08-05 11:13:23
+HKCU\...\Run,jusched,Enabled,Logon,mgarcia,Java Update Scheduler,(Verified) Oracle Corporation,C:\Program Files (x86)\Common Files\Java\Java Update\jusched.exe,2026-08-02 10:01:11
+HKCU\...\Run,jusched,Enabled,Logon,twong,Java Update Scheduler,(Verified) Oracle Corporation,C:\Program Files (x86)\Common Files\Java\Java Update\jusched.exe,2026-08-02 10:05:15
+HKLM\...\Run,IntelAudioService,Enabled,Logon,System,Intel(R) Smart Sound Technology,(Verified) Intel Corporation,C:\Windows\System32\IntelAudioService.exe,2026-08-03 14:01:41
+HKCU\...\Run,IntelAudioService,Enabled,Logon,jsmith,Intel(R) Smart Sound Technology,(Verified) Intel Corporation,C:\Windows\System32\IntelAudioService.exe,2026-08-05 11:11:21
+HKCU\...\Run,IntelAudioService,Enabled,Logon,mgarcia,Intel(R) Smart Sound Technology,(Verified) Intel Corporation,C:\Windows\System32\IntelAudioService.exe,2026-08-03 14:03:43
+HKCU\...\Run,IntelAudioService,Enabled,Logon,twong,Intel(R) Smart Sound Technology,(Verified) Intel Corporation,C:\Windows\System32\IntelAudioService.exe,2026-08-02 10:07:17
+HKLM\...\Run,igfxTray,Enabled,Logon,System,Intel(R) Graphics Tray,(Verified) Intel Corporation,C:\Windows\System32\igfxTray.exe,2026-08-05 11:14:24
+HKCU\...\Run,igfxTray,Enabled,Logon,jsmith,Intel(R) Graphics Tray,(Verified) Intel Corporation,C:\Windows\System32\igfxTray.exe,2026-08-01 09:14:03
+HKCU\...\Run,igfxTray,Enabled,Logon,mgarcia,Intel(R) Graphics Tray,(Verified) Intel Corporation,C:\Windows\System32\igfxTray.exe,2026-08-02 10:03:13
+HKCU\...\Run,igfxTray,Enabled,Logon,twong,Intel(R) Graphics Tray,(Verified) Intel Corporation,C:\Windows\System32\igfxTray.exe,2026-08-05 11:15:25
+HKLM\...\Run,DellSupportAssistAgent,Enabled,Logon,System,Dell SupportAssist Agent,(Verified) Dell Inc.,C:\Program Files\Dell\SupportAssistAgent\SupportAssistAgent.exe,2026-08-02 10:01:11
+HKCU\...\Run,DellSupportAssistAgent,Enabled,Logon,jsmith,Dell SupportAssist Agent,(Verified) Dell Inc.,C:\Program Files\Dell\SupportAssistAgent\SupportAssistAgent.exe,2026-08-05 11:17:27
+HKCU\...\Run,DellSupportAssistAgent,Enabled,Logon,mgarcia,Dell SupportAssist Agent,(Verified) Dell Inc.,C:\Program Files\Dell\SupportAssistAgent\SupportAssistAgent.exe,2026-08-01 09:14:04
+HKCU\...\Run,DellSupportAssistAgent,Enabled,Logon,twong,Dell SupportAssist Agent,(Verified) Dell Inc.,C:\Program Files\Dell\SupportAssistAgent\SupportAssistAgent.exe,2026-08-01 09:14:02
+HKLM\...\Run,Dell Command | Update,Enabled,Logon,System,Dell Command Update,(Verified) Dell Inc.,C:\Program Files (x86)\Dell\CommandUpdate\DellCommandUpdate.exe,2026-08-01 09:14:02
+HKCU\...\Run,Dell Command | Update,Enabled,Logon,jsmith,Dell Command Update,(Verified) Dell Inc.,C:\Program Files (x86)\Dell\CommandUpdate\DellCommandUpdate.exe,2026-08-03 14:02:42
+HKCU\...\Run,Dell Command | Update,Enabled,Logon,mgarcia,Dell Command Update,(Verified) Dell Inc.,C:\Program Files (x86)\Dell\CommandUpdate\DellCommandUpdate.exe,2026-08-01 09:14:04
+HKCU\...\Run,Dell Command | Update,Enabled,Logon,twong,Dell Command Update,(Verified) Dell Inc.,C:\Program Files (x86)\Dell\CommandUpdate\DellCommandUpdate.exe,2026-08-05 11:12:22
+HKLM\...\Run,AcroCEF32,Enabled,Logon,System,Adobe Acrobat helper process,(Verified) Adobe Inc.,C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\AcroCEF\RdrCEF.exe,2026-08-03 14:01:41
+HKCU\...\Run,AcroCEF32,Enabled,Logon,jsmith,Adobe Acrobat helper process,(Verified) Adobe Inc.,C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\AcroCEF\RdrCEF.exe,2026-08-05 11:16:26
+HKCU\...\Run,AcroCEF32,Enabled,Logon,mgarcia,Adobe Acrobat helper process,(Verified) Adobe Inc.,C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\AcroCEF\RdrCEF.exe,2026-08-01 09:14:01
+HKCU\...\Run,AcroCEF32,Enabled,Logon,twong,Adobe Acrobat helper process,(Verified) Adobe Inc.,C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\AcroCEF\RdrCEF.exe,2026-08-02 10:03:13
+HKLM\...\Run,CCleanerSkipUAC,Enabled,Logon,System,CCleaner update helper,(Verified) Piriform Software Ltd,C:\Program Files\CCleaner\CCleaner64.exe,2026-08-01 09:14:05
+HKCU\...\Run,CCleanerSkipUAC,Enabled,Logon,jsmith,CCleaner update helper,(Verified) Piriform Software Ltd,C:\Program Files\CCleaner\CCleaner64.exe,2026-08-05 11:17:27
+HKCU\...\Run,CCleanerSkipUAC,Enabled,Logon,mgarcia,CCleaner update helper,(Verified) Piriform Software Ltd,C:\Program Files\CCleaner\CCleaner64.exe,2026-08-01 09:14:07
+HKCU\...\Run,CCleanerSkipUAC,Enabled,Logon,twong,CCleaner update helper,(Verified) Piriform Software Ltd,C:\Program Files\CCleaner\CCleaner64.exe,2026-08-03 14:07:47
+Scheduled Tasks,GoogleUpdateTaskMachineCore,Enabled,Task Scheduler,System,Keeps Google software up to date,(Verified) Google LLC,C:\Program Files (x86)\Google\Update\GoogleUpdate.exe,2026-08-05 11:15:25
+Scheduled Tasks,GoogleUpdateTaskMachineUA,Enabled,Task Scheduler,System,Keeps Google software up to date,(Verified) Google LLC,C:\Program Files (x86)\Google\Update\GoogleUpdate.exe,2026-08-05 11:12:22
+Scheduled Tasks,OneDrive Standalone Update Task,Enabled,Task Scheduler,System,Updates OneDrive,(Verified) Microsoft Corporation,C:\Program Files\Microsoft OneDrive\OneDriveStandaloneUpdater.exe,2026-08-01 09:14:07
+Scheduled Tasks,Adobe Acrobat Update Task,Enabled,Task Scheduler,System,Adobe Acrobat updater,(Verified) Adobe Inc.,C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARM.exe,2026-08-02 10:06:16
+Scheduled Tasks,MicrosoftEdgeUpdateTaskMachineCore,Enabled,Task Scheduler,System,Keeps Microsoft Edge up to date,(Verified) Microsoft Corporation,C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe,2026-08-02 10:02:12
+Scheduled Tasks,NvTmRep_CrashReport1,Enabled,Task Scheduler,System,NVIDIA crash reporter,(Verified) NVIDIA Corporation,C:\Program Files\NVIDIA Corporation\NvTelemetry\NvTmRep.exe,2026-08-01 09:14:01
+Services,RealtekAudioService,Enabled,Boot Execute,System,Realtek Audio Universal Service,(Verified) Realtek Semiconductor,C:\Windows\System32\RtkAudUService64.exe,2026-08-01 09:14:02
+Services,WdNisSvc,Enabled,Boot Execute,System,Windows Defender Antivirus Network Inspection Service,(Verified) Microsoft Windows,C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24070.5\NisSrv.exe,2026-08-02 10:04:14
+Services,CSFalconService,Enabled,Boot Execute,System,CrowdStrike Falcon Sensor Service,(Verified) CrowdStrike, Inc.,C:\Windows\System32\drivers\CrowdStrike\CSFalconService.exe,2026-08-01 09:14:03
+Services,VeeamEndpointBackupSvc,Enabled,Boot Execute,System,Veeam Agent for Microsoft Windows,(Verified) Veeam Software Group GmbH,C:\Program Files\Veeam\Endpoint Backup\Veeam.EndpointBackup.Service.exe,2026-08-02 10:06:16
+Services,AGSService,Enabled,Boot Execute,System,Adobe Genuine Software Integrity Service,(Verified) Adobe Inc.,C:\Program Files (x86)\Common Files\Adobe\AdobeGCClient\AGSService.exe,2026-08-05 11:16:26
+Services,CitrixWorkspaceUpdater,Enabled,Boot Execute,System,Citrix Workspace update service,(Verified) Citrix Systems, Inc.,C:\Program Files (x86)\Citrix\ICA Client\CitrixWorkspaceUpdater.exe,2026-08-01 09:14:07
+Services,AMDEventUtility,Enabled,Boot Execute,System,AMD External Events Utility,(Verified) Advanced Micro Devices, Inc.,C:\Windows\System32\atiesrxx.exe,2026-08-01 09:14:06
+Services,HPWMISvc,Enabled,Boot Execute,System,HP WMI Interface Service,(Verified) HP Inc.,C:\Program Files (x86)\Hewlett-Packard\HP Support Framework\HPWmiSvc.exe,2026-08-05 11:17:27
+HKLM\...\Winlogon\Notify,GPClient,Enabled,Boot Execute,System,Group Policy Client-Side Extension,(Verified) Microsoft Corporation,C:\Windows\System32\gpclient.dll,2026-08-02 10:06:16
+Codecs,MSVideo,Enabled,Codec,System,Microsoft Video Codec,(Verified) Microsoft Corporation,C:\Windows\System32\msyuv.dll,2026-08-03 14:04:44
+Internet Explorer\Toolbar,Adobe PDF Link Helper,Enabled,Browser Helper Object,System,Adobe Acrobat PDF link helper,(Verified) Adobe Inc.,C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\AcroIEFavClient.dll,2026-08-01 09:14:04
+Internet Explorer\Toolbar,Skype for Business Browser Helper,Enabled,Browser Helper Object,System,Skype for Business click-to-call add-in,(Verified) Microsoft Corporation,C:\Program Files\Microsoft Office\root\Office16\OFFICE365\ADDINS\Skype.dll,2026-08-03 14:04:44
+HKLM\...\Explorer\ShellIconOverlayIdentifiers,DropboxExt,Enabled,Explorer,System,Dropbox shell icon overlay,(Verified) Dropbox Inc,C:\Program Files (x86)\Dropbox\Client\DropboxExt64.20.dll,2026-08-05 11:16:26
+Printers,Canon IJ Network Scan Utility,Enabled,Logon,System,Canon scanner network utility,(Verified) Canon Inc.,C:\Program Files\Canon\IJ Network Scanner Selector EX\CNMNSST.exe,2026-08-03 14:06:46
+Printers,EEventManager,Enabled,Logon,System,Epson Event Manager,(Verified) Seiko Epson Corporation,C:\Program Files (x86)\EPSON Software\Event Manager\EEventManager.exe,2026-08-05 11:14:24
+HKLM\...\Run,MicrosoftEdgeAutoLaunch,Enabled,Logon,System,Microsoft Edge background launch,(Verified) Microsoft Corporation,C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,2026-09-03 08:22:10
+Services,SentinelAgent,Enabled,Boot Execute,System,SentinelOne endpoint agent (new deployment),(Verified) SentinelOne, Inc.,C:\Program Files\SentinelOne\Sentinel Agent\SentinelAgent.exe,2026-09-09 13:05:44
+Scheduled Tasks,Adobe Genuine Monitor,Enabled,Task Scheduler,System,Adobe Genuine Software monitor,(Verified) Adobe Inc.,C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\UWA\Adobe Genuine Monitor.exe,2026-09-12 07:30:00
 HKLM\...\Run,WinUpdateHelper,Enabled,Logon,System,Windows Update Helper,(Not verified) Unknown,C:\ProgramData\Microsoft\svchost.exe,2026-09-12 03:41:57
-HKLM\...\Run,Dropbox,Enabled,Logon,System,Dropbox desktop sync client,(Verified) Dropbox Inc,C:\Program Files (x86)\Dropbox\Client\Dropbox.exe,2026-08-03 14:02:40

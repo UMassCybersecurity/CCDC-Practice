@@ -9,17 +9,6 @@
 ## Scenario
 Welcome to WidgetCorp. You are the new IT Administrator. The previous admin left abruptly and set up a new Ubuntu web server, but we suspect they left it highly insecure. We have an audit in 30 minutes.
 
-<details>
-<summary><strong>Learning Objectives</strong> (spoiler — click to reveal)</summary>
-
-- Enable and configure a host firewall (UFW) without locking yourself out
-- Identify and disable an unnecessary/vulnerable network service
-- Find and remove or lock an unauthorized local account
-- Harden `sshd_config` against root login and empty-password authentication
-- Fix a misconfigured system without taking down the service it's meant to protect
-
-</details>
-
 ## Objectives
 Secure the server without breaking the website.
 
@@ -51,34 +40,12 @@ Vagrant will automatically detect your computer's architecture. Please install t
 - Find and remove/secure any weak accounts.
 - Secure the SSH configuration.
 
-<details>
-<summary><strong>Hints</strong> (try without these first — click to reveal)</summary>
-
-- `ufw status` / `ufw enable` — a default-deny inbound policy plus explicit allows for the ports you actually need is the simplest fix.
-- `systemctl status vsftpd` — is an FTP server actually part of this box's job?
-- `cat /etc/passwd` and `getent group sudo` — check for accounts that don't belong, especially ones with sudo rights.
-- `/etc/ssh/sshd_config` — both root login and empty-password authentication should be explicitly disabled.
-
-</details>
-
 ## Scoring
 Run the scoring engine inside the VM: `sudo /vagrant/scripts/score_me.sh`
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
+**6 points total.** Full breakdown is in ANSWER.md.
 
-| Points | Criteria |
-|---|---|
-| +1 | UFW firewall is active |
-| +1 | Vulnerable FTP service (`vsftpd`) is stopped |
-| +1 | Apache web server is still online |
-| +1 | Backdoor account (`backupadmin`) removed |
-| +1 | SSH root login disabled |
-| +1 | SSH empty-password authentication disabled |
-
-> **Expected finding count: 4** *(FTP service, backdoor account, SSH root login, SSH empty passwords)*
-
-</details>
+> **Expected finding count: 4**
 
 ## Pause and Resume
 When you want to take a break, use `vagrant halt` to stop the VM and then `vagrant up` to resume your machine. It will save your progress.

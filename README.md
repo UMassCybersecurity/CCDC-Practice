@@ -27,7 +27,7 @@
 ## Usage
 
 ```bash
-cd challenges/01-find-persistence
+cd challenges/01-domain-controller-incident
 
 vagrant up          # Start the challenge
 vagrant rdp         # Connect via RDP (or use your RDP client to 192.168.56.10)

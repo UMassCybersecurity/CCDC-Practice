@@ -7,12 +7,25 @@
       apt:
         update_cache: yes
 
-    - name: Install Apache (legit business service) and netcat
+    - name: Install Apache (legit business service), netcat, and other real boring services
       apt:
         name:
           - apache2
           - netcat-openbsd
+          - fail2ban
+          - unattended-upgrades
+          - cron
+          - python3
         state: present
+
+    - name: Enable and start fail2ban and cron (real, boring, expected services)
+      systemd:
+        name: "{{ item }}"
+        enabled: yes
+        state: started
+      loop:
+        - fail2ban
+        - cron
 
     - name: Deploy systemd-udevd-helper script
       copy:
@@ -43,6 +56,130 @@
         enabled: yes
         state: started
         daemon_reload: yes
+
+    # --- Legitimate noise below: a real second listener, real extra users,
+    # real cron jobs, and backdated log history, so the rogue process isn't
+    # one of only two things running on this box.
+
+    - name: Create metrics directory
+      file:
+        path: /var/www/metrics
+        state: directory
+        owner: www-data
+        group: www-data
+
+    - name: Set up a real (legitimate) lightweight metrics endpoint
+      copy:
+        dest: /var/www/metrics/index.html
+        content: |
+          node_up 1
+          node_cpu_seconds_total 48213.4
+          node_memory_available_bytes 412827648
+        owner: www-data
+        group: www-data
+
+    - name: Install monitoring-agent unit (a real, boring metrics exporter)
+      copy:
+        dest: /etc/systemd/system/monitoring-agent.service
+        content: |
+          [Unit]
+          Description=Lightweight node metrics exporter
+          After=network.target
+
+          [Service]
+          ExecStart=/usr/bin/python3 -m http.server 9256 --directory /var/www/metrics
+          Restart=always
+          User=www-data
+
+          [Install]
+          WantedBy=multi-user.target
+
+    - name: Enable and start monitoring-agent
+      systemd:
+        name: monitoring-agent
+        enabled: yes
+        state: started
+        daemon_reload: yes
+
+    - name: Create legitimate secondary user accounts
+      user:
+        name: "{{ item }}"
+        shell: /bin/bash
+        create_home: yes
+      loop:
+        - deploy
+        - jdoe
+
+    - name: Give deploy a plausible bash history
+      copy:
+        dest: /home/deploy/.bash_history
+        content: |
+          cd /var/www/html
+          git pull
+          sudo systemctl reload apache2
+          df -h
+          exit
+        owner: deploy
+        group: deploy
+        mode: '0600'
+
+    - name: Give jdoe a plausible bash history
+      copy:
+        dest: /home/jdoe/.bash_history
+        content: |
+          ssh prod-app03
+          sudo systemctl status apache2
+          tail -f /var/log/apache2/access.log
+          logout
+        owner: jdoe
+        group: jdoe
+        mode: '0600'
+
+    - name: Add legitimate cron jobs (nightly backup + apt cleanup)
+      cron:
+        name: "{{ item.name }}"
+        job: "{{ item.job }}"
+        minute: "{{ item.minute }}"
+        hour: "{{ item.hour }}"
+        user: root
+      loop:
+        - { name: "nightly backup marker", job: "/usr/bin/date >> /var/log/backup.log", minute: "0", hour: "2" }
+        - { name: "weekly apt cleanup", job: "/usr/bin/apt-get -y autoremove --purge > /var/log/apt-cleanup.log 2>&1", minute: "30", hour: "3" }
+
+    - name: Backdate two days of ordinary syslog noise
+      shell: |
+        {
+          for d in 2 1; do
+            ts_base=$(date -d "-${d} days" +"%b %e")
+            for h in 00 03 06 09 12 15 18 21; do
+              echo "${ts_base} ${h}:0${RANDOM: -1} prod-app03 CRON[$((RANDOM % 9000 + 1000))]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)"
+              echo "${ts_base} ${h}:1${RANDOM: -1} prod-app03 systemd[1]: Started Daily apt download activities."
+              echo "${ts_base} ${h}:1${RANDOM: -1} prod-app03 systemd[1]: apt-daily.service: Deactivated successfully."
+              echo "${ts_base} ${h}:2${RANDOM: -1} prod-app03 fail2ban.filter[812]: INFO [sshd] No matches found for banning"
+              echo "${ts_base} ${h}:3${RANDOM: -1} prod-app03 apache2[901]: [access] 192.168.56.1 - - \"GET / HTTP/1.1\" 200"
+            done
+          done
+        } >> /var/log/syslog
+      args:
+        executable: /bin/bash
+
+    - name: Backdate two days of ordinary auth.log noise
+      shell: |
+        {
+          for d in 2 1; do
+            ts_base=$(date -d "-${d} days" +"%b %e")
+            echo "${ts_base} 09:14:0${RANDOM: -1} prod-app03 sshd[2201]: Accepted publickey for jdoe from 192.168.56.1 port 51022 ssh2"
+            echo "${ts_base} 09:14:1${RANDOM: -1} prod-app03 sshd[2201]: pam_unix(sshd:session): session opened for user jdoe(uid=1001) by (uid=0)"
+            echo "${ts_base} 09:22:0${RANDOM: -1} prod-app03 sudo:   jdoe : TTY=pts/0 ; PWD=/home/jdoe ; USER=root ; COMMAND=/usr/bin/systemctl status apache2"
+            echo "${ts_base} 09:31:4${RANDOM: -1} prod-app03 sshd[2201]: pam_unix(sshd:session): session closed for user jdoe"
+            echo "${ts_base} 14:02:1${RANDOM: -1} prod-app03 sshd[2340]: Accepted publickey for deploy from 192.168.56.1 port 51501 ssh2"
+            echo "${ts_base} 14:02:2${RANDOM: -1} prod-app03 sshd[2340]: pam_unix(sshd:session): session opened for user deploy(uid=1000) by (uid=0)"
+            echo "${ts_base} 14:09:0${RANDOM: -1} prod-app03 sudo:   deploy : TTY=pts/0 ; PWD=/var/www/html ; USER=root ; COMMAND=/usr/bin/systemctl reload apache2"
+            echo "${ts_base} 14:10:1${RANDOM: -1} prod-app03 sshd[2340]: pam_unix(sshd:session): session closed for user deploy"
+          done
+        } >> /var/log/auth.log
+      args:
+        executable: /bin/bash
 
     - name: Drop incident-response notes
       copy:

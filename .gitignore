@@ -25,6 +25,9 @@ desktop.ini
 # macOS junk
 .DS_Store
 
+# ...except a planted decoy .DS_Store that's challenge content, not build output
+!challenges/09-upload-portal/site/uploads/.DS_Store
+
 # Logs
 *.log
 crash.log
@@ -32,6 +35,8 @@ crash.log
 # ...except seeded log fixtures that are challenge content, not build output
 !challenges/13-log-triage/auth.log
 !challenges/15-brute-force-detector/auth.log
+!challenges/26-siem-detection-rule/auth.log
+!challenges/24-multi-source-log-correlation/logs/*.log
 
 # Editor files
 *.swp

@@ -1,16 +1,286 @@
 TimeCreated,Id,ProviderName,Message
-2026-09-12 07:58:01,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 2
-2026-09-12 07:58:02,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: jsmith
-2026-09-12 08:10:15,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 3
-2026-09-12 08:22:47,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: jsmith
-2026-09-12 08:40:03,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 2
-2026-09-12 08:40:04,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: administrator
-2026-09-12 08:55:19,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: administrator
-2026-09-12 09:02:11,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-monitor Logon Type: 5
-2026-09-12 09:12:40,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\RtkAudUService64.exe Creator Process Name: C:\Windows\System32\services.exe
-2026-09-12 09:15:02,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 2
-2026-09-12 09:31:07,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: jsmith
+2026-09-12 06:08:48,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: mgarcia
+2026-09-12 06:19:25,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-backup Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 06:46:35,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: twong Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 06:56:00,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 5
+2026-09-12 06:58:52,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 06:59:44,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: twong
+2026-09-12 07:03:52,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 3
+2026-09-12 07:07:46,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: mgarcia Logon Type: 2
+2026-09-12 07:07:56,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 5
+2026-09-12 07:08:40,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 07:16:41,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 5
+2026-09-12 07:18:23,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 07:19:37,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: mgarcia Logon Type: 10
+2026-09-12 07:19:41,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-monitor Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 07:19:54,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-reports
+2026-09-12 07:21:04,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-reports
+2026-09-12 07:26:04,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 07:26:20,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: helpdesk
+2026-09-12 07:27:30,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 5
+2026-09-12 07:30:56,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files (x86)\Google\Update\GoogleUpdate.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 07:33:04,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: twong Logon Type: 10
+2026-09-12 07:33:31,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-reports
+2026-09-12 07:37:28,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 07:44:13,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 3
+2026-09-12 07:45:09,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\Dell\SupportAssistAgent\SupportAssistAgent.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 07:45:49,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-backup
+2026-09-12 07:46:03,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-monitor Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 07:46:06,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-backup Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 07:48:14,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: administrator Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 07:55:36,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-backup Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 07:57:29,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 3
+2026-09-12 07:58:56,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: jsmith Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 07:59:46,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: helpdesk
+2026-09-12 08:08:33,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files (x86)\Google\Update\GoogleUpdate.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 08:09:46,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\RtkAudUService64.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 08:09:58,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-monitor
+2026-09-12 08:12:34,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 08:13:05,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-reports Logon Type: 5
+2026-09-12 08:16:52,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-reports
+2026-09-12 08:17:53,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-monitor
+2026-09-12 08:23:11,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\Dell\SupportAssistAgent\SupportAssistAgent.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 08:28:02,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 08:32:54,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 3
+2026-09-12 08:36:57,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files (x86)\Google\Update\GoogleUpdate.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 08:38:08,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 5
+2026-09-12 08:39:08,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 10
+2026-09-12 08:46:13,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: twong
+2026-09-12 08:48:49,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\RtkAudUService64.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 08:50:39,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-reports Logon Type: 3
+2026-09-12 09:01:16,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-monitor
+2026-09-12 09:03:59,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-monitor
+2026-09-12 09:05:33,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: administrator Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 09:06:42,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-backup
+2026-09-12 09:08:04,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-backup Logon Type: 10 Failure Reason: Unknown user name or bad password
+2026-09-12 09:08:37,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: administrator
+2026-09-12 09:11:50,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: twong Logon Type: 2
+2026-09-12 09:12:03,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: twong Logon Type: 10 Failure Reason: Unknown user name or bad password
+2026-09-12 09:26:06,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-monitor
+2026-09-12 09:30:34,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: helpdesk
+2026-09-12 09:34:15,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 5
+2026-09-12 09:34:17,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 2
+2026-09-12 09:40:20,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 10
+2026-09-12 09:40:28,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\Microsoft OneDrive\OneDrive.exe Creator Process Name: C:\Windows\explorer.exe
 2026-09-12 09:41:52,4624,Microsoft-Windows-Security-Auditing,An RDP logon attempt reached the Winlogon secure desktop. Account: -
 2026-09-12 09:41:58,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\cmd.exe Creator Process Name: C:\Windows\System32\sethc.exe Creator Process ID: 0x8ac
 2026-09-12 09:42:31,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\ProgramData\Microsoft\svchost.exe Creator Process Name: C:\Windows\System32\cmd.exe
-2026-09-12 09:55:00,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 3
+2026-09-12 09:43:51,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 3
+2026-09-12 09:44:57,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-reports Logon Type: 10
+2026-09-12 09:45:24,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 10
+2026-09-12 09:47:25,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 2
+2026-09-12 09:47:49,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: administrator
+2026-09-12 09:48:11,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: helpdesk Logon Type: 10 Failure Reason: Unknown user name or bad password
+2026-09-12 09:48:19,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 5
+2026-09-12 09:48:43,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: twong
+2026-09-12 09:51:17,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 5
+2026-09-12 09:52:53,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: twong Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 09:59:19,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 10:00:19,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: administrator
+2026-09-12 10:00:47,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-backup Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 10:03:53,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-reports Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 10:08:15,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\Dell\SupportAssistAgent\SupportAssistAgent.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 10:12:10,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files (x86)\Google\Update\GoogleUpdate.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 10:12:36,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: mgarcia
+2026-09-12 10:14:06,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\RtkAudUService64.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 10:17:56,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-backup Logon Type: 10 Failure Reason: Unknown user name or bad password
+2026-09-12 10:20:24,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-monitor Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 10:25:29,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\Microsoft OneDrive\OneDrive.exe Creator Process Name: C:\Windows\explorer.exe
+2026-09-12 10:30:12,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: mgarcia
+2026-09-12 10:38:00,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files (x86)\Google\Update\GoogleUpdate.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 10:38:08,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 10
+2026-09-12 10:41:31,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: twong Logon Type: 3
+2026-09-12 10:46:59,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: mgarcia Logon Type: 2
+2026-09-12 10:48:57,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 10
+2026-09-12 10:52:08,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 10
+2026-09-12 10:53:27,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: jsmith
+2026-09-12 10:55:40,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 10:58:15,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: jsmith
+2026-09-12 10:58:18,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-monitor Logon Type: 3
+2026-09-12 11:03:12,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: twong Logon Type: 10
+2026-09-12 11:14:56,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-backup
+2026-09-12 11:14:56,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: jsmith Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 11:15:49,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: administrator
+2026-09-12 11:21:35,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: mgarcia Logon Type: 3
+2026-09-12 11:23:08,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 2
+2026-09-12 11:23:16,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: mgarcia Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 11:28:01,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: twong Logon Type: 5
+2026-09-12 11:29:22,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-reports Logon Type: 2
+2026-09-12 11:30:55,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: helpdesk Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 11:39:27,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: twong Logon Type: 2
+2026-09-12 11:42:44,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 2
+2026-09-12 11:44:57,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 2
+2026-09-12 11:47:23,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: administrator Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 11:48:29,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-monitor Logon Type: 3
+2026-09-12 11:51:14,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: administrator
+2026-09-12 11:52:29,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-reports Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 11:59:53,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: administrator
+2026-09-12 12:03:31,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: helpdesk
+2026-09-12 12:06:34,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-backup Logon Type: 10 Failure Reason: Unknown user name or bad password
+2026-09-12 12:06:48,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-monitor
+2026-09-12 12:06:54,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-monitor
+2026-09-12 12:07:48,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-reports Logon Type: 2
+2026-09-12 12:09:16,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 12:12:31,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: jsmith Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 12:13:56,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-backup
+2026-09-12 12:17:45,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: twong
+2026-09-12 12:24:49,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: jsmith Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 12:25:23,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: mgarcia Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 12:32:47,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: mgarcia
+2026-09-12 12:33:32,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 5
+2026-09-12 12:35:52,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: mgarcia Logon Type: 3
+2026-09-12 12:38:13,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: twong Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 12:42:15,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: twong
+2026-09-12 12:42:36,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 12:43:40,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-reports
+2026-09-12 12:49:56,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: mgarcia
+2026-09-12 12:50:48,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: jsmith
+2026-09-12 12:51:50,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: mgarcia
+2026-09-12 12:55:59,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 2
+2026-09-12 13:00:23,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: twong
+2026-09-12 13:01:10,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: jsmith
+2026-09-12 13:10:27,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-reports Logon Type: 3
+2026-09-12 13:13:21,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: twong Logon Type: 10
+2026-09-12 13:13:29,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: administrator
+2026-09-12 13:16:50,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: helpdesk Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 13:17:36,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 13:17:58,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\Dell\SupportAssistAgent\SupportAssistAgent.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 13:18:22,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-reports Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 13:28:45,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-backup
+2026-09-12 13:29:12,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 3
+2026-09-12 13:30:08,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: twong
+2026-09-12 13:37:29,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 13:38:23,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: mgarcia Logon Type: 5
+2026-09-12 13:43:12,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: mgarcia
+2026-09-12 13:44:16,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 5
+2026-09-12 13:59:30,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: twong Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 14:00:20,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: helpdesk Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 14:01:15,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-reports
+2026-09-12 14:01:16,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-backup
+2026-09-12 14:01:43,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 14:10:15,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: helpdesk
+2026-09-12 14:11:03,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\RtkAudUService64.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 14:11:08,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-monitor Logon Type: 10
+2026-09-12 14:12:32,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-monitor Logon Type: 5
+2026-09-12 14:15:03,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-monitor
+2026-09-12 14:16:22,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: helpdesk
+2026-09-12 14:20:00,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: mgarcia
+2026-09-12 14:22:33,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: administrator
+2026-09-12 14:26:58,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 5
+2026-09-12 14:28:12,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-monitor
+2026-09-12 14:37:43,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: helpdesk Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 14:38:42,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 10
+2026-09-12 14:39:25,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: mgarcia Logon Type: 5
+2026-09-12 14:44:03,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-backup Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 14:45:20,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-monitor
+2026-09-12 14:47:01,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files (x86)\Google\Update\GoogleUpdate.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 14:49:58,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: administrator
+2026-09-12 14:51:08,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-reports Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 14:53:09,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-monitor Logon Type: 5
+2026-09-12 14:56:05,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: mgarcia
+2026-09-12 14:56:51,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-reports
+2026-09-12 14:58:50,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-monitor
+2026-09-12 14:59:00,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\Microsoft OneDrive\OneDrive.exe Creator Process Name: C:\Windows\explorer.exe
+2026-09-12 14:59:55,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files (x86)\Google\Update\GoogleUpdate.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 15:05:44,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: mgarcia
+2026-09-12 15:15:03,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\Microsoft OneDrive\OneDrive.exe Creator Process Name: C:\Windows\explorer.exe
+2026-09-12 15:18:54,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-backup Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 15:19:13,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: mgarcia Logon Type: 10
+2026-09-12 15:29:05,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-reports Logon Type: 2
+2026-09-12 15:31:47,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files (x86)\Google\Update\GoogleUpdate.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 15:32:13,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-backup
+2026-09-12 15:42:17,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: helpdesk Logon Type: 10 Failure Reason: Unknown user name or bad password
+2026-09-12 15:45:22,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: mgarcia
+2026-09-12 15:46:42,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: jsmith
+2026-09-12 15:47:27,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 15:47:48,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 15:48:38,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: helpdesk
+2026-09-12 15:50:30,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 2
+2026-09-12 15:51:04,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-monitor
+2026-09-12 15:53:47,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: twong Logon Type: 10 Failure Reason: Unknown user name or bad password
+2026-09-12 15:53:55,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: mgarcia
+2026-09-12 15:57:08,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: helpdesk
+2026-09-12 16:00:11,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files (x86)\Google\Update\GoogleUpdate.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 16:02:28,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: helpdesk
+2026-09-12 16:04:30,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-backup Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 16:05:34,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-reports
+2026-09-12 16:06:11,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 16:08:05,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-reports Logon Type: 10 Failure Reason: Unknown user name or bad password
+2026-09-12 16:09:49,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: twong
+2026-09-12 16:11:31,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: helpdesk Logon Type: 10 Failure Reason: Unknown user name or bad password
+2026-09-12 16:12:37,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: jsmith
+2026-09-12 16:13:43,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-monitor
+2026-09-12 16:20:39,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 2
+2026-09-12 16:23:05,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-backup
+2026-09-12 16:24:57,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: administrator
+2026-09-12 16:26:09,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: administrator Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 16:29:15,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: mgarcia
+2026-09-12 16:33:01,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-reports
+2026-09-12 16:35:41,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: jsmith
+2026-09-12 16:36:24,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: helpdesk Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 16:38:03,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: jsmith
+2026-09-12 16:41:00,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: mgarcia
+2026-09-12 16:43:42,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-reports Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 16:44:36,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 16:46:16,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-monitor Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 16:48:01,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\NVIDIA Corporation\NvContainer\NvContainerLocalSystem.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 17:00:12,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files (x86)\Google\Update\GoogleUpdate.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 17:02:19,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: mgarcia Logon Type: 5
+2026-09-12 17:05:37,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-reports
+2026-09-12 17:09:21,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-reports
+2026-09-12 17:09:41,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: jsmith
+2026-09-12 17:09:44,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: twong
+2026-09-12 17:11:16,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 3
+2026-09-12 17:14:26,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: jsmith
+2026-09-12 17:17:19,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: mgarcia Logon Type: 2
+2026-09-12 17:21:07,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-monitor
+2026-09-12 17:24:04,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: administrator Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 17:24:27,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files (x86)\Google\Update\GoogleUpdate.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 17:25:30,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: twong
+2026-09-12 17:29:59,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 3
+2026-09-12 17:32:18,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: twong
+2026-09-12 17:32:55,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-reports Logon Type: 5
+2026-09-12 17:33:03,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 10
+2026-09-12 17:34:03,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: twong
+2026-09-12 17:39:06,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: mgarcia Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 17:42:11,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 17:47:22,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: helpdesk Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 17:48:40,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: twong
+2026-09-12 17:50:05,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-monitor
+2026-09-12 17:53:03,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 2
+2026-09-12 17:55:14,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\Microsoft OneDrive\OneDrive.exe Creator Process Name: C:\Windows\explorer.exe
+2026-09-12 17:58:52,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-reports Logon Type: 10 Failure Reason: Unknown user name or bad password
+2026-09-12 18:08:52,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Program Files\Dell\SupportAssistAgent\SupportAssistAgent.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 18:13:08,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: mgarcia Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 18:13:39,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: mgarcia Logon Type: 3
+2026-09-12 18:15:17,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: jsmith Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 18:17:01,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: svc-backup Logon Type: 3 Failure Reason: Unknown user name or bad password
+2026-09-12 18:19:18,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 3
+2026-09-12 18:19:26,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-reports
+2026-09-12 18:20:59,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: administrator Logon Type: 5 Failure Reason: Unknown user name or bad password
+2026-09-12 18:26:11,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 5
+2026-09-12 18:26:52,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: twong Logon Type: 5
+2026-09-12 18:31:07,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\RtkAudUService64.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 18:31:30,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-monitor
+2026-09-12 18:38:42,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: administrator Logon Type: 2
+2026-09-12 18:39:38,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-backup
+2026-09-12 18:40:08,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: mgarcia
+2026-09-12 18:41:42,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 2
+2026-09-12 18:41:48,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: jsmith Logon Type: 10 Failure Reason: Unknown user name or bad password
+2026-09-12 18:42:13,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: mgarcia
+2026-09-12 18:51:23,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: helpdesk Logon Type: 10
+2026-09-12 18:52:14,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: jsmith
+2026-09-12 18:53:15,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 18:53:55,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: twong
+2026-09-12 19:30:13,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\RtkAudUService64.exe Creator Process Name: C:\Windows\System32\services.exe
+2026-09-12 19:32:17,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: jsmith Logon Type: 2
+2026-09-12 19:58:52,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-backup
+2026-09-12 20:06:31,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: twong
+2026-09-12 20:09:58,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-monitor Logon Type: 2
+2026-09-12 20:26:09,4634,Microsoft-Windows-Security-Auditing,An account was logged off. Account: svc-reports
+2026-09-12 20:35:56,4625,Microsoft-Windows-Security-Auditing,An account failed to log on. Account: twong Logon Type: 2 Failure Reason: Unknown user name or bad password
+2026-09-12 21:11:59,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-monitor Logon Type: 2
+2026-09-12 21:38:54,4688,Microsoft-Windows-Security-Auditing,A new process has been created. New Process Name: C:\Windows\System32\WerFault.exe Creator Process Name: C:\Windows\System32\svchost.exe
+2026-09-12 21:48:52,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-backup
+2026-09-12 21:52:06,4624,Microsoft-Windows-Security-Auditing,An account was successfully logged on. Account: svc-backup Logon Type: 2
+2026-09-12 21:52:42,4672,Microsoft-Windows-Security-Auditing,Special privileges assigned to new logon. Account: svc-monitor

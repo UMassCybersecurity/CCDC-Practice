@@ -1,0 +1,97 @@
+---
+- name: Configure Ubuntu application server
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Apache (legit business service) and rsyslog
+      apt:
+        name:
+          - apache2
+          - rsyslog
+        state: present
+
+    - name: Create legitimate service accounts with their own routine cron jobs
+      user:
+        name: "{{ item }}"
+        shell: /bin/bash
+        create_home: yes
+      loop:
+        - svc-backup
+        - svc-cleanup
+        - svc-metrics
+
+    - name: svc-backup's nightly backup job (legitimate)
+      cron:
+        name: "nightly backup"
+        user: svc-backup
+        minute: "0"
+        hour: "2"
+        job: 'tar -czf /var/backups/daily-$(date +\%F).tar.gz /var/www/html 2>&1'
+
+    - name: svc-cleanup's hourly tmp sweep (legitimate)
+      cron:
+        name: "tmp cleanup"
+        user: svc-cleanup
+        minute: "15"
+        job: 'find /tmp -type f -mtime +7 -delete 2>&1'
+
+    - name: svc-metrics's per-minute "heartbeat" cron job (the actual planted persistence)
+      cron:
+        name: "metrics collector heartbeat"
+        user: svc-metrics
+        minute: "*"
+        job: 'echo "metrics checkin $(date)" >> /tmp/.metrics_cache_heartbeat 2>&1'
+
+    - name: Install legitimate rsyslog noise-reduction filters
+      copy:
+        dest: "/etc/rsyslog.d/{{ item.file }}"
+        content: "{{ item.content }}"
+      loop:
+        - file: "05-discard-snapd.conf"
+          content: |
+            # snapd's refresh-check chatter isn't actionable; keep it out of syslog.
+            if $programname == 'snapd' then stop
+        - file: "06-discard-nm-dhcp.conf"
+          content: |
+            # Routine DHCP lease renewals are noisy and not useful for troubleshooting.
+            if $programname == 'NetworkManager' and $msg contains 'dhcp4' then stop
+        - file: "07-discard-systemd-user.conf"
+          content: |
+            # Per-login systemd --user session spam.
+            if $programname == 'systemd' and $msg contains 'pam_unix(systemd-user' then stop
+        - file: "08-discard-chrony.conf"
+          content: |
+            # Routine time-sync noise.
+            if $programname == 'chronyd' then stop
+      notify: Restart rsyslog
+
+    - name: Install the malicious rsyslog filter (the actual blind spot)
+      copy:
+        dest: /etc/rsyslog.d/50-app-metrics-filter.conf
+        content: |
+          # Suppress noisy debug lines from the metrics collector service account
+          if $msg contains 'svc-metrics' then stop
+      notify: Restart rsyslog
+
+    - name: Copy baseline log seeding script
+      copy:
+        src: seed-logs.sh
+        dest: /tmp/seed-logs.sh
+        mode: '0755'
+
+    - name: Seed a few days of realistic baseline log history
+      command: /tmp/seed-logs.sh
+      # Directly appends backdated lines to /var/log/syslog and
+      # /var/log/auth.log (bypassing syslog entirely, so the rsyslog
+      # filters above never see or suppress this seeded history) so the
+      # box doesn't boot with suspiciously empty logs.
+
+  handlers:
+    - name: Restart rsyslog
+      service:
+        name: rsyslog
+        state: restarted

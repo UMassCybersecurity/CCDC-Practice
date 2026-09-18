@@ -1,5 +1,503 @@
 [
   {
+    "id": 2019,
+    "timestamp": "2026-02-10T00:03:00.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 00:03:00 web02 sshd[3384]: Failed password for test from 198.51.100.201 port 51055 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2056,
+    "timestamp": "2026-02-10T00:05:36.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 00:05:36 web02 sshd[6590]: Failed password for jenkins from 198.51.100.201 port 38827 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2051,
+    "timestamp": "2026-02-10T00:13:39.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "203.0.113.9"
+    },
+    "full_log": "Feb 10 00:13:39 vpn-gw01 sshd[3884]: Failed password for www-data from 203.0.113.9 port 50198 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2186,
+    "timestamp": "2026-02-10T00:15:21.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.46"
+    },
+    "full_log": "Feb 10 00:15:21 web02 apache2: 10.0.9.46 - - \"GET / HTTP/1.1\" 200 2202",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
+    "id": 2187,
+    "timestamp": "2026-02-10T00:21:43.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.51"
+    },
+    "full_log": "Feb 10 00:21:43 web01 apache2: 10.0.9.51 - - \"GET / HTTP/1.1\" 200 2074",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
+    "id": 2126,
+    "timestamp": "2026-02-10T00:22:41.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "chrome_updater.exe",
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 00:22:41 mkt-ws03 auditd[1]: EXECVE proc=chrome_updater.exe user=mrivera pid=7403",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2157,
+    "timestamp": "2026-02-10T00:49:15.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "asingh",
+      "command": "systemctl restart apache2"
+    },
+    "full_log": "Feb 10 00:49:15 fin-ws07 sudo: asingh : COMMAND=/usr/bin/env systemctl restart apache2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2041,
+    "timestamp": "2026-02-10T01:14:49.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.5"
+    },
+    "full_log": "Feb 10 01:14:49 vpn-gw01 sshd[5270]: Failed password for root from 185.220.101.5 port 58765 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2026,
+    "timestamp": "2026-02-10T01:15:57.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "203.0.113.9"
+    },
+    "full_log": "Feb 10 01:15:57 web01 sshd[7387]: Failed password for root from 203.0.113.9 port 38780 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2067,
+    "timestamp": "2026-02-10T01:16:41.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 01:16:41 vpn-gw01 clamav-freshclam[1990]: main.cvd updated (version: 66, sigs: 6633940)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2130,
+    "timestamp": "2026-02-10T01:17:16.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "java.exe",
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 01:17:16 vpn-gw01 auditd[1]: EXECVE proc=java.exe user=mrivera pid=6472",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2006,
+    "timestamp": "2026-02-10T01:25:00.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 01:25:00 web01 sshd[9377]: Failed password for ubuntu from 198.51.100.201 port 44645 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2212,
+    "timestamp": "2026-02-10T01:26:00.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100060",
+      "level": 7,
+      "description": "modsecurity: Automated scanning pattern detected against web application",
+      "groups": [
+        "web",
+        "attack",
+        "recon"
+      ]
+    },
+    "decoder": {
+      "name": "modsecurity"
+    },
+    "data": {
+      "srcip": "203.0.113.201"
+    },
+    "full_log": "Feb 10 01:26:00 web01 apache2: 203.0.113.201 - - \"GET /app/wp-login.php HTTP/1.1\" 404 287",
+    "location": "/var/log/apache2/modsec_audit.log"
+  },
+  {
+    "id": 2176,
+    "timestamp": "2026-02-10T01:47:08.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "oncall_svc"
+    },
+    "full_log": "Feb 10 01:47:08 web02 sshd[6385]: pam_unix(sshd:session): session opened for user oncall_svc by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2120,
+    "timestamp": "2026-02-10T01:50:52.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "chrome_updater.exe",
+      "user": "kwong"
+    },
+    "full_log": "Feb 10 01:50:52 mkt-ws03 auditd[1]: EXECVE proc=chrome_updater.exe user=kwong pid=8656",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2013,
+    "timestamp": "2026-02-10T02:02:36.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.5"
+    },
+    "full_log": "Feb 10 02:02:36 web02 sshd[9455]: Failed password for oracle from 185.220.101.5 port 39633 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2193,
+    "timestamp": "2026-02-10T02:07:10.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.28"
+    },
+    "full_log": "Feb 10 02:07:10 web02 apache2: 10.0.9.28 - - \"GET /app/products.php HTTP/1.1\" 200 1852",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
     "id": 1005,
     "timestamp": "2026-02-10T02:14:11.000+0000",
     "agent": {
@@ -58,6 +556,566 @@
     "location": "/var/log/auth.log"
   },
   {
+    "id": 2160,
+    "timestamp": "2026-02-10T02:29:26.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "jdoe",
+      "command": "systemctl restart sshd"
+    },
+    "full_log": "Feb 10 02:29:26 vpn-gw01 sudo: jdoe : COMMAND=/usr/bin/env systemctl restart sshd",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2010,
+    "timestamp": "2026-02-10T02:31:08.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.5"
+    },
+    "full_log": "Feb 10 02:31:08 web01 sshd[7293]: Failed password for ubuntu from 185.220.101.5 port 36659 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2052,
+    "timestamp": "2026-02-10T02:37:22.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "203.0.113.9"
+    },
+    "full_log": "Feb 10 02:37:22 web01 sshd[6804]: Failed password for guest from 203.0.113.9 port 55805 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2058,
+    "timestamp": "2026-02-10T02:47:25.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "203.0.113.9"
+    },
+    "full_log": "Feb 10 02:47:25 web02 sshd[3430]: Failed password for admin from 203.0.113.9 port 58160 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2178,
+    "timestamp": "2026-02-10T02:57:41.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 02:57:41 hr-ws01 sshd[2080]: pam_unix(sshd:session): session opened for user mrivera by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2163,
+    "timestamp": "2026-02-10T03:00:32.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "lramirez",
+      "command": "apt-get update"
+    },
+    "full_log": "Feb 10 03:00:32 web02 sudo: lramirez : COMMAND=/usr/bin/env apt-get update",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2086,
+    "timestamp": "2026-02-10T03:01:21.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.113.58.9",
+      "domain": "updates.adobe.com"
+    },
+    "full_log": "Feb 10 03:01:21 mkt-ws03 netmon: NEW_DOMAIN src=10.0.4.31 dst=... domain=updates.adobe.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2014,
+    "timestamp": "2026-02-10T03:11:44.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.156.73.44"
+    },
+    "full_log": "Feb 10 03:11:44 vpn-gw01 sshd[6712]: Failed password for jenkins from 185.156.73.44 port 52262 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2148,
+    "timestamp": "2026-02-10T03:13:36.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.36",
+      "user": "asingh"
+    },
+    "full_log": "Feb 10 03:13:36 vpn-gw01 openvpn[935]: asingh/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2085,
+    "timestamp": "2026-02-10T03:27:07.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.116.43.173",
+      "domain": "cdn.zoom.us"
+    },
+    "full_log": "Feb 10 03:27:07 hr-ws01 netmon: NEW_DOMAIN src=10.0.4.9 dst=... domain=cdn.zoom.us first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2043,
+    "timestamp": "2026-02-10T03:27:48.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "203.0.113.9"
+    },
+    "full_log": "Feb 10 03:27:48 web02 sshd[4635]: Failed password for admin from 203.0.113.9 port 41713 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2159,
+    "timestamp": "2026-02-10T03:28:04.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "oncall_svc",
+      "command": "systemctl restart sshd"
+    },
+    "full_log": "Feb 10 03:28:04 web02 sudo: oncall_svc : COMMAND=/usr/bin/env systemctl restart sshd",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2172,
+    "timestamp": "2026-02-10T03:35:14.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "kwong"
+    },
+    "full_log": "Feb 10 03:35:14 corp-laptop14 sshd[6493]: pam_unix(sshd:session): session opened for user kwong by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2066,
+    "timestamp": "2026-02-10T03:36:49.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 03:36:49 web01 clamav-freshclam[1170]: main.cvd updated (version: 61, sigs: 6682353)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2191,
+    "timestamp": "2026-02-10T03:41:35.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.47"
+    },
+    "full_log": "Feb 10 03:41:35 web02 apache2: 10.0.9.47 - - \"GET /favicon.ico HTTP/1.1\" 200 2632",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
+    "id": 2081,
+    "timestamp": "2026-02-10T03:41:39.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.222.154.70",
+      "domain": "docs.googleapis.com"
+    },
+    "full_log": "Feb 10 03:41:39 vpn-gw01 netmon: NEW_DOMAIN src=10.0.0.2 dst=... domain=docs.googleapis.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2083,
+    "timestamp": "2026-02-10T03:49:41.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.88.51.223",
+      "domain": "cdn.brandassets.net"
+    },
+    "full_log": "Feb 10 03:49:41 hr-ws01 netmon: NEW_DOMAIN src=10.0.4.9 dst=... domain=cdn.brandassets.net first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2201,
+    "timestamp": "2026-02-10T03:57:00.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100061",
+      "level": 7,
+      "description": "modsecurity: SQL injection pattern matched in request parameter",
+      "groups": [
+        "web",
+        "attack",
+        "sql_injection"
+      ]
+    },
+    "decoder": {
+      "name": "modsecurity"
+    },
+    "data": {
+      "srcip": "185.220.101.44"
+    },
+    "full_log": "Feb 10 03:57:00 web02 apache2: 185.220.101.44 - - \"GET /app/login.php?id=1%27%20OR%20%271%27%3D%271 HTTP/1.1\" 403 210",
+    "location": "/var/log/apache2/modsec_audit.log"
+  },
+  {
+    "id": 2037,
+    "timestamp": "2026-02-10T03:57:40.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 03:57:40 vpn-gw01 sshd[6416]: Failed password for admin from 198.51.100.201 port 42965 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
     "id": 1011,
     "timestamp": "2026-02-10T04:02:55.000+0000",
     "agent": {
@@ -85,6 +1143,540 @@
     },
     "full_log": "Feb 10 04:02:55 web01 clamav-freshclam[1102]: main.cvd updated (version: 62, sigs: 6647427)",
     "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2094,
+    "timestamp": "2026-02-10T04:03:53.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.134.145.27",
+      "domain": "benefits.newvendorhr.com"
+    },
+    "full_log": "Feb 10 04:03:53 web01 netmon: NEW_DOMAIN src=10.0.2.15 dst=... domain=benefits.newvendorhr.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2190,
+    "timestamp": "2026-02-10T04:09:38.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.19"
+    },
+    "full_log": "Feb 10 04:09:38 web02 apache2: 10.0.9.19 - - \"GET /app/index.php HTTP/1.1\" 200 1754",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
+    "id": 2189,
+    "timestamp": "2026-02-10T04:23:06.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.25"
+    },
+    "full_log": "Feb 10 04:23:06 web02 apache2: 10.0.9.25 - - \"GET /favicon.ico HTTP/1.1\" 200 529",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
+    "id": 2137,
+    "timestamp": "2026-02-10T04:23:40.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.28",
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 04:23:40 vpn-gw01 openvpn[993]: mrivera/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2047,
+    "timestamp": "2026-02-10T04:25:22.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "45.155.205.10"
+    },
+    "full_log": "Feb 10 04:25:22 vpn-gw01 sshd[7377]: Failed password for oracle from 45.155.205.10 port 57440 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2034,
+    "timestamp": "2026-02-10T04:29:59.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "45.155.205.10"
+    },
+    "full_log": "Feb 10 04:29:59 vpn-gw01 sshd[2391]: Failed password for test from 45.155.205.10 port 49743 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2082,
+    "timestamp": "2026-02-10T04:31:58.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.192.72.185",
+      "domain": "api.slack.com"
+    },
+    "full_log": "Feb 10 04:31:58 hr-ws01 netmon: NEW_DOMAIN src=10.0.4.9 dst=... domain=api.slack.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2151,
+    "timestamp": "2026-02-10T04:33:52.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.20",
+      "user": "jdoe"
+    },
+    "full_log": "Feb 10 04:33:52 vpn-gw01 openvpn[978]: jdoe/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2146,
+    "timestamp": "2026-02-10T04:45:43.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.20",
+      "user": "lramirez"
+    },
+    "full_log": "Feb 10 04:45:43 vpn-gw01 openvpn[965]: lramirez/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2068,
+    "timestamp": "2026-02-10T04:51:48.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 04:51:48 vpn-gw01 clamav-freshclam[1108]: main.cvd updated (version: 62, sigs: 6648755)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2101,
+    "timestamp": "2026-02-10T05:12:51.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "backup-agent.exe",
+      "user": "svc_backup"
+    },
+    "full_log": "Feb 10 05:12:51 vpn-gw01 auditd[1]: EXECVE proc=backup-agent.exe user=svc_backup pid=8659",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2105,
+    "timestamp": "2026-02-10T05:19:59.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "backup-agent.exe",
+      "user": "jdoe"
+    },
+    "full_log": "Feb 10 05:19:59 web02 auditd[1]: EXECVE proc=backup-agent.exe user=jdoe pid=5297",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2103,
+    "timestamp": "2026-02-10T05:21:40.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "chrome_updater.exe",
+      "user": "lramirez"
+    },
+    "full_log": "Feb 10 05:21:40 fin-ws07 auditd[1]: EXECVE proc=chrome_updater.exe user=lramirez pid=7364",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2092,
+    "timestamp": "2026-02-10T05:29:25.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.78.228.238",
+      "domain": "outlook.office365.com"
+    },
+    "full_log": "Feb 10 05:29:25 vpn-gw01 netmon: NEW_DOMAIN src=10.0.0.2 dst=... domain=outlook.office365.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2076,
+    "timestamp": "2026-02-10T05:36:30.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.43.90.129",
+      "domain": "cdn.zoom.us"
+    },
+    "full_log": "Feb 10 05:36:30 fin-ws07 netmon: NEW_DOMAIN src=10.0.4.22 dst=... domain=cdn.zoom.us first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2106,
+    "timestamp": "2026-02-10T05:37:45.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "java.exe",
+      "user": "jdoe"
+    },
+    "full_log": "Feb 10 05:37:45 vpn-gw01 auditd[1]: EXECVE proc=java.exe user=jdoe pid=1743",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2154,
+    "timestamp": "2026-02-10T05:40:01.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.52",
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 05:40:01 vpn-gw01 openvpn[991]: mrivera/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2197,
+    "timestamp": "2026-02-10T05:40:04.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.11"
+    },
+    "full_log": "Feb 10 05:40:04 web02 apache2: 10.0.9.11 - - \"GET /app/index.php HTTP/1.1\" 200 2660",
+    "location": "/var/log/apache2/access.log"
   },
   {
     "id": 1013,
@@ -117,6 +1709,94 @@
     "location": "/var/log/netmon/connections.log"
   },
   {
+    "id": 2016,
+    "timestamp": "2026-02-10T05:47:49.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.5"
+    },
+    "full_log": "Feb 10 05:47:49 vpn-gw01 sshd[7911]: Failed password for root from 185.220.101.5 port 41702 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2038,
+    "timestamp": "2026-02-10T06:07:19.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "203.0.113.9"
+    },
+    "full_log": "Feb 10 06:07:19 vpn-gw01 sshd[8738]: Failed password for admin from 203.0.113.9 port 55661 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2162,
+    "timestamp": "2026-02-10T06:10:33.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "asingh",
+      "command": "systemctl restart sshd"
+    },
+    "full_log": "Feb 10 06:10:33 web02 sudo: asingh : COMMAND=/usr/bin/env systemctl restart sshd",
+    "location": "/var/log/auth.log"
+  },
+  {
     "id": 1017,
     "timestamp": "2026-02-10T06:30:02.000+0000",
     "agent": {
@@ -147,6 +1827,95 @@
     "location": "/var/log/audit/audit.log"
   },
   {
+    "id": 2027,
+    "timestamp": "2026-02-10T06:31:04.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 06:31:04 web02 sshd[4405]: Failed password for admin from 198.51.100.201 port 31580 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2089,
+    "timestamp": "2026-02-10T06:35:26.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.214.46.131",
+      "domain": "cdn.zoom.us"
+    },
+    "full_log": "Feb 10 06:35:26 fin-ws07 netmon: NEW_DOMAIN src=10.0.4.22 dst=... domain=cdn.zoom.us first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2108,
+    "timestamp": "2026-02-10T07:00:34.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "av_nightly_scan.exe",
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 07:00:34 corp-laptop14 auditd[1]: EXECVE proc=av_nightly_scan.exe user=mrivera pid=8678",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
     "id": 1019,
     "timestamp": "2026-02-10T07:05:44.000+0000",
     "agent": {
@@ -174,6 +1943,272 @@
     },
     "full_log": "Feb 10 07:05:44 web01 sshd[2311]: Failed password for oracle from 198.51.100.201 port 44120 ssh2",
     "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2100,
+    "timestamp": "2026-02-10T07:07:40.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "spoolsv",
+      "user": "SYSTEM"
+    },
+    "full_log": "Feb 10 07:07:40 mkt-ws03 auditd[1]: EXECVE proc=spoolsv user=SYSTEM pid=2867",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2102,
+    "timestamp": "2026-02-10T07:22:29.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "backup-agent.exe",
+      "user": "asingh"
+    },
+    "full_log": "Feb 10 07:22:29 corp-laptop14 auditd[1]: EXECVE proc=backup-agent.exe user=asingh pid=9852",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2070,
+    "timestamp": "2026-02-10T07:29:33.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 07:29:33 web01 clamav-freshclam[1480]: main.cvd updated (version: 64, sigs: 6664486)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2198,
+    "timestamp": "2026-02-10T07:34:49.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.11"
+    },
+    "full_log": "Feb 10 07:34:49 web02 apache2: 10.0.9.11 - - \"GET /app/products.php HTTP/1.1\" 200 1284",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
+    "id": 2180,
+    "timestamp": "2026-02-10T07:39:01.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 07:39:01 hr-ws01 sshd[3169]: pam_unix(sshd:session): session opened for user mrivera by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2005,
+    "timestamp": "2026-02-10T07:40:45.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "203.0.113.9"
+    },
+    "full_log": "Feb 10 07:40:45 web02 sshd[7775]: Failed password for oracle from 203.0.113.9 port 57830 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2145,
+    "timestamp": "2026-02-10T07:53:09.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.27",
+      "user": "jdoe"
+    },
+    "full_log": "Feb 10 07:53:09 vpn-gw01 openvpn[979]: jdoe/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2139,
+    "timestamp": "2026-02-10T07:53:17.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.53",
+      "user": "jdoe"
+    },
+    "full_log": "Feb 10 07:53:17 vpn-gw01 openvpn[907]: jdoe/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2080,
+    "timestamp": "2026-02-10T07:55:27.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.9.209.181",
+      "domain": "benefits.newvendorhr.com"
+    },
+    "full_log": "Feb 10 07:55:27 web01 netmon: NEW_DOMAIN src=10.0.2.15 dst=... domain=benefits.newvendorhr.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
   },
   {
     "id": 1022,
@@ -236,6 +2271,64 @@
     "location": "/var/log/openvpn/openvpn.log"
   },
   {
+    "id": 2062,
+    "timestamp": "2026-02-10T08:26:51.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 08:26:51 web02 clamav-freshclam[1507]: main.cvd updated (version: 70, sigs: 6635627)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2033,
+    "timestamp": "2026-02-10T08:28:08.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "89.248.165.12"
+    },
+    "full_log": "Feb 10 08:28:08 web01 sshd[9912]: Failed password for test from 89.248.165.12 port 51546 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
     "id": 1031,
     "timestamp": "2026-02-10T08:44:02.000+0000",
     "agent": {
@@ -266,6 +2359,66 @@
     "location": "/var/log/netmon/connections.log"
   },
   {
+    "id": 2090,
+    "timestamp": "2026-02-10T08:54:50.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.213.11.35",
+      "domain": "s3.amazonaws.com"
+    },
+    "full_log": "Feb 10 08:54:50 web01 netmon: NEW_DOMAIN src=10.0.2.15 dst=... domain=s3.amazonaws.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2098,
+    "timestamp": "2026-02-10T08:59:26.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "onedrive.exe",
+      "user": "svc_backup"
+    },
+    "full_log": "Feb 10 08:59:26 web01 auditd[1]: EXECVE proc=onedrive.exe user=svc_backup pid=3002",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
     "id": 1037,
     "timestamp": "2026-02-10T09:01:55.000+0000",
     "agent": {
@@ -293,6 +2446,65 @@
     },
     "full_log": "Feb 10 09:01:55 web02 sshd[3301]: Failed password for admin from 203.0.113.9 port 52011 ssh2",
     "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2020,
+    "timestamp": "2026-02-10T09:08:56.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "89.248.165.12"
+    },
+    "full_log": "Feb 10 09:08:56 web02 sshd[5475]: Failed password for root from 89.248.165.12 port 55133 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2128,
+    "timestamp": "2026-02-10T09:13:33.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "av_nightly_scan.exe",
+      "user": "oncall_svc"
+    },
+    "full_log": "Feb 10 09:13:33 web01 auditd[1]: EXECVE proc=av_nightly_scan.exe user=oncall_svc pid=7584",
+    "location": "/var/log/audit/audit.log"
   },
   {
     "id": 1042,
@@ -503,6 +2715,35 @@
     "location": "/var/log/audit/audit.log"
   },
   {
+    "id": 2063,
+    "timestamp": "2026-02-10T09:38:45.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 09:38:45 mkt-ws03 clamav-freshclam[1287]: main.cvd updated (version: 66, sigs: 6671433)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
     "id": 1051,
     "timestamp": "2026-02-10T09:38:55.000+0000",
     "agent": {
@@ -532,6 +2773,36 @@
     },
     "full_log": "Feb 10 09:38:55 web01 netmon: OUTBOUND src=10.0.2.15 dst=198.51.100.44 dport=4444 proto=tcp bytes=18422",
     "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2125,
+    "timestamp": "2026-02-10T09:39:26.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "design_suite_updater.exe",
+      "user": "lramirez"
+    },
+    "full_log": "Feb 10 09:39:26 web01 auditd[1]: EXECVE proc=design_suite_updater.exe user=lramirez pid=6434",
+    "location": "/var/log/audit/audit.log"
   },
   {
     "id": 1052,
@@ -593,6 +2864,36 @@
     "location": "/var/log/audit/audit.log"
   },
   {
+    "id": 2161,
+    "timestamp": "2026-02-10T09:42:23.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "lramirez",
+      "command": "systemctl restart sshd"
+    },
+    "full_log": "Feb 10 09:42:23 web01 sudo: lramirez : COMMAND=/usr/bin/env systemctl restart sshd",
+    "location": "/var/log/auth.log"
+  },
+  {
     "id": 1054,
     "timestamp": "2026-02-10T09:45:20.000+0000",
     "agent": {
@@ -621,6 +2922,36 @@
     },
     "full_log": "Feb 10 09:45:20 vpn-gw01 openvpn[911]: mrivera/10.0.6.22 VERIFY OK, auth succeeded",
     "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2112,
+    "timestamp": "2026-02-10T09:45:36.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "teams_updater.exe",
+      "user": "oncall_svc"
+    },
+    "full_log": "Feb 10 09:45:36 fin-ws07 auditd[1]: EXECVE proc=teams_updater.exe user=oncall_svc pid=1217",
+    "location": "/var/log/audit/audit.log"
   },
   {
     "id": 1056,
@@ -683,6 +3014,388 @@
     "location": "/var/log/audit/audit.log"
   },
   {
+    "id": 2118,
+    "timestamp": "2026-02-10T09:53:14.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "onedrive.exe",
+      "user": "asingh"
+    },
+    "full_log": "Feb 10 09:53:14 vpn-gw01 auditd[1]: EXECVE proc=onedrive.exe user=asingh pid=4836",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2171,
+    "timestamp": "2026-02-10T10:11:33.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "jchen"
+    },
+    "full_log": "Feb 10 10:11:33 web02 sshd[3981]: pam_unix(sshd:session): session opened for user jchen by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2031,
+    "timestamp": "2026-02-10T10:16:31.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 10:16:31 web01 sshd[3723]: Failed password for www-data from 198.51.100.201 port 41798 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2032,
+    "timestamp": "2026-02-10T10:24:40.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 10:24:40 web01 sshd[2705]: Failed password for www-data from 198.51.100.201 port 32633 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2194,
+    "timestamp": "2026-02-10T10:24:57.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.46"
+    },
+    "full_log": "Feb 10 10:24:57 web02 apache2: 10.0.9.46 - - \"GET /app/index.php HTTP/1.1\" 200 2841",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
+    "id": 2012,
+    "timestamp": "2026-02-10T10:35:17.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.156.73.44"
+    },
+    "full_log": "Feb 10 10:35:17 web02 sshd[6712]: Failed password for root from 185.156.73.44 port 54412 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2109,
+    "timestamp": "2026-02-10T10:37:36.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "spoolsv",
+      "user": "lramirez"
+    },
+    "full_log": "Feb 10 10:37:36 hr-ws01 auditd[1]: EXECVE proc=spoolsv user=lramirez pid=8075",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2055,
+    "timestamp": "2026-02-10T10:46:04.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "194.61.24.9"
+    },
+    "full_log": "Feb 10 10:46:04 web01 sshd[2153]: Failed password for jenkins from 194.61.24.9 port 46956 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2177,
+    "timestamp": "2026-02-10T10:47:21.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "jdoe"
+    },
+    "full_log": "Feb 10 10:47:21 mkt-ws03 sshd[2930]: pam_unix(sshd:session): session opened for user jdoe by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2004,
+    "timestamp": "2026-02-10T10:57:53.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 10:57:53 web01 sshd[7223]: Failed password for oracle from 198.51.100.201 port 30559 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2110,
+    "timestamp": "2026-02-10T10:58:31.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "av_nightly_scan.exe",
+      "user": "oncall_svc"
+    },
+    "full_log": "Feb 10 10:58:31 web02 auditd[1]: EXECVE proc=av_nightly_scan.exe user=oncall_svc pid=2503",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2204,
+    "timestamp": "2026-02-10T11:02:00.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100060",
+      "level": 7,
+      "description": "modsecurity: Automated scanning pattern detected against web application",
+      "groups": [
+        "web",
+        "attack",
+        "recon"
+      ]
+    },
+    "decoder": {
+      "name": "modsecurity"
+    },
+    "data": {
+      "srcip": "10.0.9.50"
+    },
+    "full_log": "Feb 10 11:02:00 web02 apache2: 10.0.9.50 - - \"GET /app/admin.php.bak HTTP/1.1\" 404 287",
+    "location": "/var/log/apache2/modsec_audit.log"
+  },
+  {
+    "id": 2136,
+    "timestamp": "2026-02-10T11:04:23.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.16",
+      "user": "jchen"
+    },
+    "full_log": "Feb 10 11:04:23 vpn-gw01 openvpn[992]: jchen/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
     "id": 1061,
     "timestamp": "2026-02-10T11:05:14.000+0000",
     "agent": {
@@ -710,6 +3423,863 @@
     },
     "full_log": "Feb 10 11:05:14 web01 sshd[2455]: Failed password for admin from 203.0.113.9 port 53012 ssh2",
     "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2205,
+    "timestamp": "2026-02-10T11:06:00.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100061",
+      "level": 8,
+      "description": "modsecurity: SQL injection pattern matched in request parameter",
+      "groups": [
+        "web",
+        "attack",
+        "sql_injection"
+      ]
+    },
+    "decoder": {
+      "name": "modsecurity"
+    },
+    "data": {
+      "srcip": "10.0.9.50"
+    },
+    "full_log": "Feb 10 11:06:00 web02 apache2: 10.0.9.50 - - \"GET /app/search.php?q=%27%20UNION%20SELECT HTTP/1.1\" 403 198",
+    "location": "/var/log/apache2/modsec_audit.log"
+  },
+  {
+    "id": 2206,
+    "timestamp": "2026-02-10T11:11:00.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100060",
+      "level": 7,
+      "description": "modsecurity: Automated scanning pattern detected against web application",
+      "groups": [
+        "web",
+        "attack",
+        "recon"
+      ]
+    },
+    "decoder": {
+      "name": "modsecurity"
+    },
+    "data": {
+      "srcip": "10.0.9.50"
+    },
+    "full_log": "Feb 10 11:11:00 web02 apache2: 10.0.9.50 - - \"GET /app/admin.php.bak HTTP/1.1\" 404 287",
+    "location": "/var/log/apache2/modsec_audit.log"
+  },
+  {
+    "id": 2207,
+    "timestamp": "2026-02-10T11:15:00.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100061",
+      "level": 8,
+      "description": "modsecurity: SQL injection pattern matched in request parameter",
+      "groups": [
+        "web",
+        "attack",
+        "sql_injection"
+      ]
+    },
+    "decoder": {
+      "name": "modsecurity"
+    },
+    "data": {
+      "srcip": "10.0.9.50"
+    },
+    "full_log": "Feb 10 11:15:00 web02 apache2: 10.0.9.50 - - \"GET /app/search.php?q=%27%20UNION%20SELECT HTTP/1.1\" 403 198",
+    "location": "/var/log/apache2/modsec_audit.log"
+  },
+  {
+    "id": 2093,
+    "timestamp": "2026-02-10T11:17:28.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.115.160.175",
+      "domain": "outlook.office365.com"
+    },
+    "full_log": "Feb 10 11:17:28 fin-ws07 netmon: NEW_DOMAIN src=10.0.4.22 dst=... domain=outlook.office365.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2208,
+    "timestamp": "2026-02-10T11:21:00.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100060",
+      "level": 7,
+      "description": "modsecurity: Automated scanning pattern detected against web application",
+      "groups": [
+        "web",
+        "attack",
+        "recon"
+      ]
+    },
+    "decoder": {
+      "name": "modsecurity"
+    },
+    "data": {
+      "srcip": "10.0.9.50"
+    },
+    "full_log": "Feb 10 11:21:00 web02 apache2: 10.0.9.50 - - \"GET /app/admin.php.bak HTTP/1.1\" 404 287",
+    "location": "/var/log/apache2/modsec_audit.log"
+  },
+  {
+    "id": 2173,
+    "timestamp": "2026-02-10T11:21:37.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "kwong"
+    },
+    "full_log": "Feb 10 11:21:37 corp-laptop14 sshd[6610]: pam_unix(sshd:session): session opened for user kwong by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2015,
+    "timestamp": "2026-02-10T11:26:54.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "45.155.205.10"
+    },
+    "full_log": "Feb 10 11:26:54 web02 sshd[8658]: Failed password for guest from 45.155.205.10 port 34420 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2209,
+    "timestamp": "2026-02-10T11:27:00.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100061",
+      "level": 8,
+      "description": "modsecurity: SQL injection pattern matched in request parameter",
+      "groups": [
+        "web",
+        "attack",
+        "sql_injection"
+      ]
+    },
+    "decoder": {
+      "name": "modsecurity"
+    },
+    "data": {
+      "srcip": "10.0.9.50"
+    },
+    "full_log": "Feb 10 11:27:00 web02 apache2: 10.0.9.50 - - \"GET /app/search.php?q=%27%20UNION%20SELECT HTTP/1.1\" 403 198",
+    "location": "/var/log/apache2/modsec_audit.log"
+  },
+  {
+    "id": 2184,
+    "timestamp": "2026-02-10T11:28:23.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "oncall_svc"
+    },
+    "full_log": "Feb 10 11:28:23 hr-ws01 sshd[2686]: pam_unix(sshd:session): session opened for user oncall_svc by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2153,
+    "timestamp": "2026-02-10T11:44:02.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.9",
+      "user": "asingh"
+    },
+    "full_log": "Feb 10 11:44:02 vpn-gw01 openvpn[927]: asingh/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2073,
+    "timestamp": "2026-02-10T11:44:36.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 11:44:36 hr-ws01 clamav-freshclam[1148]: main.cvd updated (version: 63, sigs: 6681279)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2133,
+    "timestamp": "2026-02-10T12:00:59.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "design_suite_updater.exe",
+      "user": "jchen"
+    },
+    "full_log": "Feb 10 12:00:59 vpn-gw01 auditd[1]: EXECVE proc=design_suite_updater.exe user=jchen pid=1448",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2091,
+    "timestamp": "2026-02-10T12:03:12.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.146.158.102",
+      "domain": "docs.googleapis.com"
+    },
+    "full_log": "Feb 10 12:03:12 fin-ws07 netmon: NEW_DOMAIN src=10.0.4.22 dst=... domain=docs.googleapis.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2202,
+    "timestamp": "2026-02-10T12:06:00.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100061",
+      "level": 7,
+      "description": "modsecurity: SQL injection pattern matched in request parameter",
+      "groups": [
+        "web",
+        "attack",
+        "sql_injection"
+      ]
+    },
+    "decoder": {
+      "name": "modsecurity"
+    },
+    "data": {
+      "srcip": "45.155.205.77"
+    },
+    "full_log": "Feb 10 12:06:00 web02 apache2: 45.155.205.77 - - \"GET /app/login.php?id=1%27%20OR%20%271%27%3D%271 HTTP/1.1\" 403 210",
+    "location": "/var/log/apache2/modsec_audit.log"
+  },
+  {
+    "id": 2029,
+    "timestamp": "2026-02-10T12:08:09.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "45.155.205.10"
+    },
+    "full_log": "Feb 10 12:08:09 vpn-gw01 sshd[7659]: Failed password for root from 45.155.205.10 port 58042 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2069,
+    "timestamp": "2026-02-10T12:18:06.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 12:18:06 web02 clamav-freshclam[1505]: main.cvd updated (version: 63, sigs: 6685941)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2071,
+    "timestamp": "2026-02-10T12:27:40.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 12:27:40 mkt-ws03 clamav-freshclam[1982]: main.cvd updated (version: 60, sigs: 6657988)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2107,
+    "timestamp": "2026-02-10T12:28:09.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "chrome_updater.exe",
+      "user": "jdoe"
+    },
+    "full_log": "Feb 10 12:28:09 web01 auditd[1]: EXECVE proc=chrome_updater.exe user=jdoe pid=3236",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2030,
+    "timestamp": "2026-02-10T12:31:59.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.156.73.44"
+    },
+    "full_log": "Feb 10 12:31:59 vpn-gw01 sshd[3003]: Failed password for www-data from 185.156.73.44 port 39105 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2061,
+    "timestamp": "2026-02-10T12:37:39.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 12:37:39 vpn-gw01 clamav-freshclam[1369]: main.cvd updated (version: 62, sigs: 6672959)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2144,
+    "timestamp": "2026-02-10T12:44:05.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.18",
+      "user": "kwong"
+    },
+    "full_log": "Feb 10 12:44:05 vpn-gw01 openvpn[909]: kwong/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2054,
+    "timestamp": "2026-02-10T12:48:54.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "89.248.165.12"
+    },
+    "full_log": "Feb 10 12:48:54 web01 sshd[7614]: Failed password for postgres from 89.248.165.12 port 54407 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2096,
+    "timestamp": "2026-02-10T12:49:45.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "teams_updater.exe",
+      "user": "oncall_svc"
+    },
+    "full_log": "Feb 10 12:49:45 corp-laptop14 auditd[1]: EXECVE proc=teams_updater.exe user=oncall_svc pid=6329",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2174,
+    "timestamp": "2026-02-10T12:56:13.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 12:56:13 fin-ws07 sshd[2433]: pam_unix(sshd:session): session opened for user mrivera by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2143,
+    "timestamp": "2026-02-10T12:57:15.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.9",
+      "user": "asingh"
+    },
+    "full_log": "Feb 10 12:57:15 vpn-gw01 openvpn[922]: asingh/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2122,
+    "timestamp": "2026-02-10T12:58:01.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "chrome_updater.exe",
+      "user": "oncall_svc"
+    },
+    "full_log": "Feb 10 12:58:01 web02 auditd[1]: EXECVE proc=chrome_updater.exe user=oncall_svc pid=9484",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2134,
+    "timestamp": "2026-02-10T13:03:15.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "teams_updater.exe",
+      "user": "lramirez"
+    },
+    "full_log": "Feb 10 13:03:15 vpn-gw01 auditd[1]: EXECVE proc=teams_updater.exe user=lramirez pid=8778",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2065,
+    "timestamp": "2026-02-10T13:12:07.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 13:12:07 web02 clamav-freshclam[1532]: main.cvd updated (version: 65, sigs: 6660730)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2188,
+    "timestamp": "2026-02-10T13:19:57.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.46"
+    },
+    "full_log": "Feb 10 13:19:57 web01 apache2: 10.0.9.46 - - \"GET /app/index.php HTTP/1.1\" 200 563",
+    "location": "/var/log/apache2/access.log"
   },
   {
     "id": 1064,
@@ -742,6 +4312,685 @@
     "location": "/var/log/audit/audit.log"
   },
   {
+    "id": 2040,
+    "timestamp": "2026-02-10T13:29:05.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 13:29:05 vpn-gw01 sshd[7379]: Failed password for test from 198.51.100.201 port 33867 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2185,
+    "timestamp": "2026-02-10T13:36:06.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "asingh"
+    },
+    "full_log": "Feb 10 13:36:06 hr-ws01 sshd[7793]: pam_unix(sshd:session): session opened for user asingh by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2097,
+    "timestamp": "2026-02-10T13:50:15.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "spoolsv",
+      "user": "asingh"
+    },
+    "full_log": "Feb 10 13:50:15 corp-laptop14 auditd[1]: EXECVE proc=spoolsv user=asingh pid=9933",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2028,
+    "timestamp": "2026-02-10T13:51:10.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.5"
+    },
+    "full_log": "Feb 10 13:51:10 web02 sshd[7757]: Failed password for admin from 185.220.101.5 port 49347 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2001,
+    "timestamp": "2026-02-10T13:56:30.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.5"
+    },
+    "full_log": "Feb 10 13:56:30 vpn-gw01 sshd[4623]: Failed password for jenkins from 185.220.101.5 port 50028 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2169,
+    "timestamp": "2026-02-10T13:59:55.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "jchen",
+      "command": "apt-get update"
+    },
+    "full_log": "Feb 10 13:59:55 corp-laptop14 sudo: jchen : COMMAND=/usr/bin/env apt-get update",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2192,
+    "timestamp": "2026-02-10T14:04:17.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.53"
+    },
+    "full_log": "Feb 10 14:04:17 web02 apache2: 10.0.9.53 - - \"GET /favicon.ico HTTP/1.1\" 200 2251",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
+    "id": 2210,
+    "timestamp": "2026-02-10T14:05:00.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100080",
+      "level": 8,
+      "description": "auditd: Account added to local Administrators group outside change window",
+      "groups": [
+        "attack",
+        "privilege_escalation",
+        "authentication"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "user": "jchen"
+    },
+    "full_log": "Feb 10 14:05:00 fin-ws07 auditd[1]: USER_ADD acct=jchen group=Administrators by=itadmin ticket=HELP-4471",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2117,
+    "timestamp": "2026-02-10T14:26:35.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "design_suite_updater.exe",
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 14:26:35 hr-ws01 auditd[1]: EXECVE proc=design_suite_updater.exe user=mrivera pid=7424",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2104,
+    "timestamp": "2026-02-10T14:40:52.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "chrome_updater.exe",
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 14:40:52 vpn-gw01 auditd[1]: EXECVE proc=chrome_updater.exe user=mrivera pid=6173",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2121,
+    "timestamp": "2026-02-10T14:41:12.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "teams_updater.exe",
+      "user": "SYSTEM"
+    },
+    "full_log": "Feb 10 14:41:12 mkt-ws03 auditd[1]: EXECVE proc=teams_updater.exe user=SYSTEM pid=1492",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2132,
+    "timestamp": "2026-02-10T14:54:47.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "chrome_updater.exe",
+      "user": "jchen"
+    },
+    "full_log": "Feb 10 14:54:47 fin-ws07 auditd[1]: EXECVE proc=chrome_updater.exe user=jchen pid=6580",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2196,
+    "timestamp": "2026-02-10T15:06:25.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.54"
+    },
+    "full_log": "Feb 10 15:06:25 web01 apache2: 10.0.9.54 - - \"GET / HTTP/1.1\" 200 3626",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
+    "id": 2142,
+    "timestamp": "2026-02-10T15:08:01.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.3",
+      "user": "oncall_svc"
+    },
+    "full_log": "Feb 10 15:08:01 vpn-gw01 openvpn[913]: oncall_svc/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2155,
+    "timestamp": "2026-02-10T15:08:45.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.53",
+      "user": "jchen"
+    },
+    "full_log": "Feb 10 15:08:45 vpn-gw01 openvpn[934]: jchen/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2170,
+    "timestamp": "2026-02-10T15:12:11.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "jchen",
+      "command": "apt-get upgrade -y"
+    },
+    "full_log": "Feb 10 15:12:11 hr-ws01 sudo: jchen : COMMAND=/usr/bin/env apt-get upgrade -y",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2182,
+    "timestamp": "2026-02-10T15:24:13.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "lramirez"
+    },
+    "full_log": "Feb 10 15:24:13 corp-laptop14 sshd[6348]: pam_unix(sshd:session): session opened for user lramirez by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2149,
+    "timestamp": "2026-02-10T15:25:27.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.48",
+      "user": "asingh"
+    },
+    "full_log": "Feb 10 15:25:27 vpn-gw01 openvpn[916]: asingh/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2199,
+    "timestamp": "2026-02-10T15:29:37.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.48"
+    },
+    "full_log": "Feb 10 15:29:37 web02 apache2: 10.0.9.48 - - \"GET /app/about.php HTTP/1.1\" 200 3718",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
+    "id": 2036,
+    "timestamp": "2026-02-10T15:30:20.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.156.73.44"
+    },
+    "full_log": "Feb 10 15:30:20 vpn-gw01 sshd[7743]: Failed password for guest from 185.156.73.44 port 45664 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2116,
+    "timestamp": "2026-02-10T15:31:41.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "teams_updater.exe",
+      "user": "SYSTEM"
+    },
+    "full_log": "Feb 10 15:31:41 web01 auditd[1]: EXECVE proc=teams_updater.exe user=SYSTEM pid=7213",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2075,
+    "timestamp": "2026-02-10T15:32:58.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 15:32:58 web01 clamav-freshclam[1624]: main.cvd updated (version: 62, sigs: 6665565)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2050,
+    "timestamp": "2026-02-10T15:37:26.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.156.73.44"
+    },
+    "full_log": "Feb 10 15:37:26 web02 sshd[2965]: Failed password for admin from 185.156.73.44 port 39446 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
     "id": 1070,
     "timestamp": "2026-02-10T15:40:19.000+0000",
     "agent": {
@@ -769,6 +5018,624 @@
     },
     "full_log": "Feb 10 15:40:19 web02 clamav-freshclam[1220]: main.cvd updated (version: 63, sigs: 6648012)",
     "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2183,
+    "timestamp": "2026-02-10T15:46:14.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "asingh"
+    },
+    "full_log": "Feb 10 15:46:14 corp-laptop14 sshd[5911]: pam_unix(sshd:session): session opened for user asingh by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2166,
+    "timestamp": "2026-02-10T15:54:39.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "jchen",
+      "command": "apt-get update"
+    },
+    "full_log": "Feb 10 15:54:39 web02 sudo: jchen : COMMAND=/usr/bin/env apt-get update",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2138,
+    "timestamp": "2026-02-10T16:07:36.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.22",
+      "user": "oncall_svc"
+    },
+    "full_log": "Feb 10 16:07:36 vpn-gw01 openvpn[903]: oncall_svc/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2049,
+    "timestamp": "2026-02-10T16:09:26.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.156.73.44"
+    },
+    "full_log": "Feb 10 16:09:26 web02 sshd[6317]: Failed password for root from 185.156.73.44 port 51489 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2195,
+    "timestamp": "2026-02-10T16:21:11.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.40"
+    },
+    "full_log": "Feb 10 16:21:11 web01 apache2: 10.0.9.40 - - \"GET /app/index.php HTTP/1.1\" 200 790",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
+    "id": 2042,
+    "timestamp": "2026-02-10T16:22:06.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 16:22:06 vpn-gw01 sshd[9174]: Failed password for test from 198.51.100.201 port 37120 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2057,
+    "timestamp": "2026-02-10T16:22:20.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "194.61.24.9"
+    },
+    "full_log": "Feb 10 16:22:20 vpn-gw01 sshd[7888]: Failed password for root from 194.61.24.9 port 33765 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2140,
+    "timestamp": "2026-02-10T16:34:41.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.38",
+      "user": "jdoe"
+    },
+    "full_log": "Feb 10 16:34:41 vpn-gw01 openvpn[959]: jdoe/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2211,
+    "timestamp": "2026-02-10T16:40:00.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100021",
+      "level": 9,
+      "description": "ClamAV: Quarantine action failed, file left in place",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 16:40:00 mkt-ws03 clamav-daemon[1140]: QUARANTINE_FAILED file=/tmp/installer_cache/setup.tmp reason=permission_denied",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2008,
+    "timestamp": "2026-02-10T16:47:23.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "203.0.113.9"
+    },
+    "full_log": "Feb 10 16:47:23 web02 sshd[6690]: Failed password for root from 203.0.113.9 port 37753 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2129,
+    "timestamp": "2026-02-10T17:11:26.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "chrome_updater.exe",
+      "user": "svc_backup"
+    },
+    "full_log": "Feb 10 17:11:26 vpn-gw01 auditd[1]: EXECVE proc=chrome_updater.exe user=svc_backup pid=6751",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2168,
+    "timestamp": "2026-02-10T17:20:59.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "mrivera",
+      "command": "apt-get upgrade -y"
+    },
+    "full_log": "Feb 10 17:20:59 hr-ws01 sudo: mrivera : COMMAND=/usr/bin/env apt-get upgrade -y",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2039,
+    "timestamp": "2026-02-10T17:25:32.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.5"
+    },
+    "full_log": "Feb 10 17:25:32 web01 sshd[7940]: Failed password for postgres from 185.220.101.5 port 54019 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2167,
+    "timestamp": "2026-02-10T17:30:28.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "oncall_svc",
+      "command": "systemctl restart apache2"
+    },
+    "full_log": "Feb 10 17:30:28 corp-laptop14 sudo: oncall_svc : COMMAND=/usr/bin/env systemctl restart apache2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2156,
+    "timestamp": "2026-02-10T17:38:25.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "mrivera",
+      "command": "systemctl restart sshd"
+    },
+    "full_log": "Feb 10 17:38:25 fin-ws07 sudo: mrivera : COMMAND=/usr/bin/env systemctl restart sshd",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2119,
+    "timestamp": "2026-02-10T17:39:22.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "av_nightly_scan.exe",
+      "user": "asingh"
+    },
+    "full_log": "Feb 10 17:39:22 vpn-gw01 auditd[1]: EXECVE proc=av_nightly_scan.exe user=asingh pid=2784",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2023,
+    "timestamp": "2026-02-10T17:41:30.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.5"
+    },
+    "full_log": "Feb 10 17:41:30 web02 sshd[9922]: Failed password for root from 185.220.101.5 port 48495 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2181,
+    "timestamp": "2026-02-10T17:49:08.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "jchen"
+    },
+    "full_log": "Feb 10 17:49:08 vpn-gw01 sshd[5147]: pam_unix(sshd:session): session opened for user jchen by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2021,
+    "timestamp": "2026-02-10T17:49:11.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.5"
+    },
+    "full_log": "Feb 10 17:49:11 vpn-gw01 sshd[8544]: Failed password for root from 185.220.101.5 port 53898 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2095,
+    "timestamp": "2026-02-10T17:55:56.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.180.118.77",
+      "domain": "api.slack.com"
+    },
+    "full_log": "Feb 10 17:55:56 mkt-ws03 netmon: NEW_DOMAIN src=10.0.4.31 dst=... domain=api.slack.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2046,
+    "timestamp": "2026-02-10T17:56:19.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.156.73.44"
+    },
+    "full_log": "Feb 10 17:56:19 web02 sshd[4150]: Failed password for guest from 185.156.73.44 port 34704 ssh2",
+    "location": "/var/log/auth.log"
   },
   {
     "id": 1076,
@@ -801,6 +5668,301 @@
     "location": "/var/log/netmon/connections.log"
   },
   {
+    "id": 2064,
+    "timestamp": "2026-02-10T18:29:35.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 18:29:35 mkt-ws03 clamav-freshclam[1706]: main.cvd updated (version: 63, sigs: 6690397)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2048,
+    "timestamp": "2026-02-10T18:46:18.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.5"
+    },
+    "full_log": "Feb 10 18:46:18 web01 sshd[9999]: Failed password for guest from 185.220.101.5 port 51620 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2111,
+    "timestamp": "2026-02-10T18:54:20.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "spoolsv",
+      "user": "svc_backup"
+    },
+    "full_log": "Feb 10 18:54:20 hr-ws01 auditd[1]: EXECVE proc=spoolsv user=svc_backup pid=9193",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2141,
+    "timestamp": "2026-02-10T19:07:13.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.16",
+      "user": "lramirez"
+    },
+    "full_log": "Feb 10 19:07:13 vpn-gw01 openvpn[961]: lramirez/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2007,
+    "timestamp": "2026-02-10T19:21:29.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "89.248.165.12"
+    },
+    "full_log": "Feb 10 19:21:29 web02 sshd[2621]: Failed password for root from 89.248.165.12 port 47621 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2115,
+    "timestamp": "2026-02-10T19:29:05.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "backup-agent.exe",
+      "user": "SYSTEM"
+    },
+    "full_log": "Feb 10 19:29:05 vpn-gw01 auditd[1]: EXECVE proc=backup-agent.exe user=SYSTEM pid=5086",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2203,
+    "timestamp": "2026-02-10T19:54:00.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100061",
+      "level": 7,
+      "description": "modsecurity: SQL injection pattern matched in request parameter",
+      "groups": [
+        "web",
+        "attack",
+        "sql_injection"
+      ]
+    },
+    "decoder": {
+      "name": "modsecurity"
+    },
+    "data": {
+      "srcip": "89.248.165.90"
+    },
+    "full_log": "Feb 10 19:54:00 web01 apache2: 89.248.165.90 - - \"GET /app/login.php?id=1%27%20OR%20%271%27%3D%271 HTTP/1.1\" 403 210",
+    "location": "/var/log/apache2/modsec_audit.log"
+  },
+  {
+    "id": 2078,
+    "timestamp": "2026-02-10T20:00:37.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.120.195.161",
+      "domain": "outlook.office365.com"
+    },
+    "full_log": "Feb 10 20:00:37 fin-ws07 netmon: NEW_DOMAIN src=10.0.4.22 dst=... domain=outlook.office365.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2045,
+    "timestamp": "2026-02-10T20:03:50.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.5"
+    },
+    "full_log": "Feb 10 20:03:50 web01 sshd[9884]: Failed password for jenkins from 185.220.101.5 port 48888 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2059,
+    "timestamp": "2026-02-10T20:09:26.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 20:09:26 vpn-gw01 sshd[5119]: Failed password for guest from 198.51.100.201 port 53664 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
     "id": 1083,
     "timestamp": "2026-02-10T20:11:33.000+0000",
     "agent": {
@@ -828,6 +5990,804 @@
     },
     "full_log": "Feb 10 20:11:33 web02 sshd[3588]: Failed password for guest from 198.51.100.201 port 54120 ssh2",
     "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2114,
+    "timestamp": "2026-02-10T20:12:41.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "java.exe",
+      "user": "lramirez"
+    },
+    "full_log": "Feb 10 20:12:41 mkt-ws03 auditd[1]: EXECVE proc=java.exe user=lramirez pid=9514",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2072,
+    "timestamp": "2026-02-10T20:15:39.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 20:15:39 web01 clamav-freshclam[1912]: main.cvd updated (version: 65, sigs: 6670968)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2017,
+    "timestamp": "2026-02-10T20:21:35.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 20:21:35 web01 sshd[4842]: Failed password for www-data from 198.51.100.201 port 48261 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2123,
+    "timestamp": "2026-02-10T20:24:40.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "onedrive.exe",
+      "user": "asingh"
+    },
+    "full_log": "Feb 10 20:24:40 web02 auditd[1]: EXECVE proc=onedrive.exe user=asingh pid=4504",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2164,
+    "timestamp": "2026-02-10T20:42:39.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "lramirez",
+      "command": "apt-get upgrade -y"
+    },
+    "full_log": "Feb 10 20:42:39 web01 sudo: lramirez : COMMAND=/usr/bin/env apt-get upgrade -y",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2213,
+    "timestamp": "2026-02-10T20:43:00.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100060",
+      "level": 7,
+      "description": "modsecurity: Automated scanning pattern detected against web application",
+      "groups": [
+        "web",
+        "attack",
+        "recon"
+      ]
+    },
+    "decoder": {
+      "name": "modsecurity"
+    },
+    "data": {
+      "srcip": "198.51.100.90"
+    },
+    "full_log": "Feb 10 20:43:00 web01 apache2: 198.51.100.90 - - \"GET /app/wp-login.php HTTP/1.1\" 404 287",
+    "location": "/var/log/apache2/modsec_audit.log"
+  },
+  {
+    "id": 2002,
+    "timestamp": "2026-02-10T20:47:25.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "194.61.24.9"
+    },
+    "full_log": "Feb 10 20:47:25 web02 sshd[8426]: Failed password for root from 194.61.24.9 port 34059 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2158,
+    "timestamp": "2026-02-10T20:58:01.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "jchen",
+      "command": "systemctl restart sshd"
+    },
+    "full_log": "Feb 10 20:58:01 vpn-gw01 sudo: jchen : COMMAND=/usr/bin/env systemctl restart sshd",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2024,
+    "timestamp": "2026-02-10T21:04:57.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 21:04:57 web02 sshd[5516]: Failed password for admin from 198.51.100.201 port 58269 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2152,
+    "timestamp": "2026-02-10T21:05:03.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.30",
+      "user": "kwong"
+    },
+    "full_log": "Feb 10 21:05:03 vpn-gw01 openvpn[956]: kwong/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2084,
+    "timestamp": "2026-02-10T21:12:18.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.221.39.16",
+      "domain": "updates.adobe.com"
+    },
+    "full_log": "Feb 10 21:12:18 corp-laptop14 netmon: NEW_DOMAIN src=10.0.6.14 dst=... domain=updates.adobe.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2088,
+    "timestamp": "2026-02-10T21:23:47.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.93.13.75",
+      "domain": "api.slack.com"
+    },
+    "full_log": "Feb 10 21:23:47 mkt-ws03 netmon: NEW_DOMAIN src=10.0.4.31 dst=... domain=api.slack.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2131,
+    "timestamp": "2026-02-10T21:25:40.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "onedrive.exe",
+      "user": "jdoe"
+    },
+    "full_log": "Feb 10 21:25:40 fin-ws07 auditd[1]: EXECVE proc=onedrive.exe user=jdoe pid=4216",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2074,
+    "timestamp": "2026-02-10T21:32:42.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100020",
+      "level": 3,
+      "description": "ClamAV: Signature database updated",
+      "groups": [
+        "ossec",
+        "av"
+      ]
+    },
+    "decoder": {
+      "name": "clamav"
+    },
+    "data": {
+      "dstip": "10.0.0.5"
+    },
+    "full_log": "Feb 10 21:32:42 corp-laptop14 clamav-freshclam[1135]: main.cvd updated (version: 61, sigs: 6633925)",
+    "location": "/var/log/clamav/clamav.log"
+  },
+  {
+    "id": 2175,
+    "timestamp": "2026-02-10T21:37:26.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "jdoe"
+    },
+    "full_log": "Feb 10 21:37:26 corp-laptop14 sshd[6913]: pam_unix(sshd:session): session opened for user jdoe by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2165,
+    "timestamp": "2026-02-10T21:38:47.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100090",
+      "level": 5,
+      "description": "sudo: Command executed by user",
+      "groups": [
+        "sudo",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "sudo"
+    },
+    "data": {
+      "user": "jchen",
+      "command": "apt-get update"
+    },
+    "full_log": "Feb 10 21:38:47 hr-ws01 sudo: jchen : COMMAND=/usr/bin/env apt-get update",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2035,
+    "timestamp": "2026-02-10T21:41:58.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "194.61.24.9"
+    },
+    "full_log": "Feb 10 21:41:58 web01 sshd[9126]: Failed password for postgres from 194.61.24.9 port 45523 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2025,
+    "timestamp": "2026-02-10T21:44:28.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "194.61.24.9"
+    },
+    "full_log": "Feb 10 21:44:28 vpn-gw01 sshd[4879]: Failed password for test from 194.61.24.9 port 58187 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2113,
+    "timestamp": "2026-02-10T21:46:31.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "chrome_updater.exe",
+      "user": "jdoe"
+    },
+    "full_log": "Feb 10 21:46:31 mkt-ws03 auditd[1]: EXECVE proc=chrome_updater.exe user=jdoe pid=4344",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2060,
+    "timestamp": "2026-02-10T21:51:28.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "45.155.205.10"
+    },
+    "full_log": "Feb 10 21:51:28 web02 sshd[5750]: Failed password for guest from 45.155.205.10 port 36769 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2150,
+    "timestamp": "2026-02-10T21:52:59.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.58",
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 21:52:59 vpn-gw01 openvpn[997]: mrivera/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2011,
+    "timestamp": "2026-02-10T21:56:21.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "198.51.100.201"
+    },
+    "full_log": "Feb 10 21:56:21 vpn-gw01 sshd[3733]: Failed password for www-data from 198.51.100.201 port 59295 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2179,
+    "timestamp": "2026-02-10T21:56:47.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100091",
+      "level": 3,
+      "description": "pam_unix: session opened for user",
+      "groups": [
+        "pam",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "data": {
+      "user": "kwong"
+    },
+    "full_log": "Feb 10 21:56:47 web01 sshd[3782]: pam_unix(sshd:session): session opened for user kwong by (uid=0)",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2077,
+    "timestamp": "2026-02-10T22:21:20.000+0000",
+    "agent": {
+      "id": "012",
+      "name": "hr-ws01",
+      "ip": "10.0.4.9"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.124.241.236",
+      "domain": "updates.adobe.com"
+    },
+    "full_log": "Feb 10 22:21:20 hr-ws01 netmon: NEW_DOMAIN src=10.0.4.9 dst=... domain=updates.adobe.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
+  },
+  {
+    "id": 2009,
+    "timestamp": "2026-02-10T22:24:20.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "194.61.24.9"
+    },
+    "full_log": "Feb 10 22:24:20 vpn-gw01 sshd[6758]: Failed password for root from 194.61.24.9 port 32407 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2135,
+    "timestamp": "2026-02-10T22:42:44.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "av_nightly_scan.exe",
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 22:42:44 corp-laptop14 auditd[1]: EXECVE proc=av_nightly_scan.exe user=mrivera pid=6030",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2087,
+    "timestamp": "2026-02-10T22:43:17.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.142.11.237",
+      "domain": "docs.googleapis.com"
+    },
+    "full_log": "Feb 10 22:43:17 fin-ws07 netmon: NEW_DOMAIN src=10.0.4.22 dst=... domain=docs.googleapis.com first_seen=true",
+    "location": "/var/log/netmon/connections.log"
   },
   {
     "id": 1090,
@@ -858,5 +6818,329 @@
     },
     "full_log": "Feb 10 22:48:05 vpn-gw01 openvpn[930]: oncall_svc/10.0.6.9 VERIFY OK, auth succeeded",
     "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2124,
+    "timestamp": "2026-02-10T22:55:05.000+0000",
+    "agent": {
+      "id": "020",
+      "name": "corp-laptop14",
+      "ip": "10.0.6.14"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "av_nightly_scan.exe",
+      "user": "asingh"
+    },
+    "full_log": "Feb 10 22:55:05 corp-laptop14 auditd[1]: EXECVE proc=av_nightly_scan.exe user=asingh pid=6973",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2147,
+    "timestamp": "2026-02-10T23:12:17.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100050",
+      "level": 3,
+      "description": "openvpn: Client authentication succeeded",
+      "groups": [
+        "vpn",
+        "authentication_success"
+      ]
+    },
+    "decoder": {
+      "name": "openvpn"
+    },
+    "data": {
+      "srcip": "10.0.6.32",
+      "user": "mrivera"
+    },
+    "full_log": "Feb 10 23:12:17 vpn-gw01 openvpn[937]: mrivera/10.0.6.x VERIFY OK, auth succeeded",
+    "location": "/var/log/openvpn/openvpn.log"
+  },
+  {
+    "id": 2200,
+    "timestamp": "2026-02-10T23:14:16.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100092",
+      "level": 3,
+      "description": "apache: normal GET request logged",
+      "groups": [
+        "web",
+        "accesslog"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "srcip": "10.0.9.26"
+    },
+    "full_log": "Feb 10 23:14:16 web02 apache2: 10.0.9.26 - - \"GET /app/index.php HTTP/1.1\" 200 3693",
+    "location": "/var/log/apache2/access.log"
+  },
+  {
+    "id": 2053,
+    "timestamp": "2026-02-10T23:15:04.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "89.248.165.12"
+    },
+    "full_log": "Feb 10 23:15:04 web02 sshd[3410]: Failed password for jenkins from 89.248.165.12 port 48031 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2044,
+    "timestamp": "2026-02-10T23:29:02.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.220.101.5"
+    },
+    "full_log": "Feb 10 23:29:02 web02 sshd[2465]: Failed password for www-data from 185.220.101.5 port 50121 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2018,
+    "timestamp": "2026-02-10T23:32:56.000+0000",
+    "agent": {
+      "id": "002",
+      "name": "web01",
+      "ip": "10.0.2.15"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "203.0.113.9"
+    },
+    "full_log": "Feb 10 23:32:56 web01 sshd[3465]: Failed password for guest from 203.0.113.9 port 57116 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2127,
+    "timestamp": "2026-02-10T23:39:16.000+0000",
+    "agent": {
+      "id": "005",
+      "name": "vpn-gw01",
+      "ip": "10.0.0.2"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "java.exe",
+      "user": "SYSTEM"
+    },
+    "full_log": "Feb 10 23:39:16 vpn-gw01 auditd[1]: EXECVE proc=java.exe user=SYSTEM pid=3774",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2003,
+    "timestamp": "2026-02-10T23:42:11.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.156.73.44"
+    },
+    "full_log": "Feb 10 23:42:11 web02 sshd[7884]: Failed password for www-data from 185.156.73.44 port 47288 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2022,
+    "timestamp": "2026-02-10T23:43:50.000+0000",
+    "agent": {
+      "id": "003",
+      "name": "web02",
+      "ip": "10.0.2.18"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100010",
+      "level": 5,
+      "description": "sshd: Multiple failed logins from same source",
+      "groups": [
+        "authentication_failed",
+        "sshd"
+      ]
+    },
+    "decoder": {
+      "name": "sshd"
+    },
+    "data": {
+      "srcip": "185.156.73.44"
+    },
+    "full_log": "Feb 10 23:43:50 web02 sshd[2959]: Failed password for postgres from 185.156.73.44 port 32222 ssh2",
+    "location": "/var/log/auth.log"
+  },
+  {
+    "id": 2099,
+    "timestamp": "2026-02-10T23:45:17.000+0000",
+    "agent": {
+      "id": "011",
+      "name": "mkt-ws03",
+      "ip": "10.0.4.31"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100040",
+      "level": 3,
+      "description": "auditd: New process execution recorded",
+      "groups": [
+        "audit_command",
+        "process_monitor"
+      ]
+    },
+    "decoder": {
+      "name": "auditd"
+    },
+    "data": {
+      "proc": "java.exe",
+      "user": "jdoe"
+    },
+    "full_log": "Feb 10 23:45:17 mkt-ws03 auditd[1]: EXECVE proc=java.exe user=jdoe pid=7179",
+    "location": "/var/log/audit/audit.log"
+  },
+  {
+    "id": 2079,
+    "timestamp": "2026-02-10T23:53:56.000+0000",
+    "agent": {
+      "id": "010",
+      "name": "fin-ws07",
+      "ip": "10.0.4.22"
+    },
+    "manager": {
+      "name": "wazuh-manager"
+    },
+    "rule": {
+      "id": "100030",
+      "level": 5,
+      "description": "netmon: First-seen outbound connection to new external domain",
+      "groups": [
+        "network",
+        "firewall"
+      ]
+    },
+    "decoder": {
+      "name": "netmon-flow"
+    },
+    "data": {
+      "dstip": "52.61.57.233",
+      "domain": "cdn.brandassets.net"
+    },
+    "full_log": "Feb 10 23:53:56 fin-ws07 netmon: NEW_DOMAIN src=10.0.4.22 dst=... domain=cdn.brandassets.net first_seen=true",
+    "location": "/var/log/netmon/connections.log"
   }
 ]

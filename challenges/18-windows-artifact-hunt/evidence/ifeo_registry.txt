@@ -15,8 +15,41 @@ Windows Registry Editor Version 5.00
 "CompatibilityFlags"=dword:00000200
 "LayerName"="WIN7RTM"
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\reportingsvc.exe]
+"MitigationOptions"=hex:00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\acad.exe]
+"CompatibilityFlags"=dword:00000400
+"LayerName"="WIN8RTM"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SAPgui.exe]
+"CompatibilityFlags"=dword:00000100
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\posclient.exe]
+"MitigationOptions"=hex:00,00,00,00,00,00,00,00,01,00,00,00,00,00,00,00
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\sethc.exe]
 "Debugger"="C:\\Windows\\System32\\cmd.exe"
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\reportingsvc.exe]
-"MitigationOptions"=hex:00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\OUTLOOK.EXE]
+"MitigationOptions"=hex:00,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\iexplore.exe]
+"CompatibilityFlags"=dword:00000800
+"LayerName"="WIN8RTM"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\java.exe]
+"MitigationOptions"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,01,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\LegacyPayroll.exe]
+"CompatibilityFlags"=dword:00000200
+"LayerName"="WINXPSP3"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\printclient32.exe]
+"CompatibilityFlags"=dword:00000100
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\scanmgr.exe]
+"MitigationOptions"=hex:00,00,00,00,00,01,00,00,00,00,00,00,00,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\kiosk_launcher.exe]
+"MitigationOptions"=hex:00,00,00,00,00,00,01,00,00,00,00,00,00,00,00,00

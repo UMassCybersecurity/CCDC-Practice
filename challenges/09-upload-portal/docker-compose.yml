@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    container_name: ccdc-09-upload-portal
+    environment:
+      VARIANT: ${VARIANT:-blueteam}
+    ports:
+      - "8201:80"

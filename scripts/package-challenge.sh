@@ -27,10 +27,10 @@ Options:
 Output lands in dist/ at the repo root (gitignored).
 
 Examples:
-  scripts/package-challenge.sh 09-webshell-hunt --offline
+  scripts/package-challenge.sh 09-upload-portal --offline
   scripts/package-challenge.sh 02-noisy-web
-  scripts/package-challenge.sh 01-find-persistence --build-box
-  scripts/package-challenge.sh 01-find-persistence --bundle candidate
+  scripts/package-challenge.sh 01-domain-controller-incident --build-box
+  scripts/package-challenge.sh 01-domain-controller-incident --bundle candidate
 EOF
 }
 

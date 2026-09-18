@@ -2,6 +2,29 @@
 
 **DO NOT READ BEFORE ATTEMPTING THE CHALLENGE**
 
+## Learning Objectives
+- Audit local user accounts and group membership for unnecessary admin rights
+- Identify SMB shares with overly permissive access
+- Verify endpoint protection (Windows Defender) is actually running
+- Recognize an unquoted service path as a local privilege-escalation vector
+- Confirm RDP requires Network Level Authentication
+
+## Hints
+- `Get-ADGroupMember -Identity Administrators` shows who shouldn't be there.
+- `Get-SmbShare` + `Get-SmbShareAccess <name>` for share permissions.
+- `Get-MpPreference` shows Defender's actual real-time-protection state.
+- `Get-CimInstance Win32_Service | Select Name,PathName` — look for an unquoted path containing a space.
+- RDP's NLA setting lives in the `Win32_TSGeneralSetting` WMI class, not a simple registry flag.
+
+## Scoring breakdown
+| Points | Criteria |
+|---|---|
+| +1 | Rogue local admin account removed/disabled |
+| +1 | Wide-open SMB share locked down |
+| +1 | Windows Defender real-time protection re-enabled |
+| +1 | Unquoted service path fixed or service removed |
+| +1 | RDP Network Level Authentication re-enabled |
+
 ## What's planted
 `scripts/plant-backdoors.ps1` runs at provision time and plants 5 host-level issues:
 1. A second admin account `svc-support` (password `Password1`) added to the server's `Administrators` group. (This box's OS has no real local SAM — `New-LocalUser` silently redirects to AD on it — so this is planted as an AD account instead; same practical effect, a second account with full admin rights on the box.)
