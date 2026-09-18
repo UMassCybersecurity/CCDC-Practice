@@ -7,19 +7,20 @@
 **Track:** Linux/Docker/SIEM
 
 ## Scenario
-Your SIEM exported a full day of alerts from `web01` and a handful of other
-hosts as JSON. Most of it is tuning noise — scanners that never get in,
-routine software updates, normal VPN logins. Somewhere in there, though, one
-external host ran a real attack chain from initial recon all the way to
-persistence. Your job is to separate the signal from the noise and reconstruct
-what actually happened.
+Your Wazuh manager logged a full day of alerts from `web01` and a handful of
+other agents to its usual `alerts.json`. Most of it is tuning noise —
+scanners that never get in, routine software updates, normal VPN logins.
+Somewhere in there, though, one external host ran a real attack chain from
+initial recon all the way to persistence. Your job is to separate the signal
+from the noise and reconstruct what actually happened.
 
 <details>
 <summary><strong>Learning Objectives</strong> (spoiler — click to reveal)</summary>
 
-- Query structured alert data (JSON) with `jq` instead of raw text tools
+- Read Wazuh's native alert JSON shape (`rule.level`/`rule.description`, `agent`, `full_log`, `decoder`) with `jq`
+- Use `rule.level` the way a SOC analyst does: as the first triage filter, not the `severity` label
 - Distinguish a genuine multi-stage intrusion from high-volume background noise
-- Correlate alerts by source IP, destination asset, and time window into a single incident
+- Correlate alerts by `agent`, `data.srcip`/`data.dstip`, and time window into a single incident
 
 </details>
 
@@ -33,7 +34,7 @@ what actually happened.
 |---|---|
 | **Start** | `docker compose up -d --build` |
 | **Shell in** | `docker compose exec app bash` |
-| **Alert data** | `/var/log/alerts.json` inside the container |
+| **Alert data** | `/var/ossec/logs/alerts/alerts.json` inside the container (the real Wazuh manager alert log path) |
 | **Findings file** | `/root/findings.txt` inside the container (you create this) |
 
 ## Rules of Engagement
@@ -49,8 +50,9 @@ ROOT_CAUSE: <short phrase naming the initial-access technique>
 <details>
 <summary><strong>Hints</strong> (try without these first — click to reveal)</summary>
 
-- `jq '.[] | .rule_name' /var/log/alerts.json | sort | uniq -c` shows you what rule types exist and how often each fires — the noise rules repeat a lot, the real chain doesn't.
-- Once you find one alert you're confident is real, `jq --arg ip "<that alert's source_ip>" '.[] | select(.source_ip==$ip or .dest_ip==$ip)'` pulls every alert tied to the same actor or asset.
+- `jq '.[] | .rule.level' alerts.json | sort -n | uniq -c` shows the level distribution — in Wazuh, `rule.level` is the first thing you filter on, not the rule name.
+- `jq '.[] | select(.rule.level >= 7)'` cuts straight past the noise levels to what's actually worth reading.
+- Once you find one alert you're confident is real, `jq --arg ip "<that alert's data.srcip or data.dstip>" '.[] | select(.data.srcip==$ip or .data.dstip==$ip or .agent.name=="<that alert's agent>")'` pulls every alert tied to the same actor or asset.
 - The real chain lives in about a 40-minute window — sort by timestamp and look for a tight cluster.
 
 </details>
