@@ -29,16 +29,4 @@ WidgetCorp's internal app went from "works on my machine" to production without 
 ## Scoring
 Run `sudo /vagrant/scripts/score_me.sh` inside the VM.
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
-
-| Points | Criteria |
-|---|---|
-| +1 | `widgetapp` runs as a non-root user |
-| +1 | Default admin credential no longer works |
-| +1 | `/app/` directory listing disabled |
-| +1 | Main app page still responds |
-
-> **Expected finding count: 3** *(root-run service, default credential, directory listing)*
-
-</details>
+**4 points total.** Full breakdown is in ANSWER.md.

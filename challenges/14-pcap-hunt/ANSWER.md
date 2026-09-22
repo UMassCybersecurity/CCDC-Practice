@@ -18,6 +18,13 @@
   it above shows the exact ~30s interval.
 - `tshark -r /root/capture.pcap -x` dumps raw bytes if you'd rather read payloads directly.
 
+## Scoring breakdown
+| Points | Criteria |
+|---|---|
+| +1 | Correct leaked username |
+| +1 | Correct leaked password |
+| +1 | Correct beacon destination IP:port |
+
 ## What's planted
 `capture.pcap` is generated deterministically by `scripts/generate_pcap.py`
 (committed for reproducibility; requires `scapy`, not a runtime dependency of

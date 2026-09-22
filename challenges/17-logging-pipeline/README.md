@@ -32,5 +32,3 @@ what's actually going on.
 Inside the VM: `sudo /vagrant/scripts/score_me.sh`
 
 **4 points total.** Full breakdown is in ANSWER.md.
-
-> **Expected finding count: 1 suppressed log source + 1 hidden persistence mechanism**

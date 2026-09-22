@@ -11,7 +11,7 @@ WidgetCorp's nightly backup box has been running unattended for months. A junior
 
 ## Objectives
 - Find and remove the unauthorized cron job
-- Find and remove the backdoor planted in `/etc/bash.bashrc`
+- There's also a backdoor hiding in a shell startup file somewhere on this box — find and remove it
 - Do **not** remove or break the legitimate nightly backup job
 
 ## Connect
@@ -27,15 +27,4 @@ WidgetCorp's nightly backup box has been running unattended for months. A junior
 ## Scoring
 Run `docker compose exec app score_me.sh` from the challenge directory on the host.
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
-
-| Points | Criteria |
-|---|---|
-| +1 | Unauthorized per-minute cron job removed |
-| +1 | Legitimate nightly backup cron job still present |
-| +1 | `sudo`-wrapping backdoor removed from `/etc/bash.bashrc` |
-
-> **Expected finding count: 2**
-
-</details>
+**3 points total.** Full breakdown is in ANSWER.md.

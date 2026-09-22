@@ -11,8 +11,7 @@ WidgetCorp's file-drop server hosts a shared directory for internal documents, f
 
 ## Objectives
 - Lock down `/srv/fileshare` so it's no longer world-writable
-- Find and remove the SUID-root backdoor binary
-- Remove `intern`'s passwordless sudo grant
+- Track down and remove any unauthorized privilege-escalation backdoor on the box
 - Keep Apache online throughout
 
 ## Connect
@@ -29,16 +28,4 @@ WidgetCorp's file-drop server hosts a shared directory for internal documents, f
 ## Scoring
 Run `sudo /vagrant/scripts/score_me.sh` inside the VM.
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
-
-| Points | Criteria |
-|---|---|
-| +1 | `/srv/fileshare` is no longer world-writable |
-| +1 | SUID backdoor removed or de-fanged |
-| +1 | `intern`'s passwordless sudo grant removed |
-| +1 | Apache still online |
-
-> **Expected finding count: 3** *(fileshare permissions, SUID backdoor, sudoers grant)*
-
-</details>
+**4 points total.** Full breakdown is in ANSWER.md.

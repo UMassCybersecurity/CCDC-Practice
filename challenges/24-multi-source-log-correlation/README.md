@@ -43,16 +43,4 @@ TIME: <nginx-format timestamp of the initial exploit request>
 ## Scoring
 From the challenge directory on the host: `docker compose exec app /scripts/score_me.sh`
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
-
-| Points | Criteria |
-|---|---|
-| +1 | Correct attacker IP |
-| +1 | Correct exploited endpoint |
-| +1 | Correct persistence mechanism |
-| +1 | Correct timestamp of the initial exploit request |
-
-> **Expected finding count: 4**
-
-</details>
+**4 points total.** Full breakdown is in ANSWER.md.

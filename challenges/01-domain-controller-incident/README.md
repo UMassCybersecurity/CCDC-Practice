@@ -30,6 +30,4 @@ Your organization's domain controller was compromised last weekend. The incident
 ## Scoring
 Run `C:\vagrant\scripts\score_me.ps1` inside the VM as Administrator.
 
-**8 points total** — 6 for the persistence mechanisms found and removed, plus 1 each for AD DS and DNS still running. Full breakdown is in ANSWER.md.
-
-> **Expected persistence count: 6**
+**8 points total.** Full breakdown is in ANSWER.md.

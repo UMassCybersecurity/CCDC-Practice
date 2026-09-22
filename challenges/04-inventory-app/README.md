@@ -28,15 +28,4 @@ WidgetCorp's "inventory-app" stores its counters in Redis. Whoever wired this up
 ## Scoring
 Run `./scripts/score_me.sh` from this directory on the host.
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
-
-| Points | Criteria |
-|---|---|
-| +1 | Redis is no longer reachable from the host on 8101 |
-| +1 | Redis requires authentication |
-| +1 | `inventory-app` `/health` still reports a working Redis connection |
-
-> **Expected finding count: 3**
-
-</details>
+**3 points total.** Full breakdown is in ANSWER.md.

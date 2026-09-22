@@ -14,6 +14,14 @@
 - `chmod` the share to something that isn't world-writable — owner/group access is enough for a legitimate file-drop.
 - `ls -la /usr/local/bin` — nothing legitimate normally lives there with a leading dot.
 
+## Scoring breakdown
+| Points | Criteria |
+|---|---|
+| +1 | `/srv/fileshare` is no longer world-writable |
+| +1 | SUID backdoor removed or de-fanged |
+| +1 | `intern`'s passwordless sudo grant removed |
+| +1 | Apache still online |
+
 ## What's broken / planted
 `scripts/break_server.yml` plants three issues: `/srv/fileshare` (and the files in it) created mode 0777/0666; `/etc/sudoers.d/90-intern` grants the `intern` account `NOPASSWD:ALL`; and `/usr/local/bin/.syshelper` is a copy of `/bin/bash` with the SUID bit set (`chmod 4755`), giving anyone who can execute it a root shell.
 

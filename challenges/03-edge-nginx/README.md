@@ -30,15 +30,4 @@ WidgetCorp's edge nginx was stood up in a hurry to front the internal "backend" 
 ## Scoring
 Run `./scripts/score_me.sh` from this directory on the host.
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
-
-| Points | Criteria |
-|---|---|
-| +1 | HTTPS on port 8143 serves the backend |
-| +1 | Plain HTTP on port 8100 redirects (3xx) |
-| +1 | `ssl_protocols` restricted to TLSv1.2 and TLSv1.3 |
-
-> **Expected finding count: 3**
-
-</details>
+**3 points total.** Full breakdown is in ANSWER.md.

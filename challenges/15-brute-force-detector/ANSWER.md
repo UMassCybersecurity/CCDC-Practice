@@ -12,6 +12,13 @@
 - The malicious IP isn't subtle once you count — it's an order of magnitude above the noisiest benign IP.
 - Pick a threshold with headroom on both sides rather than tuning it to a single log.
 
+## Scoring breakdown
+| Points | Criteria |
+|---|---|
+| +1 | Malicious IP flagged in `/root/alerts.log` |
+| +1 | No benign IP falsely flagged |
+| +1 | `/root/alerts.log` contains exactly one line (no noise/duplicates) |
+
 ## What's planted
 `auth.log` is generated deterministically by `scripts/generate_log.py`
 (committed for reproducibility). It contains failed-login noise from five

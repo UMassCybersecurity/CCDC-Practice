@@ -29,6 +29,4 @@ corp.local's domain controller was compromised again — a different attacker th
 ## Scoring
 Run `C:\vagrant\scripts\score_me.ps1` inside the VM as Administrator.
 
-**7 points total** — 5 for the persistence mechanisms found and removed, plus 1 each for AD DS and DNS still running. Full breakdown is in ANSWER.md.
-
-> **Expected persistence count: 5**
+**7 points total.** Full breakdown is in ANSWER.md.

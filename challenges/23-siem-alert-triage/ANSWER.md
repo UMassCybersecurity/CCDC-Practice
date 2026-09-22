@@ -14,6 +14,12 @@
 - Once you find one alert you're confident is real, cross-reference its `data.srcip`/`data.dstip` against the other level-7+ alerts — a plain `agent.name` match alone now also pulls in a lot of that agent's routine low-level noise, so filter by IP first.
 - The real chain lives in about a 40-minute window — among just the level-7+ alerts, sort by timestamp and look for a tight cluster on one agent, not an isolated single alert or a burst that never escalates.
 
+## Scoring breakdown
+| Points | Criteria |
+|---|---|
+| +1 | Every true-positive alert ID in the chain identified, no noise IDs included |
+| +1 | Correct root-cause technique named |
+
 ## What's planted
 `alerts.json` (see `Dockerfile`) is shaped like a real Wazuh manager alert
 log (`/var/ossec/logs/alerts/alerts.json`) — `rule.id`/`rule.level`/

@@ -40,14 +40,4 @@ ROOT_CAUSE: <short phrase naming the initial-access technique>
 ## Scoring
 From the challenge directory on the host: `docker compose exec app /scripts/score_me.sh`
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
-
-| Points | Criteria |
-|---|---|
-| +1 | Every true-positive alert ID in the chain identified, no noise IDs included |
-| +1 | Correct root-cause technique named |
-
-> **Expected finding count: 5 alert IDs forming one intrusion, out of 242 total alerts**
-
-</details>
+**2 points total.** Full breakdown is in ANSWER.md.

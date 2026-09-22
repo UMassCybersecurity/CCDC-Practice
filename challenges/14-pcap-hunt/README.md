@@ -38,15 +38,4 @@ BEACON: <destination IP>:<destination port>
 ## Scoring
 From the challenge directory on the host: `docker compose exec app /scripts/score_me.sh`
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
-
-| Points | Criteria |
-|---|---|
-| +1 | Correct leaked username |
-| +1 | Correct leaked password |
-| +1 | Correct beacon destination IP:port |
-
-> **Expected finding count: 3**
-
-</details>
+**3 points total.** Full breakdown is in ANSWER.md.

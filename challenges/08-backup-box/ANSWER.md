@@ -13,6 +13,13 @@
 - A job that fires every single minute is worth a second look.
 - System-wide shell startup files (`/etc/bash.bashrc`, `/etc/profile.d/*`) are a common place to hide a function that shadows a real command.
 
+## Scoring breakdown
+| Points | Criteria |
+|---|---|
+| +1 | Unauthorized per-minute cron job removed |
+| +1 | Legitimate nightly backup cron job still present |
+| +1 | `sudo`-wrapping backdoor removed from `/etc/bash.bashrc` |
+
 ## What's broken / planted
 `scripts/setup.sh` (baked into the image at build time) plants two things in the `app` container's root crontab:
 - A legitimate nightly backup entry: `0 2 * * * /usr/bin/date >> /var/log/backup.log` — must survive.

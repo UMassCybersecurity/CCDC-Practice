@@ -33,15 +33,4 @@ real detection rule would.
 ## Scoring
 From the challenge directory on the host: `docker compose exec app /scripts/score_me.sh`
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
-
-| Points | Criteria |
-|---|---|
-| +1 | Malicious IP flagged in `/root/alerts.log` |
-| +1 | No benign IP falsely flagged |
-| +1 | `/root/alerts.log` contains exactly one line (no noise/duplicates) |
-
-> **Expected finding count: 1 malicious IP out of 6 total source IPs in the log**
-
-</details>
+**3 points total.** Full breakdown is in ANSWER.md.

@@ -15,10 +15,8 @@ case from the exported artifacts alone, the way a real triage pass starts
 before anyone RDPs in.
 
 ## Objectives
-- Identify the binary targeted by the malicious IFEO `Debugger` value
-- Identify the exact `Debugger` value the attacker set
-- Identify the full path of the malicious scheduled task
-- Write your findings to `/root/findings.txt` inside the container
+- Work out how this attacker set themselves up to survive a reboot, using only the evidence provided
+- Write your findings to `/root/findings.txt` inside the container, in the format below
 
 ## Connect
 | Field | Value |
@@ -42,15 +40,4 @@ TASK_NAME: <full path of the malicious scheduled task>
 ## Scoring
 From the challenge directory on the host: `docker compose exec app /scripts/score_me.sh`
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
-
-| Points | Criteria |
-|---|---|
-| +1 | Correct IFEO target binary |
-| +1 | Correct IFEO debugger value |
-| +1 | Correct malicious scheduled task path |
-
-> **Expected finding count: 3**
-
-</details>
+**3 points total.** Full breakdown is in ANSWER.md.

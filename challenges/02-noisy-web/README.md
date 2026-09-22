@@ -45,8 +45,6 @@ Run the scoring engine inside the VM: `sudo /vagrant/scripts/score_me.sh`
 
 **6 points total.** Full breakdown is in ANSWER.md.
 
-> **Expected finding count: 4**
-
 ## Pause and Resume
 When you want to take a break, use `vagrant halt` to stop the VM and then `vagrant up` to resume your machine. It will save your progress.
 

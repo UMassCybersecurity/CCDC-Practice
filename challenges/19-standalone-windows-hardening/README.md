@@ -10,7 +10,7 @@
 A standalone Windows server was stood up quickly for a project and never got a proper hardening pass. Nothing has been compromised (yet) — this is a proactive audit. Find the local misconfigurations before someone else does.
 
 ## Objectives
-- Find and remediate all 5 local hardening issues
+- Find and remediate the local hardening issues on this box
 - Do not break the box's ability to accept RDP connections
 
 ## Connect
@@ -29,5 +29,3 @@ A standalone Windows server was stood up quickly for a project and never got a p
 Run `C:\vagrant\scripts\score_me.ps1` inside the VM as Administrator.
 
 **5 points total.** Full breakdown is in ANSWER.md.
-
-> **Expected finding count: 5**

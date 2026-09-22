@@ -27,5 +27,3 @@ WidgetCorp's monitoring box runs one job: a lightweight agent that writes a hear
 Run `docker compose exec app score_me.sh` from the challenge directory on the host.
 
 **3 points total.** Full breakdown is in ANSWER.md.
-
-> **Expected finding count: 1**

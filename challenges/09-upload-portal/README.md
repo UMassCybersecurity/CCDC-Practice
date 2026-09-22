@@ -10,7 +10,7 @@
 WidgetCorp's marketing site takes public file uploads for the "share your widget photo" contest. Someone on the security mailing list noticed an odd filename in the web server's access patterns and asked you to check the uploads directory before this spreads.
 
 ## Objectives
-- Find and remove the planted backdoor file from `uploads/`
+- Find and remove whatever doesn't belong in `uploads/`
 - Keep the company site and the legitimate uploaded file intact and reachable
 
 ## Connect
@@ -28,5 +28,3 @@ WidgetCorp's marketing site takes public file uploads for the "share your widget
 Run `./scripts/score_me.sh` from the challenge directory on the host.
 
 **3 points, plus 1 bonus point.** Full breakdown is in ANSWER.md.
-
-> **Expected finding count: 1**

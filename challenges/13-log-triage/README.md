@@ -40,15 +40,4 @@ TIME: <syslog timestamp of the first successful login, e.g. "Mar 14 02:11:03">
 ## Scoring
 From the challenge directory on the host: `docker compose exec app /scripts/score_me.sh`
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
-
-| Points | Criteria |
-|---|---|
-| +1 | Correct attacker IP |
-| +1 | Correct compromised username |
-| +1 | Correct timestamp of first successful login |
-
-> **Expected finding count: 3**
-
-</details>
+**3 points total.** Full breakdown is in ANSWER.md.

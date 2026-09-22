@@ -28,6 +28,4 @@ WidgetCorp's ops box runs a legitimate Apache site and not much else — or so t
 ## Scoring
 Run `sudo /vagrant/scripts/score_me.sh` inside the VM.
 
-**7 points total** — 6 for the persistence mechanisms found and removed, plus 1 for Apache still online. Full breakdown is in ANSWER.md.
-
-> **Expected persistence count: 6**
+**7 points total.** Full breakdown is in ANSWER.md.

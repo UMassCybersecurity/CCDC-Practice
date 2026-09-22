@@ -14,6 +14,13 @@
 - Dropping the `ports:` mapping on the `redis` service removes host access entirely — containers on the same compose network can still reach it by service name.
 - `docker compose up -d` picks up compose file changes without a rebuild.
 
+## Scoring breakdown
+| Points | Criteria |
+|---|---|
+| +1 | Redis is no longer reachable from the host on 8101 |
+| +1 | Redis requires authentication |
+| +1 | `inventory-app` `/health` still reports a working Redis connection |
+
 ## What's broken / planted
 `docker-compose.yml` publishes `redis` on host port 8101 with no `requirepass`, so any host process (or anyone who can reach the box) has unauthenticated read/write access to the datastore. `app` connects to it with no credential.
 

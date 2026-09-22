@@ -14,6 +14,14 @@
 - `send_from_directory` will serve anything in the directory you point it at, including dotfiles, unless you explicitly reject them.
 - Remember to rebuild (`docker compose up -d --build`) after editing `app.py` — this app isn't bind-mounted, so a plain restart won't pick up your change.
 
+## Scoring breakdown
+| Points | Criteria |
+|---|---|
+| +1 | `/crash` no longer leaks a debug traceback |
+| +1 | `/status` no longer leaks the API key |
+| +1 | `/files/.env` is blocked (403/404) |
+| +1 | `/` and `/files/logo.txt` still return 200 |
+
 ## What's broken / planted
 `app/app.py` ships with `app.run(debug=True)` (leaks tracebacks on `/crash`), a hardcoded `API_KEY` echoed verbatim by `/status`, and a `/files/<path:name>` route that serves anything under `static/` — including `static/.env`, which contains fake secrets (`DB_PASSWORD`, `STRIPE_SECRET`).
 

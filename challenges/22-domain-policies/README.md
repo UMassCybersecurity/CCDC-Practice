@@ -11,7 +11,7 @@
 
 ## Objectives
 - Identify the one rogue GPO among the legitimate ones
-- Remove it (and its SYSVOL payload) without touching the legitimate GPOs
+- Remove it entirely without touching the legitimate GPOs
 - Document what you found *(GPO name, payload, delivery mechanism)*
 
 ## Connect
@@ -31,5 +31,3 @@
 Run `C:\vagrant\scripts\score_me.ps1` inside the VM as Administrator.
 
 **3 points total.** Full breakdown is in ANSWER.md.
-
-> **Expected finding count: 1 rogue GPO among 4 total**

@@ -15,6 +15,13 @@
 - `ssl_protocols TLSv1.2 TLSv1.3;` disables the deprecated versions.
 - After editing `edge/default.conf`, run `docker compose exec edge nginx -s reload` to apply it without restarting the container.
 
+## Scoring breakdown
+| Points | Criteria |
+|---|---|
+| +1 | HTTPS on port 8143 serves the backend |
+| +1 | Plain HTTP on port 8100 redirects (3xx) |
+| +1 | `ssl_protocols` restricted to TLSv1.2 and TLSv1.3 |
+
 ## What's broken / planted
 `edge/default.conf` ships with a plain-HTTP `server` block on port 80 that proxies to the backend, plus a second `server` block on 443 that already references the provided cert/key but restricts `ssl_protocols` to the deprecated `TLSv1 TLSv1.1`. There is no redirect off plain HTTP.
 

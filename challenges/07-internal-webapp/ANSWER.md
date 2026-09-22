@@ -14,6 +14,14 @@
 - `location /app/ { autoindex on; }` in the nginx site is what's exposing the listing — turn it off or remove the location block entirely.
 - `nginx -t && systemctl reload nginx` applies a config change without downtime.
 
+## Scoring breakdown
+| Points | Criteria |
+|---|---|
+| +1 | `widgetapp` runs as a non-root user |
+| +1 | Default admin credential no longer works |
+| +1 | `/app/` directory listing disabled |
+| +1 | Main app page still responds |
+
 ## What's broken / planted
 `/etc/systemd/system/widgetapp.service` has `User=root`. `/opt/widgetapp/app.py` hardcodes `USERS = {"admin": "admin123"}`. `/etc/nginx/sites-available/widgetapp` has `location /app/ { alias /opt/widgetapp/; autoindex on; }`, exposing the app's source directory.
 

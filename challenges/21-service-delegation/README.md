@@ -7,10 +7,10 @@
 **Track:** AD/Windows
 
 ## Scenario
-A low-privilege service account on `corp.local` was delegated some rights months ago "temporarily" and nobody ever audited what those rights actually granted. It turns out compromising that one account's password is enough to compromise the entire domain. Find the delegation chain and cut it off.
+A low-privilege service account on `corp.local` was delegated some rights months ago "temporarily" and nobody ever audited what those rights actually granted. Figure out what that account can really do in the domain, and lock it down.
 
 ## Objectives
-- Identify every non-default ACE granted to the low-privilege account
+- Figure out exactly what the over-permissioned account can do in the domain
 - Remove the excess rights without breaking AD DS
 - Document what you found *(account name, rights granted, on which objects)*
 
@@ -32,5 +32,3 @@ A low-privilege service account on `corp.local` was delegated some rights months
 Run `C:\vagrant\scripts\score_me.ps1` inside the VM as Administrator.
 
 **4 points total.** Full breakdown is in ANSWER.md.
-
-> **Expected finding count: 2 (chained across 2 objects)**

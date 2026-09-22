@@ -14,6 +14,13 @@
 - Removing the app's access and removing the rogue container are two separate steps — fixing one doesn't fix the other.
 - `docker compose up -d` picks up compose file changes without a rebuild.
 
+## Scoring breakdown
+| Points | Criteria |
+|---|---|
+| +1 | `app` no longer has Docker control-plane access (`DOCKER_HOST` wiring removed) |
+| +1 | The rogue `backdoor-c2` container has been removed from the `dind` daemon |
+| +1 | `app`'s `/health` endpoint still responds correctly |
+
 ## What's planted
 `docker-compose.yml` gives the `app` (ops dashboard) service `DOCKER_HOST=tcp://dind:2375`,
 letting its `/admin/exec` endpoint (guarded only by a hardcoded `X-Admin-Token: changeme123`

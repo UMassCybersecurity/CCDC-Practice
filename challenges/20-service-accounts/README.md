@@ -7,10 +7,10 @@
 **Track:** AD/Windows
 
 ## Scenario
-A security assessment flagged `corp.local` for some account and credential hygiene issues. Three separate issues were reported but never triaged. Find and fix all of them.
+A security assessment flagged `corp.local` for some account and credential hygiene issues. Several issues were reported but never triaged. Find and fix all of them.
 
 ## Objectives
-- Identify all three account/credential exposure issues
+- Identify all the account/credential exposure issues
 - Remediate each one without breaking AD DS
 - Document what you found *(account names, exposed passwords, etc.)*
 
@@ -31,5 +31,3 @@ A security assessment flagged `corp.local` for some account and credential hygie
 Run `C:\vagrant\scripts\score_me.ps1` inside the VM as Administrator.
 
 **4 points total.** Full breakdown is in ANSWER.md.
-
-> **Expected finding count: 3**

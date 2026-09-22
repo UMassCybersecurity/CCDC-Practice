@@ -40,5 +40,3 @@ PORT: <port it was using>
 Inside the VM: `sudo /vagrant/scripts/score_me.sh`
 
 **4 points total.** Full breakdown is in ANSWER.md.
-
-> **Expected finding count: 1 live rogue process**

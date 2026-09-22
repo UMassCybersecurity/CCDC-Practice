@@ -28,16 +28,4 @@ A dev spun up WidgetCorp's public API container and never took the training whee
 ## Scoring
 Run `./scripts/score_me.sh` from this directory on the host.
 
-<details>
-<summary>Scoring criteria (spoiler — click to reveal)</summary>
-
-| Points | Criteria |
-|---|---|
-| +1 | `/crash` no longer leaks a debug traceback |
-| +1 | `/status` no longer leaks the API key |
-| +1 | `/files/.env` is blocked (403/404) |
-| +1 | `/` and `/files/logo.txt` still return 200 |
-
-> **Expected finding count: 4**
-
-</details>
+**4 points total.** Full breakdown is in ANSWER.md.
