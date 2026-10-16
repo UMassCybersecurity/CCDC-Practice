@@ -13,7 +13,7 @@ Welcome to WidgetCorp. You are the new IT Administrator. The previous admin left
 Secure the server without breaking the website.
 
 ## Prerequisites
-Vagrant will automatically detect your computer's architecture. Please install the software required for your specific machine:
+Vagrant will automatically detect your computer's architecture. Please install the software required for your specific machine (full details in the [main README](../../README.md#prerequisites)):
 
 **For Windows, Linux, and Intel-based Macs (x86):**
 1. Install [VirtualBox](https://www.virtualbox.org/).

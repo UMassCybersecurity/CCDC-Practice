@@ -14,6 +14,21 @@ WidgetCorp's ops box runs a legitimate Apache site and not much else — or so t
 - Keep the Apache web server online throughout
 - Document what you found (technique, artifact, how it was remediated)
 
+## Prerequisites
+Vagrant will automatically detect your computer's architecture. Please install the software required for your specific machine (full details in the [main README](../../README.md#prerequisites)):
+
+**For Windows, Linux, and Intel-based Macs (x86):**
+1. Install [VirtualBox](https://www.virtualbox.org/).
+2. Install [Vagrant](https://www.vagrantup.com/).
+
+**For Apple Silicon Macs (M1/M2/M3/M4):**
+*(VirtualBox does not work on Apple Silicon. You must use VMware).*
+1. Install [VMware Fusion](https://knowledge.broadcom.com/external/article/315638/download-and-install-vmware-fusion.html) (Free for personal use).
+2. Install [Vagrant](https://www.vagrantup.com/).
+3. Install the [Vagrant VMware Utility](https://developer.hashicorp.com/vagrant/docs/providers/vmware/vagrant-vmware-utility). Download the macOS version, open the file, and run the standard installer.
+4. Finally, link Vagrant to VMware by running this single command in your Mac terminal:
+   `vagrant plugin install vagrant-vmware-desktop`
+
 ## Connect
 | Field | Value |
 |---|---|
